@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aoglang.com/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/welcome-aoglang.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/welcome-aoglang.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/welcome-aoglang.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/welcome-aoglang.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/static-site-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/static-site-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/static-site-guide.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/static-site-guide.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/gallery/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/gallery/spring-scenes.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/spring-scenes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/spring-scenes.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/gallery/spring-scenes.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/intro-aoglang.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/intro-aoglang.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/intro-aoglang.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/intro-aoglang.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/contact/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/contact/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/about/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/about/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/privacy/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/privacy/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/terms/"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/terms/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>

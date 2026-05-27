@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>aoglang Articles</title>
+  <link>https://aoglang.com/en/</link>
+  <description>Latest articles</description>
+  <language>en</language>
+  <item>
+    <title>Welcome to aoglang</title>
+    <link>https://aoglang.com/en/articles/welcome-aoglang.html</link>
+    <description>Bilingual static site intro</description>
+    <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Static site guide</title>
+    <link>https://aoglang.com/en/articles/static-site-guide.html</link>
+    <description>SEO checklist</description>
+    <pubDate>Mon, 26 May 2026 00:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

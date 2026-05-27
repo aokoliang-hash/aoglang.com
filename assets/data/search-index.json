@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "lang": "zh",
+      "title": "欢迎来到 aoglang",
+      "desc": "了解本站纯 HTML 静态架构与双语 SEO 做法。",
+      "url": "articles/welcome-aoglang.html",
+      "tags": ["文章", "指南"]
+    },
+    {
+      "lang": "zh",
+      "title": "静态网站搭建指南",
+      "desc": "从目录结构到 sitemap、RSS 的完整清单。",
+      "url": "articles/static-site-guide.html",
+      "tags": ["文章", "SEO"]
+    },
+    {
+      "lang": "zh",
+      "title": "春日图集",
+      "desc": "示例图集：多图展示与无障碍说明。",
+      "url": "gallery/spring-scenes.html",
+      "tags": ["图集", "摄影"]
+    },
+    {
+      "lang": "zh",
+      "title": "认识 aoglang 视频",
+      "desc": "HTML5 视频播放示例与封面图设置。",
+      "url": "videos/intro-aoglang.html",
+      "tags": ["视频"]
+    },
+    {
+      "lang": "zh",
+      "title": "关于我们",
+      "desc": "站点使命与联系方式。",
+      "url": "about/",
+      "tags": ["关于"]
+    },
+    {
+      "lang": "zh",
+      "title": "联系我们",
+      "desc": "邮件与留言表单。",
+      "url": "contact/",
+      "tags": ["联系"]
+    },
+    {
+      "lang": "en",
+      "title": "Welcome to aoglang",
+      "desc": "Bilingual static HTML site structure and SEO.",
+      "url": "articles/welcome-aoglang.html",
+      "tags": ["article", "guide"]
+    },
+    {
+      "lang": "en",
+      "title": "Static site guide",
+      "desc": "Checklist from folders to sitemap and RSS.",
+      "url": "articles/static-site-guide.html",
+      "tags": ["article", "SEO"]
+    },
+    {
+      "lang": "en",
+      "title": "Spring scenes gallery",
+      "desc": "Sample photo gallery with captions and alt text.",
+      "url": "gallery/spring-scenes.html",
+      "tags": ["gallery", "photos"]
+    },
+    {
+      "lang": "en",
+      "title": "Intro to aoglang (video)",
+      "desc": "HTML5 video demo with poster image.",
+      "url": "videos/intro-aoglang.html",
+      "tags": ["video"]
+    },
+    {
+      "lang": "en",
+      "title": "About",
+      "desc": "Mission and contact information.",
+      "url": "about/",
+      "tags": ["about"]
+    },
+    {
+      "lang": "en",
+      "title": "Contact",
+      "desc": "Email and contact form.",
+      "url": "contact/",
+      "tags": ["contact"]
+    }
+  ]
+}
