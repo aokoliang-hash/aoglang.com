@@ -16,6 +16,13 @@
     },
     {
       "lang": "zh",
+      "title": "无穷符号 3D 视觉图集",
+      "desc": "十张无穷符号 3D 抽象视觉，含说明与关键词：金属、螺旋、虹彩、橙色系。",
+      "url": "gallery/infinity-3d.html",
+      "tags": ["图集", "无穷符号", "3D", "抽象", "橙色", "金属", "螺旋", "aoglang"]
+    },
+    {
+      "lang": "zh",
       "title": "春日图集",
       "desc": "示例图集：多图展示与无障碍说明。",
       "url": "gallery/spring-scenes.html",
@@ -55,6 +62,13 @@
       "desc": "Checklist from folders to sitemap and RSS.",
       "url": "articles/static-site-guide.html",
       "tags": ["article", "SEO"]
+    },
+    {
+      "lang": "en",
+      "title": "Infinity 3D visual gallery",
+      "desc": "Ten infinity-themed 3D visuals with captions and keywords: metallic, spiral, iridescent, orange.",
+      "url": "gallery/infinity-3d.html",
+      "tags": ["gallery", "infinity", "3D", "abstract", "orange", "metallic", "spiral", "aoglang"]
     },
     {
       "lang": "en",

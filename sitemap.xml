@@ -68,6 +68,16 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://aoglang.com/zh/gallery/infinity-3d.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/infinity-3d.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/infinity-3d.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/gallery/infinity-3d.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://aoglang.com/zh/videos/</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/"/>

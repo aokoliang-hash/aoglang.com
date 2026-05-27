@@ -561,6 +561,31 @@ main {
   color: var(--color-muted);
 }
 
+.gallery-grid figcaption strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  margin-bottom: 0.35rem;
+}
+
+.gallery-grid figcaption p {
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
+.gallery-grid .gallery-keywords {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.gallery-intro {
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  color: var(--color-muted);
+}
+
 /* Video */
 .video-wrap {
   position: relative;
@@ -619,11 +644,20 @@ video.player {
   padding: 0;
 }
 
+/* 覆盖通用 .search-screen 的全屏高度，避免挡住下方「最新内容」 */
 .page-home-search .home-search-screen {
+  flex: 0 0 auto;
   height: auto;
-  min-height: auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 0;
+}
+
+.page-home-search .home-content {
+  position: relative;
+  z-index: 1;
 }
 
 .page-home-search .hero-first-screen {
@@ -666,6 +700,24 @@ video.player {
   max-width: 100%;
   margin: 0;
   padding: 0 var(--content-padding) 3rem;
+}
+
+/* 整张卡片可点击 */
+.card-anchor {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-anchor:hover .card-body h2,
+.card-anchor:hover .card-body h3 {
+  color: var(--color-accent);
+}
+
+.card-anchor:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 /* Full-screen search page (legacy redirect target) */

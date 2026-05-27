@@ -24,12 +24,21 @@ const navEn = [
   ["About", "about/", "about"],
 ];
 
+/** 从页面回到站点根（含 assets/、favicon）需向上的层数；depth 2/3 实际都在 lang 下两级目录 */
+function relUpCount(depth) {
+  return depth <= 1 ? 1 : 2;
+}
+
+function relPrefix(depth) {
+  return "../".repeat(relUpCount(depth));
+}
+
 function relToAssets(depth) {
-  return "../".repeat(depth) + "assets";
+  return `${relPrefix(depth)}assets`;
 }
 
 function relToRoot(depth) {
-  return "../".repeat(depth);
+  return relPrefix(depth);
 }
 
 function head(lang, depth, meta) {
@@ -82,12 +91,12 @@ function header(lang, depth, active, altPage) {
   const navItems = nav
     .map(([label, href, key]) => {
       const cur = key === active ? ' aria-current="page"' : "";
-      return `<li><a href="${base}${href}"${cur}>${label}</a></li>`;
+      return `<li><a href="${navLink(base, href)}"${cur}>${label}</a></li>`;
     })
     .join("\n          ");
 
   const drawerItems = nav
-    .map(([label, href]) => `<li><a href="${base}${href}">${label}</a></li>`)
+    .map(([label, href]) => `<li><a href="${navLink(base, href)}">${label}</a></li>`)
     .join("\n        ");
 
   return `  <a class="skip-link" href="#main">${skip}</a>
@@ -190,12 +199,12 @@ function headerFixed(lang, depth, active, mirrorPath) {
   const navItems = nav
     .map(([label, href, key]) => {
       const cur = key === active ? ' aria-current="page"' : "";
-      return `<li><a href="${base}${href}"${cur}>${label}</a></li>`;
+      return `<li><a href="${navLink(base, href)}"${cur}>${label}</a></li>`;
     })
     .join("\n          ");
 
   const drawerItems = nav
-    .map(([label, href]) => `<li><a href="${base}${href}">${label}</a></li>`)
+    .map(([label, href]) => `<li><a href="${navLink(base, href)}">${label}</a></li>`)
     .join("\n        ");
 
   return `  <a class="skip-link" href="#main">${skip}</a>
@@ -261,6 +270,16 @@ function cardThumbAttr(w, h) {
   else if (ratio >= 0.85) ar = "1 / 1";
   else ar = "3 / 4";
   return ` style="--thumb-ar: ${ar}"`;
+}
+
+function navLink(base, href) {
+  if (href === "./" || href === "") return base || "./";
+  return `${base}${href}`;
+}
+
+/** 整张卡片可点击（缩略图 + 标题区域） */
+function cardArticle({ thumbStyle, imgSrc, imgW, imgH, imgAlt, href, heading, meta, tag = "h2" }) {
+  return `<article class="card"${thumbStyle}><a class="card-anchor" href="${href}"><img class="card-thumb" src="${imgSrc}" width="${imgW}" height="${imgH}" alt="${imgAlt}" loading="lazy"><div class="card-body"><${tag}>${heading}</${tag}><p class="card-meta">${meta}</p></div></a></article>`;
 }
 
 function homeHeroSearch(isZh) {
@@ -334,22 +353,61 @@ write(
     <div class="home-content" id="content">
     <h2 class="section-title">最新内容</h2>
     <div class="masonry-grid">
-      <article class="card"${cardThumbAttr(640, 360)}>
-        <img class="card-thumb" src="../assets/img/placeholder.svg" width="640" height="360" alt="欢迎来到 aoglang 文章封面" loading="lazy">
-        <div class="card-body"><h3><a href="articles/welcome-aoglang.html">欢迎来到 aoglang</a></h3><p class="card-meta"><span class="tag">文章</span>2026-05-27</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(800, 600)}>
-        <img class="card-thumb" src="../assets/img/gallery/spring-1.svg" width="800" height="600" alt="春日图集封面" loading="lazy">
-        <div class="card-body"><h3><a href="gallery/spring-scenes.html">春日图集</a></h3><p class="card-meta"><span class="tag">图集</span>6 张</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(1280, 720)}>
-        <img class="card-thumb" src="../assets/img/video-poster.svg" width="1280" height="720" alt="认识 aoglang 视频封面" loading="lazy">
-        <div class="card-body"><h3><a href="videos/intro-aoglang.html">认识 aoglang</a></h3><p class="card-meta"><span class="tag">视频</span>HTML5</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(640, 360)}>
-        <img class="card-thumb" src="../assets/img/placeholder.svg" width="640" height="360" alt="静态网站搭建指南" loading="lazy">
-        <div class="card-body"><h3><a href="articles/static-site-guide.html">静态网站搭建指南</a></h3><p class="card-meta"><span class="tag">文章</span>2026-05-26</p></div>
-      </article>
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(1920, 1080),
+        imgSrc: "../assets/img/gallery/wqd/wqd-01.png",
+        imgW: 1920,
+        imgH: 1080,
+        imgAlt: "无穷符号 3D 视觉图集",
+        href: "gallery/infinity-3d.html",
+        heading: "无穷符号 3D 视觉",
+        meta: '<span class="tag">图集</span>10 张',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(640, 360),
+        imgSrc: "../assets/img/placeholder.svg",
+        imgW: 640,
+        imgH: 360,
+        imgAlt: "欢迎来到 aoglang 文章封面",
+        href: "articles/welcome-aoglang.html",
+        heading: "欢迎来到 aoglang",
+        meta: '<span class="tag">文章</span>2026-05-27',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(800, 600),
+        imgSrc: "../assets/img/gallery/spring-1.svg",
+        imgW: 800,
+        imgH: 600,
+        imgAlt: "春日图集封面",
+        href: "gallery/spring-scenes.html",
+        heading: "春日图集",
+        meta: '<span class="tag">图集</span>6 张',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(1280, 720),
+        imgSrc: "../assets/img/video-poster.svg",
+        imgW: 1280,
+        imgH: 720,
+        imgAlt: "认识 aoglang 视频封面",
+        href: "videos/intro-aoglang.html",
+        heading: "认识 aoglang",
+        meta: '<span class="tag">视频</span>HTML5',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(640, 360),
+        imgSrc: "../assets/img/placeholder.svg",
+        imgW: 640,
+        imgH: 360,
+        imgAlt: "静态网站搭建指南",
+        href: "articles/static-site-guide.html",
+        heading: "静态网站搭建指南",
+        meta: '<span class="tag">文章</span>2026-05-26',
+        tag: "h3",
+      })}
     </div>
     </div>`,
     {
@@ -377,22 +435,61 @@ write(
     <div class="home-content" id="content">
     <h2 class="section-title">Latest</h2>
     <div class="masonry-grid">
-      <article class="card"${cardThumbAttr(640, 360)}>
-        <img class="card-thumb" src="../assets/img/placeholder.svg" width="640" height="360" alt="Welcome to aoglang article cover" loading="lazy">
-        <div class="card-body"><h3><a href="articles/welcome-aoglang.html">Welcome to aoglang</a></h3><p class="card-meta"><span class="tag">Article</span>2026-05-27</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(800, 600)}>
-        <img class="card-thumb" src="../assets/img/gallery/spring-1.svg" width="800" height="600" alt="Spring scenes gallery cover" loading="lazy">
-        <div class="card-body"><h3><a href="gallery/spring-scenes.html">Spring scenes</a></h3><p class="card-meta"><span class="tag">Gallery</span>6 photos</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(1280, 720)}>
-        <img class="card-thumb" src="../assets/img/video-poster.svg" width="1280" height="720" alt="Intro to aoglang video cover" loading="lazy">
-        <div class="card-body"><h3><a href="videos/intro-aoglang.html">Intro to aoglang</a></h3><p class="card-meta"><span class="tag">Video</span>HTML5</p></div>
-      </article>
-      <article class="card"${cardThumbAttr(640, 360)}>
-        <img class="card-thumb" src="../assets/img/placeholder.svg" width="640" height="360" alt="Static site guide" loading="lazy">
-        <div class="card-body"><h3><a href="articles/static-site-guide.html">Static site guide</a></h3><p class="card-meta"><span class="tag">Article</span>2026-05-26</p></div>
-      </article>
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(1920, 1080),
+        imgSrc: "../assets/img/gallery/wqd/wqd-01.png",
+        imgW: 1920,
+        imgH: 1080,
+        imgAlt: "Infinity 3D visual gallery",
+        href: "gallery/infinity-3d.html",
+        heading: "Infinity 3D visuals",
+        meta: '<span class="tag">Gallery</span>10 images',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(640, 360),
+        imgSrc: "../assets/img/placeholder.svg",
+        imgW: 640,
+        imgH: 360,
+        imgAlt: "Welcome to aoglang article cover",
+        href: "articles/welcome-aoglang.html",
+        heading: "Welcome to aoglang",
+        meta: '<span class="tag">Article</span>2026-05-27',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(800, 600),
+        imgSrc: "../assets/img/gallery/spring-1.svg",
+        imgW: 800,
+        imgH: 600,
+        imgAlt: "Spring scenes gallery cover",
+        href: "gallery/spring-scenes.html",
+        heading: "Spring scenes",
+        meta: '<span class="tag">Gallery</span>6 photos',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(1280, 720),
+        imgSrc: "../assets/img/video-poster.svg",
+        imgW: 1280,
+        imgH: 720,
+        imgAlt: "Intro to aoglang video cover",
+        href: "videos/intro-aoglang.html",
+        heading: "Intro to aoglang",
+        meta: '<span class="tag">Video</span>HTML5',
+        tag: "h3",
+      })}
+      ${cardArticle({
+        thumbStyle: cardThumbAttr(640, 360),
+        imgSrc: "../assets/img/placeholder.svg",
+        imgW: 640,
+        imgH: 360,
+        imgAlt: "Static site guide",
+        href: "articles/static-site-guide.html",
+        heading: "Static site guide",
+        meta: '<span class="tag">Article</span>2026-05-26',
+        tag: "h3",
+      })}
     </div>
     </div>`,
     {
@@ -506,31 +603,219 @@ write("en/articles/static-site-guide.html", page("en", 3, "articles", "articles/
   type: "article",
 }, guideEn));
 
-// Gallery
-const galleryGrid = (depth) => {
-  const p = depth === 2 ? "../../" : "../../../";
-  return [1, 2, 3, 4, 5, 6]
-    .map(
-      (n) => `<figure><img src="${p}assets/img/gallery/spring-${n}.svg" width="800" height="600" alt="${n}" loading="lazy"><figcaption>Photo ${n}</figcaption></figure>`
-    )
-    .join("\n      ");
-};
+// Gallery — WQD 无穷符号 3D 图集（upload/picture）
+const WQD_GALLERY = [
+  {
+    file: "wqd-01.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "铜色金属无穷环",
+      desc: "暖米色背景上的抛光铜色三维无穷符号，柔光勾勒金属质感，寓意连续与永恒。",
+      keywords: ["无穷符号", "3D", "金属", "铜色", "抽象", "aoglang"],
+    },
+    en: {
+      title: "Copper metallic infinity",
+      desc: "A polished copper 3D infinity loop on a warm beige backdrop with soft studio lighting.",
+      keywords: ["infinity", "3D", "metallic", "copper", "abstract", "aoglang"],
+    },
+  },
+  {
+    file: "wqd-02.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "橙金螺旋缎带",
+      desc: "多层光泽缎带扭转成螺旋形态，橙金渐变与高光强调流动感与现代感。",
+      keywords: ["螺旋", "缎带", "橙色", "3D渲染", "抽象", "动态"],
+    },
+    en: {
+      title: "Orange-gold spiral ribbons",
+      desc: "Glossy layered ribbons twist into a dynamic spiral with warm orange and gold highlights.",
+      keywords: ["spiral", "ribbon", "orange", "3D render", "abstract", "dynamic"],
+    },
+  },
+  {
+    file: "wqd-03.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "橙色波浪层叠",
+      desc: "平行光泽带层叠扭转，形成波浪式无穷动线，深影与高对比塑造立体层次。",
+      keywords: ["波浪", "层叠", "橙色", "光泽", "流体", "3D"],
+    },
+    en: {
+      title: "Layered orange waves",
+      desc: "Parallel glossy bands layer and twist into a fluid wave-like infinity motion.",
+      keywords: ["wave", "layers", "orange", "glossy", "fluid", "3D"],
+    },
+  },
+  {
+    file: "wqd-04.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "渐变背景螺旋",
+      desc: "粗壮橙色缎带螺旋盘绕，背景由暖黄过渡到浅蓝，冷暖对比突出主体。",
+      keywords: ["螺旋", "渐变背景", "橙色", "极简", "构图", "3D艺术"],
+    },
+    en: {
+      title: "Spiral on gradient sky",
+      desc: "Bold orange helical ribbons against a soft yellow-to-blue gradient background.",
+      keywords: ["spiral", "gradient", "orange", "minimal", "composition", "3D art"],
+    },
+  },
+  {
+    file: "wqd-05.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "双色光影无穷环",
+      desc: "黑色背景上的镀铬无穷符号，左侧暖金、右侧冷蓝双色照明，科技感强烈。",
+      keywords: ["无穷符号", "镀铬", "双色光", "黑色背景", "科技", "未来感"],
+    },
+    en: {
+      title: "Dual-lit chrome infinity",
+      desc: "Chrome infinity on black with warm gold left and cool blue right lighting.",
+      keywords: ["infinity", "chrome", "dual lighting", "black background", "tech", "futuristic"],
+    },
+  },
+  {
+    file: "wqd-06.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "青绿渐变扭曲环",
+      desc: "多层薄带扭转成莫比乌斯式无穷结构，青绿到青蓝渐变，金属光泽细腻。",
+      keywords: ["青绿", "渐变", "莫比乌斯", "无穷", "金属", "抽象雕塑"],
+    },
+    en: {
+      title: "Teal gradient twist",
+      desc: "Layered ribbons form a Möbius-like infinity with lime-to-cyan metallic gradients.",
+      keywords: ["teal", "gradient", "Möbius", "infinity", "metallic", "sculpture"],
+    },
+  },
+  {
+    file: "wqd-07.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "哑光橙无穷符号",
+      desc: "简洁哑光橙色三维无穷环，置于浅色平面，轻阴影呈现干净极简风格。",
+      keywords: ["哑光", "橙色", "极简", "无穷符号", "图标", "现代"],
+    },
+    en: {
+      title: "Matte orange infinity",
+      desc: "Clean matte orange 3D infinity icon on a light surface with soft shadow.",
+      keywords: ["matte", "orange", "minimal", "infinity", "icon", "modern"],
+    },
+  },
+  {
+    file: "wqd-08.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "单色橙铜无穷",
+      desc: "同色系橙铜金属无穷符号，背景与主体色调统一，强调形态与材质细节。",
+      keywords: ["单色", "橙铜", "金属", "无穷", "极简", "品牌视觉"],
+    },
+    en: {
+      title: "Monochrome copper-orange",
+      desc: "Monochromatic metallic infinity in copper-orange tones on a matching backdrop.",
+      keywords: ["monochrome", "copper", "metallic", "infinity", "minimal", "branding"],
+    },
+  },
+  {
+    file: "wqd-09.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "层叠橙带无穷",
+      desc: "多层薄带堆叠扭转成无穷结，全橙色调中通过明暗展现立体结构。",
+      keywords: ["层叠", "薄带", "橙色", "无穷符号", "3D", "光泽"],
+    },
+    en: {
+      title: "Layered orange infinity",
+      desc: "Stacked thin ribbons twist into an infinity knot with depth via orange highlights.",
+      keywords: ["layered", "ribbons", "orange", "infinity", "3D", "glossy"],
+    },
+  },
+  {
+    file: "wqd-10.png",
+    w: 1920,
+    h: 1080,
+    zh: {
+      title: "虹彩玻璃方块无穷",
+      desc: "半透明方块螺旋砌成无穷环，虹彩折射如水晶玻璃，轻盈且富有未来感。",
+      keywords: ["虹彩", "玻璃", "半透明", "无穷", "方块", "未来"],
+    },
+    en: {
+      title: "Iridescent glass blocks",
+      desc: "Translucent blocks spiral into an infinity loop with rainbow iridescent refractions.",
+      keywords: ["iridescent", "glass", "translucent", "infinity", "blocks", "futuristic"],
+    },
+  },
+];
+
+const INFINITY_SLUG = "infinity-3d";
+
+function wqdFiguresHtml(lang, assetPrefix) {
+  const isZh = lang === "zh";
+  return WQD_GALLERY.map((item) => {
+    const loc = isZh ? item.zh : item.en;
+    const tags = loc.keywords.map((k) => `<span class="tag">${k}</span>`).join("");
+    const ar = cardThumbAttr(item.w, item.h).replace(' style="', "").replace('"', "");
+    return `<figure${cardThumbAttr(item.w, item.h)}>
+        <img src="${assetPrefix}assets/img/gallery/wqd/${item.file}" width="${item.w}" height="${item.h}" alt="${loc.title}" loading="lazy" decoding="async">
+        <figcaption>
+          <strong>${loc.title}</strong>
+          <p>${loc.desc}</p>
+          <p class="gallery-keywords">${tags}</p>
+        </figcaption>
+      </figure>`;
+  }).join("\n      ");
+}
+
+function galleryIndexCards(isZh) {
+  const spring = cardArticle({
+    thumbStyle: cardThumbAttr(800, 600),
+    imgSrc: "../../assets/img/gallery/spring-1.svg",
+    imgW: 800,
+    imgH: 600,
+    imgAlt: isZh ? "春日图集" : "Spring scenes",
+    href: "spring-scenes.html",
+    heading: isZh ? "春日图集" : "Spring scenes",
+    meta: isZh ? '<span class="tag">示例</span>6 张' : '<span class="tag">Demo</span>6 photos',
+  });
+  const infinity = cardArticle({
+    thumbStyle: cardThumbAttr(1920, 1080),
+    imgSrc: "../../assets/img/gallery/wqd/wqd-01.png",
+    imgW: 1920,
+    imgH: 1080,
+    imgAlt: isZh ? "无穷符号 3D 视觉图集" : "Infinity 3D visual gallery",
+    href: `${INFINITY_SLUG}.html`,
+    heading: isZh ? "无穷符号 3D 视觉" : "Infinity 3D visuals",
+    meta: isZh
+      ? '<span class="tag">图集</span>10 张 · 关键词'
+      : '<span class="tag">Gallery</span>10 images · keywords',
+  });
+  return `${infinity}\n      ${spring}`;
+}
 
 for (const lang of ["zh", "en"]) {
   const isZh = lang === "zh";
   write(`${lang}/gallery/index.html`, page(lang, 2, "gallery", "gallery/", {
     title: isZh ? "图集 — aoglang" : "Gallery — aoglang",
-    desc: isZh ? "图片与摄影图集。" : "Photo galleries on aoglang.",
+    desc: isZh ? "图片与 3D 视觉图集，含说明与关键词。" : "Photo and 3D visual galleries with captions and keywords.",
     canonical: `${SITE}/${lang}/gallery/`,
-  }, isZh
-    ? `    <h1>图集</h1><div class="masonry-grid"><article class="card"><img class="card-thumb" src="../../assets/img/gallery/spring-1.svg" alt="春日图集" loading="lazy"><div class="card-body"><h2><a href="spring-scenes.html">春日图集</a></h2><p class="card-meta">6 张 · 2026-05</p></div></article></div>`
-    : `    <h1>Gallery</h1><div class="masonry-grid"><article class="card"><img class="card-thumb" src="../../assets/img/gallery/spring-1.svg" alt="Spring scenes" loading="lazy"><div class="card-body"><h2><a href="spring-scenes.html">Spring scenes</a></h2><p class="card-meta">6 photos · 2026-05</p></div></article></div>`));
+  }, `    <h1>${isZh ? "图集" : "Gallery"}</h1>
+    <div class="masonry-grid">${galleryIndexCards(isZh)}</div>`));
 
   const cap = (n) => (isZh ? `春日景象 ${n}` : `Spring scene ${n}`);
   const figs = [1, 2, 3, 4, 5, 6]
     .map(
       (n) =>
-        `<figure><img src="../../../assets/img/gallery/spring-${n}.svg" width="800" height="600" alt="${cap(n)}" loading="lazy"><figcaption>${cap(n)}</figcaption></figure>`
+        `<figure><img src="${relPrefix(3)}assets/img/gallery/spring-${n}.svg" width="800" height="600" alt="${cap(n)}" loading="lazy"><figcaption>${cap(n)}</figcaption></figure>`
     )
     .join("\n      ");
 
@@ -547,6 +832,41 @@ for (const lang of ["zh", "en"]) {
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Gallery</a></li><li aria-current="page">Spring scenes</li></ol>
     <header class="article-header"><h1>Spring scenes</h1><p class="card-meta"><a href="../../zh/gallery/spring-scenes.html" hreflang="zh">中文版</a></p></header>
     <div class="gallery-grid prose-wide">${figs}</div>`
+    )
+  );
+
+  const wqdFigs = wqdFiguresHtml(lang, relPrefix(3));
+  const metaZh = {
+    title: "无穷符号 3D 视觉图集 — aoglang",
+    desc: "十张无穷符号主题 3D 视觉作品，附中文说明与搜索关键词。",
+    intro: "来自 upload 图库的三维无穷符号与缎带抽象视觉，每张配有说明与关键词，便于检索与分享。",
+    h1: "无穷符号 3D 视觉",
+  };
+  const metaEn = {
+    title: "Infinity 3D visual gallery — aoglang",
+    desc: "Ten infinity-themed 3D visuals with captions and searchable keywords.",
+    intro: "Abstract infinity loops and ribbons with bilingual captions and tags for search and sharing.",
+    h1: "Infinity 3D visuals",
+  };
+  const m = isZh ? metaZh : metaEn;
+  const otherLang = isZh ? "en" : "zh";
+  const otherLabel = isZh ? "English" : "中文版";
+
+  write(
+    `${lang}/gallery/${INFINITY_SLUG}.html`,
+    page(lang, 3, "gallery", `gallery/${INFINITY_SLUG}.html`, {
+      title: m.title,
+      desc: m.desc,
+      canonical: `${SITE}/${lang}/gallery/${INFINITY_SLUG}.html`,
+      type: "article",
+      extra: `<script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageGallery","name":"${m.h1}","description":"${m.desc}","inLanguage":"${isZh ? "zh-Hans" : "en"}"}</script>`,
+    }, `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "图集" : "Gallery"}</a></li><li aria-current="page">${m.h1}</li></ol>
+    <header class="article-header">
+      <h1>${m.h1}</h1>
+      <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="../../${otherLang}/gallery/${INFINITY_SLUG}.html" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="gallery-intro">${m.intro}</p>
+    </header>
+    <div class="gallery-grid prose-wide">${wqdFigs}</div>`
     )
   );
 }
@@ -573,7 +893,7 @@ for (const lang of ["zh", "en"]) {
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">视频</a></li><li aria-current="page">认识 aoglang</li></ol>
     <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="../../en/videos/intro-aoglang.html" hreflang="en">English</a></p></header>
     <article class="prose">
-      <video class="player" controls width="100%" poster="../../../assets/img/video-poster.svg">
+      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
         您的浏览器不支持视频播放。
@@ -585,7 +905,7 @@ for (const lang of ["zh", "en"]) {
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Videos</a></li><li aria-current="page">Intro</li></ol>
     <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="../../zh/videos/intro-aoglang.html" hreflang="zh">中文版</a></p></header>
     <article class="prose">
-      <video class="player" controls width="100%" poster="../../../assets/img/video-poster.svg">
+      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
         Your browser does not support video.
@@ -761,6 +1081,7 @@ const urls = [
   "/zh/articles/static-site-guide.html", "/en/articles/static-site-guide.html",
   "/zh/gallery/", "/en/gallery/",
   "/zh/gallery/spring-scenes.html", "/en/gallery/spring-scenes.html",
+  "/zh/gallery/infinity-3d.html", "/en/gallery/infinity-3d.html",
   "/zh/videos/", "/en/videos/",
   "/zh/videos/intro-aoglang.html", "/en/videos/intro-aoglang.html",
   "/zh/contact/", "/en/contact/",
