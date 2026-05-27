@@ -41,6 +41,16 @@ function relToRoot(depth) {
   return relPrefix(depth);
 }
 
+/** 从当前页回到所在语言目录 zh/ 或 en/（depth 2、3 均为 ../） */
+function langBase(depth) {
+  return depth <= 1 ? "" : "../";
+}
+
+/** 切换到另一语言的 mirror 页面（与 depth 无关） */
+function crossLangHref(toLang, mirrorPath) {
+  return `../${toLang}/${mirrorPath || ""}`;
+}
+
 function head(lang, depth, meta) {
   const { title, desc, canonical, hreflang, extra = "" } = meta;
   const type = meta.type || "website";
@@ -133,7 +143,7 @@ function header(lang, depth, active, altPage) {
 }
 
 function footer(lang, depth) {
-  let base = depth === 1 ? "" : depth === 2 ? "../" : "../../";
+  const base = langBase(depth);
   if (lang === "zh") {
     return `  <footer class="site-footer">
     <div class="footer-inner">
@@ -188,13 +198,12 @@ function write(file, content) {
 // Fix lang switch links in header - need proper cross-lang URLs
 function headerFixed(lang, depth, active, mirrorPath) {
   const assets = relToAssets(depth);
-  const base = depth === 1 ? "" : depth === 2 ? "../" : "../../";
-  const rootBase = relToRoot(depth);
+  const base = langBase(depth);
   const nav = lang === "zh" ? navZh : navEn;
   const skip = lang === "zh" ? "跳到主要内容" : "Skip to main content";
   const menuLabel = lang === "zh" ? "打开菜单" : "Open menu";
-  const zhHref = rootBase + "zh/" + (mirrorPath || "");
-  const enHref = rootBase + "en/" + (mirrorPath || "");
+  const zhHref = crossLangHref("zh", mirrorPath);
+  const enHref = crossLangHref("en", mirrorPath);
 
   const navItems = nav
     .map(([label, href, key]) => {
@@ -525,7 +534,7 @@ for (const lang of ["zh", "en"]) {
 
 // Article: welcome
 const welcomeZh = `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">文章</a></li><li aria-current="page">欢迎来到 aoglang</li></ol>
-    <header class="article-header"><h1>欢迎来到 aoglang</h1><p class="card-meta">2026-05-27 · <a href="../../en/articles/welcome-aoglang.html" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>欢迎来到 aoglang</h1><p class="card-meta">2026-05-27 · <a href="${crossLangHref("en", "articles/welcome-aoglang.html")}" hreflang="en">English</a></p></header>
     <article class="prose">
       <p>本站是<strong>纯 HTML 静态站</strong>：无数据库、无 PHP，适合个人或小团队内容分享。每种语言使用独立页面，利于 SEO。</p>
       <h2>你能在这里找到什么</h2>
@@ -534,7 +543,7 @@ const welcomeZh = `    <ol class="breadcrumb"><li><a href="../">首页</a></li><
       <p>阅读<a href="static-site-guide.html">静态网站搭建指南</a>，或浏览<a href="../gallery/spring-scenes.html">春日图集</a>示例。</p>
     </article>`;
 const welcomeEn = `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Articles</a></li><li aria-current="page">Welcome to aoglang</li></ol>
-    <header class="article-header"><h1>Welcome to aoglang</h1><p class="card-meta">2026-05-27 · <a href="../../zh/articles/welcome-aoglang.html" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Welcome to aoglang</h1><p class="card-meta">2026-05-27 · <a href="${crossLangHref("zh", "articles/welcome-aoglang.html")}" hreflang="zh">中文版</a></p></header>
     <article class="prose">
       <p>This is a <strong>pure HTML static site</strong>—no database, no PHP. Each language has its own URLs for better SEO.</p>
       <h2>What you'll find</h2>
@@ -560,7 +569,7 @@ write("en/articles/welcome-aoglang.html", page("en", 3, "articles", "articles/we
 }, welcomeEn));
 
 const guideZh = `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">文章</a></li><li aria-current="page">静态网站搭建指南</li></ol>
-    <header class="article-header"><h1>静态网站搭建指南</h1><p class="card-meta">2026-05-26 · <a href="../../en/articles/static-site-guide.html" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>静态网站搭建指南</h1><p class="card-meta">2026-05-26 · <a href="${crossLangHref("en", "articles/static-site-guide.html")}" hreflang="en">English</a></p></header>
     <article class="prose">
       <h2>目录结构</h2>
       <pre><code>zh/  en/  assets/  sitemap.xml  robots.txt</code></pre>
@@ -576,7 +585,7 @@ const guideZh = `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li
       <p>使用 WebP/AVIF、<code>loading="lazy"</code>、有意义的 <code>alt</code>。视频大文件建议外链 CDN。</p>
     </article>`;
 const guideEn = `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Articles</a></li><li aria-current="page">Static site guide</li></ol>
-    <header class="article-header"><h1>Static site guide</h1><p class="card-meta">2026-05-26 · <a href="../../zh/articles/static-site-guide.html" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Static site guide</h1><p class="card-meta">2026-05-26 · <a href="${crossLangHref("zh", "articles/static-site-guide.html")}" hreflang="zh">中文版</a></p></header>
     <article class="prose">
       <h2>Folder layout</h2>
       <pre><code>zh/  en/  assets/  sitemap.xml  robots.txt</code></pre>
@@ -827,10 +836,10 @@ for (const lang of ["zh", "en"]) {
       canonical: `${SITE}/${lang}/gallery/spring-scenes.html`,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">图集</a></li><li aria-current="page">春日图集</li></ol>
-    <header class="article-header"><h1>春日图集</h1><p class="card-meta"><a href="../../en/gallery/spring-scenes.html" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>春日图集</h1><p class="card-meta"><a href="${crossLangHref("en", "gallery/spring-scenes.html")}" hreflang="en">English</a></p></header>
     <div class="gallery-grid prose-wide">${figs}</div>`
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Gallery</a></li><li aria-current="page">Spring scenes</li></ol>
-    <header class="article-header"><h1>Spring scenes</h1><p class="card-meta"><a href="../../zh/gallery/spring-scenes.html" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Spring scenes</h1><p class="card-meta"><a href="${crossLangHref("zh", "gallery/spring-scenes.html")}" hreflang="zh">中文版</a></p></header>
     <div class="gallery-grid prose-wide">${figs}</div>`
     )
   );
@@ -863,7 +872,7 @@ for (const lang of ["zh", "en"]) {
     }, `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "图集" : "Gallery"}</a></li><li aria-current="page">${m.h1}</li></ol>
     <header class="article-header">
       <h1>${m.h1}</h1>
-      <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="../../${otherLang}/gallery/${INFINITY_SLUG}.html" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="${crossLangHref(otherLang, `gallery/${INFINITY_SLUG}.html`)}" hreflang="${otherLang}">${otherLabel}</a></p>
       <p class="gallery-intro">${m.intro}</p>
     </header>
     <div class="gallery-grid prose-wide">${wqdFigs}</div>`
@@ -891,7 +900,7 @@ for (const lang of ["zh", "en"]) {
       extra: `<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"${isZh ? "认识 aoglang" : "Intro to aoglang"}","uploadDate":"2026-05-27"}</script>`,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">视频</a></li><li aria-current="page">认识 aoglang</li></ol>
-    <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="../../en/videos/intro-aoglang.html" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="${crossLangHref("en", "videos/intro-aoglang.html")}" hreflang="en">English</a></p></header>
     <article class="prose">
       <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
@@ -903,7 +912,7 @@ for (const lang of ["zh", "en"]) {
       <div class="video-wrap"><iframe title="嵌入视频示例" src="https://www.youtube-nocookie.com/embed/EngW7bV5ING" loading="lazy" allowfullscreen></iframe></div>
     </article>`
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Videos</a></li><li aria-current="page">Intro</li></ol>
-    <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="../../zh/videos/intro-aoglang.html" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="${crossLangHref("zh", "videos/intro-aoglang.html")}" hreflang="zh">中文版</a></p></header>
     <article class="prose">
       <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
