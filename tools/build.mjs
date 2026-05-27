@@ -1113,4 +1113,50 @@ ${urls.map((u) => {
 </urlset>`;
 write("sitemap.xml", sm);
 
+/** 根目录短路径 → 按浏览器语言跳到 zh/ 或 en/ 对应栏目 */
+function rootSectionRedirectHtml(section, opts = {}) {
+  const { hash = "", labelZh = "正在跳转…", labelEn = "Redirecting…" } = opts;
+  const path = section ? `${section}/` : "";
+  const hashPart = hash ? hash.replace(/^#/, "") : "";
+  const targetSuffix = hashPart ? `#${hashPart}` : "";
+  const title = section ? `${section} — aoglang` : "aoglang";
+  return `<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title}</title>
+  <meta http-equiv="refresh" content="0;url=../zh/${path}${targetSuffix}">
+  <link rel="canonical" href="${SITE}/zh/${path}">
+  <script>
+(function () {
+  var lang = /^zh/i.test(navigator.language || "") ? "zh" : "en";
+  var q = location.search || "";
+  location.replace("../" + lang + "/${path}" + q + "${targetSuffix}");
+})();
+  </script>
+</head>
+<body>
+  <p>${labelZh} <a href="../zh/${path}${targetSuffix}">中文</a> · <a href="../en/${path}${targetSuffix}">English</a></p>
+</body>
+</html>`;
+}
+
+const rootRedirects = [
+  "articles",
+  "gallery",
+  "videos",
+  "contact",
+  "about",
+  "privacy",
+  "terms",
+];
+for (const section of rootRedirects) {
+  write(`${section}/index.html`, rootSectionRedirectHtml(section));
+}
+write(
+  "search/index.html",
+  rootSectionRedirectHtml("", { hash: "#search", labelZh: "前往首页搜索", labelEn: "Go to home search" })
+);
+
 console.log("Done.");
