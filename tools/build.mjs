@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -289,7 +290,7 @@ function navLink(base, href) {
 
 /** 整张卡片可点击（缩略图 + 标题区域） */
 function cardArticle({ thumbStyle, imgSrc, imgW, imgH, imgAlt, href, heading, meta, tag = "h2" }) {
-  return `<article class="card"${thumbStyle}><a class="card-anchor" href="${href}"><img class="card-thumb" src="${imgSrc}" width="${imgW}" height="${imgH}" alt="${imgAlt}" loading="lazy"><div class="card-body"><${tag}>${heading}</${tag}><p class="card-meta">${meta}</p></div></a></article>`;
+  return `<article class="card"${thumbStyle}><a class="card-anchor" href="${href}"><img class="card-thumb" src="${imgSrc}" width="${imgW}" height="${imgH}" alt="${imgAlt}" loading="lazy" decoding="async"><div class="card-body"><${tag}>${heading}</${tag}><p class="card-meta">${meta}</p></div></a></article>`;
 }
 
 function homeHeroSearch(isZh) {
@@ -553,7 +554,7 @@ write(
     <div class="masonry-grid">
       ${cardArticle({
         thumbStyle: cardThumbAttr(1920, 1080),
-        imgSrc: "../assets/img/gallery/pictures/tokyo-waterside-highway.png",
+        imgSrc: "../assets/img/gallery/pictures/tokyo-waterside-highway-thumb.webp",
         imgW: 1920,
         imgH: 1080,
         imgAlt: "东京滨水高速航拍",
@@ -625,7 +626,7 @@ write(
     <div class="masonry-grid">
       ${cardArticle({
         thumbStyle: cardThumbAttr(1920, 1080),
-        imgSrc: "../assets/img/gallery/pictures/tokyo-waterside-highway.png",
+        imgSrc: "../assets/img/gallery/pictures/tokyo-waterside-highway-thumb.webp",
         imgW: 1920,
         imgH: 1080,
         imgAlt: "Tokyo waterside highway aerial",
@@ -1491,25 +1492,94 @@ function buildPicturesCatalog() {
 
 const PICTURES = buildPicturesCatalog();
 
-function pictureAssetPath(p, prefix = "../../") {
-  return `${prefix}assets/img/gallery/${p.subdir}/${p.file}`;
+const IMAGE_MAIN_MAX = 1400;
+const IMAGE_THUMB_MAX = 480;
+const WEBP_QUALITY_MAIN = 82;
+const WEBP_QUALITY_THUMB = 78;
+
+function pictureBasename(p) {
+  return path.basename(p.file, path.extname(p.file));
 }
 
-function syncUploadPictures() {
+function pictureWebpFile(p, variant = "main") {
+  const base = pictureBasename(p);
+  return variant === "thumb" ? `${base}-thumb.webp` : `${base}.webp`;
+}
+
+function pictureAssetPath(p, prefix = "../../", variant = "main") {
+  return `${prefix}assets/img/gallery/${p.subdir}/${pictureWebpFile(p, variant)}`;
+}
+
+/** 从 upload 生成 WebP 主图（≤1400px）与缩略图（≤480px），替换原 PNG/JPG */
+async function optimizeGalleryImage(srcPath, destDir, basename) {
+  const mainPath = path.join(destDir, `${basename}.webp`);
+  const thumbPath = path.join(destDir, `${basename}-thumb.webp`);
+  const input = sharp(srcPath);
+  const meta = await input.metadata();
+  const srcW = meta.width || IMAGE_MAIN_MAX;
+  const mainW = Math.min(srcW, IMAGE_MAIN_MAX);
+  await input
+    .clone()
+    .resize(mainW, null, { withoutEnlargement: true, fit: "inside" })
+    .webp({ quality: WEBP_QUALITY_MAIN, effort: 4 })
+    .toFile(mainPath);
+  const thumbW = Math.min(srcW, IMAGE_THUMB_MAX);
+  await sharp(srcPath)
+    .resize(thumbW, null, { withoutEnlargement: true, fit: "inside" })
+    .webp({ quality: WEBP_QUALITY_THUMB, effort: 4 })
+    .toFile(thumbPath);
+  const mainMeta = await sharp(mainPath).metadata();
+  for (const ext of [".png", ".jpg", ".jpeg"]) {
+    const legacy = path.join(destDir, `${basename}${ext}`);
+    if (fs.existsSync(legacy)) {
+      try {
+        fs.unlinkSync(legacy);
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+  return { w: mainMeta.width || mainW, h: mainMeta.height || Math.round(mainW * 0.5625) };
+}
+
+async function syncUploadPictures() {
   const srcDir = path.join(root, "upload", "picture");
   for (const p of PICTURES) {
     const src = path.join(srcDir, p.uploadFile);
     const destDir = path.join(root, "assets", "img", "gallery", p.subdir);
-    const dest = path.join(destDir, p.file);
+    const basename = pictureBasename(p);
     fs.mkdirSync(destDir, { recursive: true });
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, dest);
-      console.log("copied picture", p.uploadFile, "→", path.relative(root, dest));
-    } else {
+    if (!fs.existsSync(src)) {
+      const mainPath = path.join(destDir, `${basename}.webp`);
+      if (fs.existsSync(mainPath)) {
+        const mainMeta = await sharp(mainPath).metadata();
+        p.w = mainMeta.width || p.w;
+        p.h = mainMeta.height || p.h;
+        console.log("keep existing", path.relative(root, mainPath));
+        continue;
+      }
       console.warn("missing picture:", src);
+      continue;
     }
+    const dims = await optimizeGalleryImage(src, destDir, basename);
+    p.w = dims.w;
+    p.h = dims.h;
+    const mainRel = path.join("assets", "img", "gallery", p.subdir, pictureWebpFile(p));
+    const mainKb = Math.round(fs.statSync(path.join(root, mainRel)).size / 1024);
+    const thumbKb = Math.round(
+      fs.statSync(path.join(root, "assets", "img", "gallery", p.subdir, pictureWebpFile(p, "thumb"))).size / 1024
+    );
+    console.log(
+      "optimized picture",
+      p.uploadFile,
+      "→",
+      path.relative(root, path.join(root, mainRel)),
+      `(${mainKb}KB + thumb ${thumbKb}KB)`
+    );
   }
 }
+
+await syncUploadPictures();
 
 function wqdFiguresHtml(lang, assetPrefix) {
   const isZh = lang === "zh";
@@ -1517,8 +1587,9 @@ function wqdFiguresHtml(lang, assetPrefix) {
     const loc = isZh ? item.zh : item.en;
     const slug = `wqd-${String(i + 1).padStart(2, "0")}`;
     const tags = loc.keywords.map((k) => `<span class="tag">${k}</span>`).join("");
+    const thumbFile = `wqd-${String(i + 1).padStart(2, "0")}-thumb.webp`;
     return `<figure${cardThumbAttr(item.w, item.h)}>
-        <a href="${slug}.html"><img src="${assetPrefix}assets/img/gallery/wqd/${item.file}" width="${item.w}" height="${item.h}" alt="${loc.title}" loading="lazy" decoding="async"></a>
+        <a href="${slug}.html"><img src="${assetPrefix}assets/img/gallery/wqd/${thumbFile}" width="${item.w}" height="${item.h}" alt="${loc.title}" loading="lazy" decoding="async"></a>
         <figcaption>
           <strong><a href="${slug}.html">${loc.title}</a></strong>
           <p>${loc.desc}</p>
@@ -1538,7 +1609,7 @@ function picturePageBody(lang, p) {
   const otherLang = isZh ? "en" : "zh";
   const otherLabel = isZh ? "English" : "中文版";
   const assetP = relPrefix(3);
-  const imgSrc = pictureAssetPath(p, assetP);
+  const imgSrc = pictureAssetPath(p, assetP, "main");
   const sections = loc.sections
     .map((s) => `      <h2>${s.h}</h2>\n      <p>${s.p}</p>`)
     .join("\n");
@@ -1571,7 +1642,7 @@ function pictureSchemaJson(lang, p) {
     "@type": "ImageObject",
     name: loc.title,
     description: loc.desc,
-    contentUrl: `${SITE}/assets/img/gallery/${p.subdir}/${p.file}`,
+    contentUrl: `${SITE}/assets/img/gallery/${p.subdir}/${pictureWebpFile(p)}`,
     width: p.w,
     height: p.h,
     datePublished: p.date,
@@ -1584,7 +1655,7 @@ function galleryIndexCards(isZh) {
     const loc = isZh ? p.zh : p.en;
     return cardArticle({
       thumbStyle: cardThumbAttr(p.w, p.h),
-      imgSrc: pictureAssetPath(p, "../../"),
+      imgSrc: pictureAssetPath(p, "../../", "thumb"),
       imgW: p.w,
       imgH: p.h,
       imgAlt: loc.title,
@@ -1605,7 +1676,7 @@ function galleryIndexCards(isZh) {
   });
   const infinity = cardArticle({
     thumbStyle: cardThumbAttr(1920, 1080),
-    imgSrc: "../../assets/img/gallery/wqd/wqd-01.png",
+    imgSrc: "../../assets/img/gallery/wqd/wqd-01-thumb.webp",
     imgW: 1920,
     imgH: 1080,
     imgAlt: isZh ? "无穷符号 3D 视觉合辑" : "Infinity 3D collection",
@@ -1615,8 +1686,6 @@ function galleryIndexCards(isZh) {
   });
   return `${pictureCards}\n      ${infinity}\n      ${spring}`;
 }
-
-syncUploadPictures();
 
 for (const lang of ["zh", "en"]) {
   const isZh = lang === "zh";
