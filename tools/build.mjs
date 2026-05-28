@@ -48,9 +48,10 @@ function langBase(depth) {
   return depth <= 1 ? "" : "../";
 }
 
-/** 切换到另一语言的 mirror 页面（与 depth 无关） */
-function crossLangHref(toLang, mirrorPath) {
-  return `../${toLang}/${mirrorPath || ""}`;
+/** 切换到另一语言的 mirror 页面（depth 1: ../en/；depth 2/3: ../../en/…） */
+function crossLangHref(toLang, mirrorPath, depth = 2) {
+  const prefix = depth <= 1 ? "../" : "../../";
+  return `${prefix}${toLang}/${mirrorPath || ""}`;
 }
 
 function head(lang, depth, meta) {
@@ -204,8 +205,8 @@ function headerFixed(lang, depth, active, mirrorPath) {
   const nav = lang === "zh" ? navZh : navEn;
   const skip = lang === "zh" ? "跳到主要内容" : "Skip to main content";
   const menuLabel = lang === "zh" ? "打开菜单" : "Open menu";
-  const zhHref = crossLangHref("zh", mirrorPath);
-  const enHref = crossLangHref("en", mirrorPath);
+  const zhHref = crossLangHref("zh", mirrorPath, depth);
+  const enHref = crossLangHref("en", mirrorPath, depth);
 
   const navItems = nav
     .map(([label, href, key]) => {
@@ -910,7 +911,7 @@ function articlePageBody(lang, a) {
   return `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "文章" : "Articles"}</a></li><li aria-current="page">${loc.title}</li></ol>
     <header class="article-header">
       <h1>${loc.title}</h1>
-      <p class="card-meta">${a.date} · <a href="${crossLangHref(otherLang, `articles/${a.slug}.html`)}" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="card-meta">${a.date} · <a href="${crossLangHref(otherLang, `articles/${a.slug}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
     </header>
     <article class="prose">
 ${intro}${sections}
@@ -1985,7 +1986,7 @@ function picturePageBody(lang, p) {
   return `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "图集" : "Gallery"}</a></li><li aria-current="page">${loc.title}</li></ol>
     <header class="article-header">
       <h1>${loc.title}</h1>
-      <p class="card-meta">${p.w}×${p.h} · ${p.date} · <a href="${crossLangHref(otherLang, `gallery/${p.slug}.html`)}" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="card-meta">${p.w}×${p.h} · ${p.date} · <a href="${crossLangHref(otherLang, `gallery/${p.slug}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
       ${collectionLink}
       <p class="gallery-intro">${loc.desc}</p>
     </header>
@@ -2106,10 +2107,10 @@ for (const lang of ["zh", "en"]) {
       canonical: `${SITE}/${lang}/gallery/spring-scenes.html`,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">图集</a></li><li aria-current="page">春日图集</li></ol>
-    <header class="article-header"><h1>春日图集</h1><p class="card-meta"><a href="${crossLangHref("en", "gallery/spring-scenes.html")}" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>春日图集</h1><p class="card-meta"><a href="${crossLangHref("en", "gallery/spring-scenes.html", 3)}" hreflang="en">English</a></p></header>
     <div class="gallery-grid prose-wide">${figs}</div>`
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Gallery</a></li><li aria-current="page">Spring scenes</li></ol>
-    <header class="article-header"><h1>Spring scenes</h1><p class="card-meta"><a href="${crossLangHref("zh", "gallery/spring-scenes.html")}" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Spring scenes</h1><p class="card-meta"><a href="${crossLangHref("zh", "gallery/spring-scenes.html", 3)}" hreflang="zh">中文版</a></p></header>
     <div class="gallery-grid prose-wide">${figs}</div>`
     )
   );
@@ -2142,7 +2143,7 @@ for (const lang of ["zh", "en"]) {
     }, `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "图集" : "Gallery"}</a></li><li aria-current="page">${m.h1}</li></ol>
     <header class="article-header">
       <h1>${m.h1}</h1>
-      <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="${crossLangHref(otherLang, `gallery/${INFINITY_SLUG}.html`)}" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="${crossLangHref(otherLang, `gallery/${INFINITY_SLUG}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
       <p class="gallery-intro">${m.intro}</p>
     </header>
     <div class="gallery-grid prose-wide">${wqdFigs}</div>`
@@ -2216,7 +2217,7 @@ function videoPageBody(lang, v) {
   return `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "视频" : "Videos"}</a></li><li aria-current="page">${loc.title}</li></ol>
     <header class="article-header">
       <h1>${loc.title}</h1>
-      <p class="card-meta">${dur} · ${resLabel} · ${v.date} · <a href="${crossLangHref(otherLang, `videos/${v.slug}.html`)}" hreflang="${otherLang}">${otherLabel}</a></p>
+      <p class="card-meta">${dur} · ${resLabel} · ${v.date} · <a href="${crossLangHref(otherLang, `videos/${v.slug}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
       <p class="gallery-intro">${loc.desc}</p>
     </header>
     <article class="prose video-article">
@@ -2299,7 +2300,7 @@ for (const lang of ["zh", "en"]) {
       extra: `<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"${isZh ? "认识 aoglang" : "Intro to aoglang"}","uploadDate":"2026-05-27"}</script>`,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">视频</a></li><li aria-current="page">认识 aoglang</li></ol>
-    <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="${crossLangHref("en", "videos/intro-aoglang.html")}" hreflang="en">English</a></p></header>
+    <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="${crossLangHref("en", "videos/intro-aoglang.html", 3)}" hreflang="en">English</a></p></header>
     <article class="prose">
       <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
@@ -2308,7 +2309,7 @@ for (const lang of ["zh", "en"]) {
       <p>MDN 示例视频。本站自托管短片请见<a href="./">视频列表</a>。</p>
     </article>`
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Videos</a></li><li aria-current="page">Intro</li></ol>
-    <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="${crossLangHref("zh", "videos/intro-aoglang.html")}" hreflang="zh">中文版</a></p></header>
+    <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="${crossLangHref("zh", "videos/intro-aoglang.html", 3)}" hreflang="zh">中文版</a></p></header>
     <article class="prose">
       <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
         <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
