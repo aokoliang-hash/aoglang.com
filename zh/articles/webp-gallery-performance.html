@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>图集网站如何用 WebP 与缩略图提升加载速度 — 文章 — aoglang</title>
+  <meta name="description" content="构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。">
+  <link rel="canonical" href="https://aoglang.com/zh/articles/webp-gallery-performance.html">
+  <link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/webp-gallery-performance.html">
+  <link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/webp-gallery-performance.html">
+  <link rel="alternate" hreflang="x-default" href="https://aoglang.com/zh/articles/webp-gallery-performance.html">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../../site.webmanifest">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="aoglang">
+  <meta property="og:title" content="图集网站如何用 WebP 与缩略图提升加载速度">
+  <meta property="og:description" content="构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。">
+  <meta property="og:url" content="https://aoglang.com/zh/articles/webp-gallery-performance.html">
+  <meta property="og:image" content="https://aoglang.com/assets/img/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"图集网站如何用 WebP 与缩略图提升加载速度","description":"构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。","datePublished":"2026-05-31","inLanguage":"zh-Hans"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="header-inner">
+        <a class="logo" href="../">
+          <img src="../../assets/img/logo.svg" width="32" height="32" alt="aoglang">
+          <span>aoglang</span>
+        </a>
+        <nav aria-label="主导航">
+          <ul class="nav-main">
+            <li><a href="../">首页</a></li>
+          <li><a href="../articles/" aria-current="page">文章</a></li>
+          <li><a href="../gallery/">图集</a></li>
+          <li><a href="../videos/">视频</a></li>
+          <li><a href="../contact/">联系</a></li>
+          <li><a href="../about/">关于</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch">
+            <a href="../zh/articles/webp-gallery-performance.html" hreflang="zh" aria-current="true">中文</a>
+            <a href="../en/articles/webp-gallery-performance.html" hreflang="en" >EN</a>
+          </div>
+          <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="打开菜单">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="nav-drawer" class="nav-drawer" hidden aria-label="移动端菜单">
+        <ul>
+          <li><a href="../">首页</a></li>
+        <li><a href="../articles/">文章</a></li>
+        <li><a href="../gallery/">图集</a></li>
+        <li><a href="../videos/">视频</a></li>
+        <li><a href="../contact/">联系</a></li>
+        <li><a href="../about/">关于</a></li>
+          <li><a href="../en/articles/webp-gallery-performance.html">English</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">文章</a></li><li aria-current="page">图集网站如何用 WebP 与缩略图提升加载速度</li></ol>
+    <header class="article-header">
+      <h1>图集网站如何用 WebP 与缩略图提升加载速度</h1>
+      <p class="card-meta">2026-05-31 · <a href="../en/articles/webp-gallery-performance.html" hreflang="en">English</a></p>
+    </header>
+    <article class="prose">
+      <p>图集页往往因大图导致首屏缓慢。aoglang 在构建阶段用 <strong>sharp</strong> 将 upload 原图转为 WebP，并区分列表缩略图与详情主图。</p>
+      <h2>为什么要两套尺寸</h2>
+      <p>瀑布流列表可能同时展示数十张卡片，若每张都加载 4K PNG，移动网络下体验很差。本站规则：<strong>卡片用 *-thumb.webp（宽≤480px）</strong>，<strong>单图页用 *.webp（宽≤1400px）</strong>，原图仅保留在本地 upload 目录。</p>
+      <h2>与 SEO 的关系</h2>
+      <p>更快的 LCP 有利于体验信号；同时每张图仍有独立 URL、<code>title</code>、<code>meta description</code> 与 ImageObject 结构化数据。浏览 <a href="../gallery/">图集索引</a> 时，搜索引擎与用户都能从缩略图进入完整说明页。</p>
+      <h2>发布新图流程</h2>
+      <p>将 PNG/JPG 放入 <code>upload/picture/</code>，运行 <code>npm run build</code>，脚本会复制并优化到 <code>assets/img/gallery/</code>，并再生双语 HTML。更多站点结构见 <a href="static-site-guide.html">静态网站搭建指南</a>。</p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>aoglang</strong>
+        <p>分享文章、图片与视频</p>
+      </div>
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="../articles/">文章</a>
+        <a href="../gallery/">图集</a>
+        <a href="../videos/">视频</a>
+        <a href="../contact/">联系</a>
+      </nav>
+      <div class="footer-legal">
+        <p>© <span data-year>2026</span> aoglang</p>
+        <p><a href="../privacy/">隐私政策</a> · <a href="../terms/">使用条款</a> · <span class="feed-link"><a href="../feed.xml">RSS</a></span> · <a href="../../sitemap.xml">网站地图</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/masonry.js" defer></script>
+
+</body>
+</html>

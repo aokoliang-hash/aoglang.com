@@ -6,15 +6,45 @@
   <description>Latest articles</description>
   <language>en</language>
   <item>
+    <title>Drone city aerials: Tokyo, Fuzhou & offshore wind</title>
+    <link>https://aoglang.com/en/articles/drone-aerial-city-photography.html</link>
+    <description>How to turn aerial gallery shots into SEO-friendly articles with clear topics, alt text, and internal links.</description>
+    <pubDate>Sun, 01 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>WebP thumbnails for faster gallery pages</title>
+    <link>https://aoglang.com/en/articles/webp-gallery-performance.html</link>
+    <description>Build-time 1400px heroes and 480px thumbs—indexes stay light while detail pages stay sharp.</description>
+    <pubDate>Sat, 31 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Infinity 3D visuals: brand abstracts & collection SEO</title>
+    <link>https://aoglang.com/en/articles/infinity-3d-brand-visuals.html</link>
+    <description>Ten infinity-themed 3D renders with both a collection URL and per-image pages for sharing and long-tail search.</description>
+    <pubDate>Fri, 30 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Self-hosted MP4 pages: UX and video SEO</title>
+    <link>https://aoglang.com/en/articles/self-hosted-video-seo.html</link>
+    <description>Posters, bilingual copy, VideoObject schema, and internal links for short clips hosted on a static site.</description>
+    <pubDate>Thu, 29 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Tech & lifestyle visuals as searchable topics</title>
+    <link>https://aoglang.com/en/articles/tech-lifestyle-visual-storytelling.html</link>
+    <description>Connect office, energy, and leisure shots with articles that capture long-tail queries beyond image filenames.</description>
+    <pubDate>Wed, 28 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Welcome to aoglang</title>
     <link>https://aoglang.com/en/articles/welcome-aoglang.html</link>
-    <description>Bilingual static site intro</description>
+    <description>About the aoglang bilingual static site—articles, galleries, videos, and SEO.</description>
     <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Static site guide</title>
     <link>https://aoglang.com/en/articles/static-site-guide.html</link>
-    <description>SEO checklist</description>
+    <description>Folder layout, SEO, RSS, sitemap, and search index checklist for aoglang.</description>
     <pubDate>Mon, 26 May 2026 00:00:00 GMT</pubDate>
   </item>
   <item>

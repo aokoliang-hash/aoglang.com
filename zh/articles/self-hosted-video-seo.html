@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>静态网站搭建指南 — 文章 — aoglang</title>
-  <meta name="description" content="纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。">
-  <link rel="canonical" href="https://aoglang.com/zh/articles/static-site-guide.html">
-  <link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/static-site-guide.html">
-  <link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/static-site-guide.html">
-  <link rel="alternate" hreflang="x-default" href="https://aoglang.com/zh/articles/static-site-guide.html">
+  <title>自托管 MP4 视频页：体验与搜索引擎优化实践 — 文章 — aoglang</title>
+  <meta name="description" content="HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。">
+  <link rel="canonical" href="https://aoglang.com/zh/articles/self-hosted-video-seo.html">
+  <link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/self-hosted-video-seo.html">
+  <link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/self-hosted-video-seo.html">
+  <link rel="alternate" hreflang="x-default" href="https://aoglang.com/zh/articles/self-hosted-video-seo.html">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../../site.webmanifest">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="aoglang">
-  <meta property="og:title" content="静态网站搭建指南">
-  <meta property="og:description" content="纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。">
-  <meta property="og:url" content="https://aoglang.com/zh/articles/static-site-guide.html">
+  <meta property="og:title" content="自托管 MP4 视频页：体验与搜索引擎优化实践">
+  <meta property="og:description" content="HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。">
+  <meta property="og:url" content="https://aoglang.com/zh/articles/self-hosted-video-seo.html">
   <meta property="og:image" content="https://aoglang.com/assets/img/og-default.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../../assets/css/main.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"静态网站搭建指南","description":"纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。","datePublished":"2026-05-26","inLanguage":"zh-Hans"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"自托管 MP4 视频页：体验与搜索引擎优化实践","description":"HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。","datePublished":"2026-05-29","inLanguage":"zh-Hans"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -42,8 +42,8 @@
         </nav>
         <div class="header-actions">
           <div class="lang-switch">
-            <a href="../zh/articles/static-site-guide.html" hreflang="zh" aria-current="true">中文</a>
-            <a href="../en/articles/static-site-guide.html" hreflang="en" >EN</a>
+            <a href="../zh/articles/self-hosted-video-seo.html" hreflang="zh" aria-current="true">中文</a>
+            <a href="../en/articles/self-hosted-video-seo.html" hreflang="en" >EN</a>
           </div>
           <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="打开菜单">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -58,25 +58,25 @@
         <li><a href="../videos/">视频</a></li>
         <li><a href="../contact/">联系</a></li>
         <li><a href="../about/">关于</a></li>
-          <li><a href="../en/articles/static-site-guide.html">English</a></li>
+          <li><a href="../en/articles/self-hosted-video-seo.html">English</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main">
-    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">文章</a></li><li aria-current="page">静态网站搭建指南</li></ol>
+    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">文章</a></li><li aria-current="page">自托管 MP4 视频页：体验与搜索引擎优化实践</li></ol>
     <header class="article-header">
-      <h1>静态网站搭建指南</h1>
-      <p class="card-meta">2026-05-26 · <a href="../en/articles/static-site-guide.html" hreflang="en">English</a></p>
+      <h1>自托管 MP4 视频页：体验与搜索引擎优化实践</h1>
+      <p class="card-meta">2026-05-29 · <a href="../en/articles/self-hosted-video-seo.html" hreflang="en">English</a></p>
     </header>
     <article class="prose">
-      <p>使用生成脚本维护双语页面，可避免手工漏改链接或站点地图。</p>
-      <h2>目录结构</h2>
-      <p><pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> 新文章在 <code>tools/build.mjs</code> 的 <code>ARTICLES</code> 数组中登记后运行 <code>npm run build</code>。</p>
-      <h2>每篇新文章 checklist</h2>
-      <p>填写 slug、日期、双语 title/description、正文 sections；构建会自动写入列表页、首页最新内容（若加入 <code>HOME_LATEST</code>）、RSS、搜索索引与 sitemap。</p>
-      <h2>图片与性能</h2>
-      <p>图集使用 WebP 主图与缩略图，详见 <a href="webp-gallery-performance.html">WebP 优化指南</a>。视频大文件可外链 CDN。</p>
+      <p>视频不必全部依赖外链平台。本站 <a href="../videos/">视频栏目</a> 提供自托管 MP4 示例，每支短片均有独立说明页。</p>
+      <h2>页面必备元素</h2>
+      <p>每支视频应有：<strong>唯一 URL</strong>、清晰的 <code>h1</code> 与 <code>meta description</code>、封面图 <code>poster</code>、时长说明，以及 VideoObject JSON-LD。参考 <a href="../videos/tech-visual-short.html">科技视觉短片</a> 与 <a href="../videos/warm-visual-clip.html">暖色视觉短片</a>。</p>
+      <h2>体积与加载</h2>
+      <p>短视频适合控制在十余秒内，并压缩码率；首屏仍可用 poster 图片避免空白。若文件过大，可外链 CDN 并在文章中说明源地址。</p>
+      <h2>与图集、文章联动</h2>
+      <p>在视频页底部链到相关 <a href="../gallery/ai-high-tech-lights.html">科技光效图集</a> 或本专栏文章，形成主题集群，有利于用户停留与站内权重传递。</p>
     </article>
   </main>
   <footer class="site-footer">
