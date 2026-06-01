@@ -7,6 +7,11 @@ import sharp from "sharp";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const SITE = "https://aoglang.com";
+const ADSENSE_CLIENT = "ca-pub-6958761551797888";
+
+function adsenseScript() {
+  return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
+}
 
 /** 页脚友情链接（外链加 rel="noopener noreferrer"） */
 const FRIEND_LINKS = [
@@ -92,6 +97,7 @@ function head(lang, depth, meta) {
   <meta property="og:image" content="${SITE}/assets/img/og-default.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="${assets}/css/main.css">
+  ${adsenseScript()}
   ${extra}
 </head>`;
 }
@@ -2708,6 +2714,7 @@ write("index.html", `<!DOCTYPE html>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/main.css">
+  ${adsenseScript()}
 </head>
 <body>
   <div class="lang-landing">
