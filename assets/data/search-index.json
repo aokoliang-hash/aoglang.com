@@ -2,6 +2,21 @@
   "items": [
     {
       "lang": "zh",
+      "title": "人物与商务视觉上新：居家、客服、通话与科技背景",
+      "desc": "解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。",
+      "url": "articles/people-business-portrait-gallery.html",
+      "tags": [
+        "文章",
+        "人物",
+        "商务",
+        "客服",
+        "图集",
+        "SEO",
+        "肖像"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "无人机城市航拍指南：东京、福州与海上风电",
       "desc": "从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。",
       "url": "articles/drone-aerial-city-photography.html",
@@ -227,6 +242,21 @@
     },
     {
       "lang": "zh",
+      "title": "二进制蓝光科技背景",
+      "desc": "蓝色光线与二进制代码抽象背景，适合网络安全、数据与高科技发布会视觉。",
+      "url": "gallery/binary-blue-light-rays.html",
+      "tags": [
+        "二进制",
+        "蓝光",
+        "科技",
+        "背景",
+        "数据",
+        "网络",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "抽象水波纹理",
       "desc": "虚化的水波与涟漪抽象背景，柔和色调适合冥想、SPA、自然与背景素材场景。",
       "url": "gallery/abstract-water-ripples.html",
@@ -237,6 +267,21 @@
         "纹理",
         "冥想",
         "自然",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "世界地图蓝光轮廓",
+      "desc": "蓝色光线勾勒的世界地图剪影，适合全球化、物流、通信与科技品牌视觉。",
+      "url": "gallery/world-map-blue-light.html",
+      "tags": [
+        "世界地图",
+        "蓝光",
+        "轮廓",
+        "全球",
+        "科技",
+        "通信",
         "aoglang"
       ]
     },
@@ -253,6 +298,36 @@
         "货船",
         "物流",
         "工业",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "客厅地面坐姿",
+      "desc": "中国女性居家客厅地面坐姿，自然光与轻松氛围，适合生活方式、家居与人物类内容配图。",
+      "url": "gallery/chinese-woman-living-room-01.html",
+      "tags": [
+        "女性",
+        "客厅",
+        "居家",
+        "生活方式",
+        "人物",
+        "肖像",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "客厅地面坐姿 · 2",
+      "desc": "中国女性居家客厅地面坐姿，自然光与轻松氛围，适合生活方式、家居与人物类内容配图。",
+      "url": "gallery/chinese-woman-living-room-02.html",
+      "tags": [
+        "女性",
+        "客厅",
+        "居家",
+        "生活方式",
+        "人物",
+        "肖像",
         "aoglang"
       ]
     },
@@ -318,6 +393,21 @@
     },
     {
       "lang": "zh",
+      "title": "年轻女性电话交谈",
+      "desc": "开心打电话的年轻中国女性，适合电信、社交应用、客服与移动沟通类视觉。",
+      "url": "gallery/young-woman-phone-call.html",
+      "tags": [
+        "女性",
+        "电话",
+        "通话",
+        "微笑",
+        "电信",
+        "移动",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "戴耳机办公",
       "desc": "戴耳机伏案工作的人物场景，传递专注、远程办公与数字生活方式。",
       "url": "gallery/desk-headphones-work.html",
@@ -328,6 +418,21 @@
         "专注",
         "生活方式",
         "人物",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "灵性能量手势",
+      "desc": "双手伸向空灵光晕的创意画面，适合冥想、科技交互与未来感视觉主题。",
+      "url": "gallery/ethereal-hands-touch.html",
+      "tags": [
+        "手势",
+        "灵光",
+        "创意",
+        "冥想",
+        "科技",
+        "抽象",
         "aoglang"
       ]
     },
@@ -348,6 +453,21 @@
     },
     {
       "lang": "zh",
+      "title": "微笑客服形象",
+      "desc": "微笑的中国女性客服工作人员，专业亲和，适合呼叫中心、在线客服与企业服务宣传。",
+      "url": "gallery/customer-service-smile-01.html",
+      "tags": [
+        "客服",
+        "微笑",
+        "女性",
+        "服务",
+        "呼叫中心",
+        "商务",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "美甲手部特写",
       "desc": "女性手部与粉色美甲特写，适合美容、时尚、护肤与生活方式类视觉内容。",
       "url": "gallery/hand-pink-nails-closeup.html",
@@ -363,9 +483,54 @@
     },
     {
       "lang": "zh",
+      "title": "联系我们来电",
+      "desc": "商务风格女性使用手机通话，强调联系我们、客户沟通与移动办公场景。",
+      "url": "gallery/contact-us-mobile-call-01.html",
+      "tags": [
+        "联系我们",
+        "电话",
+        "商务",
+        "女性",
+        "手机",
+        "客服",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "联系我们来电 · 2",
+      "desc": "商务风格女性使用手机通话，强调联系我们、客户沟通与移动办公场景。",
+      "url": "gallery/contact-us-mobile-call-02.html",
+      "tags": [
+        "联系我们",
+        "电话",
+        "商务",
+        "女性",
+        "手机",
+        "客服",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "电脑技术员办公",
       "desc": "技术员在简约办公室操作电脑，强调 IT 支持、企业科技与数字化运维场景。",
       "url": "gallery/computer-technician-office.html",
+      "tags": [
+        "电脑",
+        "技术员",
+        "办公室",
+        "IT",
+        "科技",
+        "运维",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "电脑技术员办公 · 2",
+      "desc": "技术员在简约办公室操作电脑，强调 IT 支持、企业科技与数字化运维场景。",
+      "url": "gallery/computer-technician-office-02.html",
       "tags": [
         "电脑",
         "技术员",
@@ -408,9 +573,69 @@
     },
     {
       "lang": "zh",
+      "title": "中年男士微笑肖像",
+      "desc": "微笑中年男性肖像，手势自然，适合金融、咨询、企业领导与信任感营销视觉。",
+      "url": "gallery/middle-aged-man-portrait-01.html",
+      "tags": [
+        "肖像",
+        "男性",
+        "中年",
+        "微笑",
+        "商务",
+        "信任",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "中年男士微笑肖像 · 2",
+      "desc": "微笑中年男性肖像，手势自然，适合金融、咨询、企业领导与信任感营销视觉。",
+      "url": "gallery/middle-aged-man-portrait-02.html",
+      "tags": [
+        "肖像",
+        "男性",
+        "中年",
+        "微笑",
+        "商务",
+        "信任",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "AI 高科技光效",
       "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
       "url": "gallery/ai-high-tech-lights.html",
+      "tags": [
+        "AI",
+        "人工智能",
+        "高科技",
+        "光效",
+        "未来感",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "AI 高科技光效 · 2",
+      "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
+      "url": "gallery/ai-high-tech-lights-02.html",
+      "tags": [
+        "AI",
+        "人工智能",
+        "高科技",
+        "光效",
+        "未来感",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "AI 高科技光效 · 3",
+      "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
+      "url": "gallery/ai-high-tech-lights-03.html",
       "tags": [
         "AI",
         "人工智能",
@@ -767,6 +992,21 @@
     },
     {
       "lang": "en",
+      "title": "New people & business portraits in the gallery",
+      "desc": "New uploads—living room scenes, phone calls, customer service smiles, tech backgrounds—with dedicated bilingual SEO pages.",
+      "url": "articles/people-business-portrait-gallery.html",
+      "tags": [
+        "article",
+        "people",
+        "business",
+        "customer service",
+        "gallery",
+        "SEO",
+        "portrait"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Drone city aerials: Tokyo, Fuzhou & offshore wind",
       "desc": "How to turn aerial gallery shots into SEO-friendly articles with clear topics, alt text, and internal links.",
       "url": "articles/drone-aerial-city-photography.html",
@@ -989,6 +1229,21 @@
     },
     {
       "lang": "en",
+      "title": "Binary code blue light rays",
+      "desc": "Abstract blue rays with binary code—cybersecurity, data, and tech event backgrounds.",
+      "url": "gallery/binary-blue-light-rays.html",
+      "tags": [
+        "binary",
+        "blue",
+        "light",
+        "tech",
+        "data",
+        "cyber",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Abstract water ripples",
       "desc": "Soft blurred water ripples—abstract background for wellness, nature, and calm visual themes.",
       "url": "gallery/abstract-water-ripples.html",
@@ -1004,6 +1259,20 @@
     },
     {
       "lang": "en",
+      "title": "World map blue light silhouette",
+      "desc": "World map silhouette with blue light rays—global business, logistics, and telecom themes.",
+      "url": "gallery/world-map-blue-light.html",
+      "tags": [
+        "world map",
+        "blue light",
+        "global",
+        "tech",
+        "silhouette",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Haikou shipyard aerial",
       "desc": "Aerial view of Haikou shipyard and cargo vessels—port logistics and coastal industry.",
       "url": "gallery/haikou-shipyard-aerial.html",
@@ -1014,6 +1283,34 @@
         "port",
         "cargo",
         "logistics",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Chinese woman in living room",
+      "desc": "A Chinese woman seated on the living room floor—casual lifestyle and portrait storytelling.",
+      "url": "gallery/chinese-woman-living-room-01.html",
+      "tags": [
+        "woman",
+        "living room",
+        "lifestyle",
+        "portrait",
+        "home",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Chinese woman in living room 2",
+      "desc": "A Chinese woman seated on the living room floor—casual lifestyle and portrait storytelling.",
+      "url": "gallery/chinese-woman-living-room-02.html",
+      "tags": [
+        "woman",
+        "living room",
+        "lifestyle",
+        "portrait",
+        "home",
         "aoglang"
       ]
     },
@@ -1077,6 +1374,21 @@
     },
     {
       "lang": "en",
+      "title": "Young woman talking on the phone",
+      "desc": "A happy young Chinese woman on a phone call—telecom, social apps, and mobile communication.",
+      "url": "gallery/young-woman-phone-call.html",
+      "tags": [
+        "woman",
+        "phone",
+        "call",
+        "smile",
+        "telecom",
+        "mobile",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Working with headphones",
       "desc": "Person at a desk with headphones—focus, remote work, and digital lifestyle storytelling.",
       "url": "gallery/desk-headphones-work.html",
@@ -1091,6 +1403,21 @@
     },
     {
       "lang": "en",
+      "title": "Ethereal hands reaching light",
+      "desc": "Hands reaching toward an ethereal glow—meditation, tech UI concepts, and futuristic mood.",
+      "url": "gallery/ethereal-hands-touch.html",
+      "tags": [
+        "hands",
+        "ethereal",
+        "light",
+        "creative",
+        "meditation",
+        "futuristic",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Senior relaxing outdoors",
       "desc": "A senior person seated outdoors in calm light—wellness, leisure, and gentle lifestyle imagery.",
       "url": "gallery/senior-outdoor-relax.html",
@@ -1100,6 +1427,20 @@
         "relax",
         "wellness",
         "lifestyle",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smiling customer service staff",
+      "desc": "Smiling Chinese customer service professional—call center, support, and corporate service visuals.",
+      "url": "gallery/customer-service-smile-01.html",
+      "tags": [
+        "customer service",
+        "smile",
+        "support",
+        "call center",
+        "business",
         "aoglang"
       ]
     },
@@ -1120,9 +1461,53 @@
     },
     {
       "lang": "en",
+      "title": "Contact us mobile call",
+      "desc": "Business-style woman on a mobile call—contact us, client communication, and remote work.",
+      "url": "gallery/contact-us-mobile-call-01.html",
+      "tags": [
+        "contact us",
+        "mobile",
+        "call",
+        "business",
+        "woman",
+        "support",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Contact us mobile call 2",
+      "desc": "Business-style woman on a mobile call—contact us, client communication, and remote work.",
+      "url": "gallery/contact-us-mobile-call-02.html",
+      "tags": [
+        "contact us",
+        "mobile",
+        "call",
+        "business",
+        "woman",
+        "support",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Computer technician at work",
       "desc": "Technician working at a computer in a clean office—IT support and enterprise tech.",
       "url": "gallery/computer-technician-office.html",
+      "tags": [
+        "technician",
+        "computer",
+        "office",
+        "IT",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Computer technician at work 2",
+      "desc": "Technician working at a computer in a clean office—IT support and enterprise tech.",
+      "url": "gallery/computer-technician-office-02.html",
       "tags": [
         "technician",
         "computer",
@@ -1163,9 +1548,67 @@
     },
     {
       "lang": "en",
+      "title": "Smiling middle-aged man portrait",
+      "desc": "Portrait of a smiling middle-aged man—finance, consulting, leadership, and trust-focused branding.",
+      "url": "gallery/middle-aged-man-portrait-01.html",
+      "tags": [
+        "portrait",
+        "man",
+        "middle-aged",
+        "smile",
+        "business",
+        "trust",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smiling middle-aged man portrait 2",
+      "desc": "Portrait of a smiling middle-aged man—finance, consulting, leadership, and trust-focused branding.",
+      "url": "gallery/middle-aged-man-portrait-02.html",
+      "tags": [
+        "portrait",
+        "man",
+        "middle-aged",
+        "smile",
+        "business",
+        "trust",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "AI high-tech light effects",
       "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
       "url": "gallery/ai-high-tech-lights.html",
+      "tags": [
+        "AI",
+        "high-tech",
+        "lights",
+        "futuristic",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "AI high-tech light effects 2",
+      "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
+      "url": "gallery/ai-high-tech-lights-02.html",
+      "tags": [
+        "AI",
+        "high-tech",
+        "lights",
+        "futuristic",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "AI high-tech light effects 3",
+      "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
+      "url": "gallery/ai-high-tech-lights-03.html",
       "tags": [
         "AI",
         "high-tech",

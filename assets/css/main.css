@@ -434,6 +434,32 @@ main {
   color: var(--color-muted);
 }
 
+.footer-friends {
+  grid-column: 1 / -1;
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.footer-friends p {
+  margin: 0;
+}
+
+.footer-friends-label {
+  margin-right: 0.35rem;
+}
+
+.footer-friends a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.footer-friends a:hover {
+  color: var(--color-accent);
+}
+
 .article-header {
   width: 100%;
   max-width: 100%;

@@ -8,6 +8,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const SITE = "https://aoglang.com";
 
+/** 页脚友情链接（外链加 rel="noopener noreferrer"） */
+const FRIEND_LINKS = [
+  {
+    url: "https://aogl.cn",
+    label: "aogl.cn",
+    titleZh: "Aogl 官网",
+    titleEn: "Aogl official site",
+  },
+];
+
 const navZh = [
   ["首页", "./", "home"],
   ["文章", "articles/", "articles"],
@@ -145,8 +155,22 @@ function header(lang, depth, active, altPage) {
   </header>`;
 }
 
+function footerFriends(lang) {
+  if (!FRIEND_LINKS.length) return "";
+  const label = lang === "zh" ? "友情链接" : "Links";
+  const links = FRIEND_LINKS.map((l) => {
+    const title = lang === "zh" ? l.titleZh : l.titleEn;
+    return `<a href="${l.url}" rel="noopener noreferrer" target="_blank" title="${title}">${l.label}</a>`;
+  }).join(" · ");
+  return `
+      <div class="footer-friends">
+        <p><span class="footer-friends-label">${label}</span> ${links}</p>
+      </div>`;
+}
+
 function footer(lang, depth) {
   const base = langBase(depth);
+  const friends = footerFriends(lang);
   if (lang === "zh") {
     return `  <footer class="site-footer">
     <div class="footer-inner">
@@ -163,7 +187,7 @@ function footer(lang, depth) {
       <div class="footer-legal">
         <p>© <span data-year>2026</span> aoglang</p>
         <p><a href="${base}privacy/">隐私政策</a> · <a href="${base}terms/">使用条款</a> · <span class="feed-link"><a href="${base}feed.xml">RSS</a></span> · <a href="${relToRoot(depth)}sitemap.xml">网站地图</a></p>
-      </div>
+      </div>${friends}
     </div>
   </footer>
   <script src="${relToAssets(depth)}/js/main.js" defer></script>
@@ -184,7 +208,7 @@ function footer(lang, depth) {
       <div class="footer-legal">
         <p>© <span data-year>2026</span> aoglang</p>
         <p><a href="${base}privacy/">Privacy</a> · <a href="${base}terms/">Terms</a> · <span class="feed-link"><a href="${base}feed.xml">RSS</a></span> · <a href="${relToRoot(depth)}sitemap.xml">Sitemap</a></p>
-      </div>
+      </div>${friends}
     </div>
   </footer>
   <script src="${relToAssets(depth)}/js/main.js" defer></script>
@@ -503,6 +527,68 @@ const VIDEOS = [
 
 /** 文章数据：构建时生成 zh/en 页面、列表、首页与搜索索引 */
 const ARTICLES = [
+  {
+    slug: "people-business-portrait-gallery",
+    date: "2026-06-02",
+    rssDate: "Mon, 02 Jun 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/gallery/pictures/customer-service-smile-01-thumb.webp",
+      w: 1920,
+      h: 1080,
+      altZh: "微笑客服女性形象",
+      altEn: "Smiling customer service portrait",
+    },
+    zh: {
+      title: "人物与商务视觉上新：居家、客服、通话与科技背景",
+      desc: "解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。",
+      tags: ["文章", "人物", "商务", "客服", "图集", "SEO", "肖像"],
+      intro:
+        "在原有航拍与工业特写之外，本站图集新增一批<strong>人物肖像与商务场景</strong>视觉，适合客服、电信、企业品牌与科技资讯类内容配图。下文按主题分组，并链到对应单图页面。",
+      sections: [
+        {
+          h: "居家与电话沟通",
+          p: "客厅地面坐姿营造亲切生活感，可参考 <a href=\"../gallery/chinese-woman-living-room-01.html\">客厅坐姿 01</a>、<a href=\"../gallery/chinese-woman-living-room-02.html\">02</a>；电话交谈画面见 <a href=\"../gallery/young-woman-phone-call.html\">年轻女性通话</a>，适合运营商、社交应用与远程沟通主题。",
+        },
+        {
+          h: "客服、联系我们与商务肖像",
+          p: "微笑客服形象见 <a href=\"../gallery/customer-service-smile-01.html\">客服微笑</a>；商务风来电场景：<a href=\"../gallery/contact-us-mobile-call-01.html\">联系我们来电 01</a>、<a href=\"../gallery/contact-us-mobile-call-02.html\">02</a>；成熟男性肖像：<a href=\"../gallery/middle-aged-man-portrait-01.html\">中年男士肖像 01</a>、<a href=\"../gallery/middle-aged-man-portrait-02.html\">02</a>；IT 办公可参考 <a href=\"../gallery/computer-technician-office.html\">电脑技术员办公</a>。",
+        },
+        {
+          h: "科技抽象与手势创意",
+          p: "二进制蓝光背景 <a href=\"../gallery/binary-blue-light-rays.html\">binary blue light rays</a>、世界地图光效 <a href=\"../gallery/world-map-blue-light.html\">world map blue light</a>、灵性能量手势 <a href=\"../gallery/ethereal-hands-touch.html\">ethereal hands touch</a>，以及 AI 光效系列 <a href=\"../gallery/ai-high-tech-lights-02.html\">AI 光效 02</a> 起，可与 <a href=\"../gallery/ai-high-tech-lights.html\">主图</a> 组成科技专题。",
+        },
+        {
+          h: "发布与性能",
+          p: "新图放入 <code>upload/picture/</code> 后执行 <code>npm run build</code> 即可生成 WebP 与双语页面。列表与首页使用缩略图，详见 <a href=\"webp-gallery-performance.html\">WebP 图集优化</a>。",
+        },
+      ],
+    },
+    en: {
+      title: "New people & business portraits in the gallery",
+      desc: "New uploads—living room scenes, phone calls, customer service smiles, tech backgrounds—with dedicated bilingual SEO pages.",
+      tags: ["article", "people", "business", "customer service", "gallery", "SEO", "portrait"],
+      intro:
+        "Beyond aerials and industrial close-ups, the gallery adds <strong>portrait and business-scene</strong> visuals for telecom, support, and corporate storytelling.",
+      sections: [
+        {
+          h: "Home and phone conversations",
+          p: "Casual living-room poses: <a href=\"../gallery/chinese-woman-living-room-01.html\">living room 01</a>, <a href=\"../gallery/chinese-woman-living-room-02.html\">02</a>. Phone calls: <a href=\"../gallery/young-woman-phone-call.html\">young woman on the phone</a>.",
+        },
+        {
+          h: "Support, contact us, and portraits",
+          p: "Smiling support: <a href=\"../gallery/customer-service-smile-01.html\">customer service smile</a>. Business mobile calls: <a href=\"../gallery/contact-us-mobile-call-01.html\">contact us call 01</a>, <a href=\"../gallery/contact-us-mobile-call-02.html\">02</a>. Middle-aged portraits: <a href=\"../gallery/middle-aged-man-portrait-01.html\">portrait 01</a>, <a href=\"../gallery/middle-aged-man-portrait-02.html\">02</a>. IT office: <a href=\"../gallery/computer-technician-office.html\">computer technician</a>.",
+        },
+        {
+          h: "Tech abstracts and gestures",
+          p: "See <a href=\"../gallery/binary-blue-light-rays.html\">binary blue light rays</a>, <a href=\"../gallery/world-map-blue-light.html\">world map blue light</a>, <a href=\"../gallery/ethereal-hands-touch.html\">ethereal hands</a>, and the <a href=\"../gallery/ai-high-tech-lights.html\">AI light</a> series starting with <a href=\"../gallery/ai-high-tech-lights-02.html\">02</a>.",
+        },
+        {
+          h: "Publishing",
+          p: "Drop files into <code>upload/picture/</code>, run <code>npm run build</code>, and browse the <a href=\"../gallery/\">gallery index</a>. Thumbs keep lists fast—see <a href=\"webp-gallery-performance.html\">WebP performance</a>.",
+        },
+      ],
+    },
+  },
   {
     slug: "drone-aerial-city-photography",
     date: "2026-06-01",
@@ -861,14 +947,20 @@ const ARTICLES = [
 
 /** 首页「最新内容」顺序（构建时在 PICTURES 可用后生成） */
 const HOME_LATEST = [
+  { type: "article", slug: "people-business-portrait-gallery" },
+  { type: "gallery", slug: "customer-service-smile-01" },
+  { type: "gallery", slug: "young-woman-phone-call" },
+  { type: "gallery", slug: "chinese-woman-living-room-01" },
+  { type: "gallery", slug: "binary-blue-light-rays" },
+  { type: "gallery", slug: "world-map-blue-light" },
+  { type: "gallery", slug: "contact-us-mobile-call-01" },
+  { type: "gallery", slug: "middle-aged-man-portrait-01" },
+  { type: "gallery", slug: "ethereal-hands-touch" },
   { type: "article", slug: "drone-aerial-city-photography" },
-  { type: "article", slug: "webp-gallery-performance" },
-  { type: "article", slug: "infinity-3d-brand-visuals" },
   { type: "gallery", slug: "tokyo-waterside-highway" },
   { type: "video", slug: "tech-visual-short" },
-  { type: "article", slug: "self-hosted-video-seo" },
-  { type: "article", slug: "tech-lifestyle-visual-storytelling" },
-  { type: "gallery", slug: "haikou-shipyard-aerial" },
+  { type: "gallery", slug: "ai-high-tech-lights-02" },
+  { type: "article", slug: "webp-gallery-performance" },
   { type: "article", slug: "welcome-aoglang" },
   { type: "video", slug: "warm-visual-clip" },
   { type: "video", slug: "hd-motion-visual" },
@@ -1506,6 +1598,12 @@ function titleCaseWords(text) {
 const pictureInferCounters = {
   protectiveSuit: 0,
   waferChip: 0,
+  aiLights: 0,
+  computerTechnician: 0,
+  livingRoomWoman: 0,
+  customerService: 0,
+  contactUsCall: 0,
+  middleAgedPortrait: 0,
 };
 
 /** 根据提示词生成双语 SEO（upload 新图自动入库） */
@@ -1635,16 +1733,142 @@ function inferPictureMeta(prompt, uploadFile) {
         keywords: ["nails", "hand", "beauty", "fashion", "close-up", "lifestyle", "aoglang"],
       }
     );
-  } else if (/computer technician|technology office/i.test(prompt)) {
+  } else if (/sitting on the floor.*livin|chinese woman.*living/i.test(prompt)) {
+    pictureInferCounters.livingRoomWoman += 1;
+    const n = pictureInferCounters.livingRoomWoman;
     finish(
-      "computer-technician-office",
+      `chinese-woman-living-room-${String(n).padStart(2, "0")}`,
       {
-        title: "电脑技术员办公",
+        title: `客厅地面坐姿 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "中国女性居家客厅地面坐姿，自然光与轻松氛围，适合生活方式、家居与人物类内容配图。",
+        keywords: ["女性", "客厅", "居家", "生活方式", "人物", "肖像", "aoglang"],
+      },
+      {
+        title: `Chinese woman in living room ${n > 1 ? n : ""}`.trim(),
+        desc: "A Chinese woman seated on the living room floor—casual lifestyle and portrait storytelling.",
+        keywords: ["woman", "living room", "lifestyle", "portrait", "home", "aoglang"],
+      }
+    );
+  } else if (/happy.*chinese woman.*talking|talking on the phone|beautiful chinese woman.*talking/i.test(
+      prompt
+    )) {
+    finish(
+      "young-woman-phone-call",
+      {
+        title: "年轻女性电话交谈",
+        desc: "开心打电话的年轻中国女性，适合电信、社交应用、客服与移动沟通类视觉。",
+        keywords: ["女性", "电话", "通话", "微笑", "电信", "移动", "aoglang"],
+      },
+      {
+        title: "Young woman talking on the phone",
+        desc: "A happy young Chinese woman on a phone call—telecom, social apps, and mobile communication.",
+        keywords: ["woman", "phone", "call", "smile", "telecom", "mobile", "aoglang"],
+      }
+    );
+  } else if (/hands.*ethereal|ethereal gl|reaching out to touch/i.test(prompt)) {
+    finish(
+      "ethereal-hands-touch",
+      {
+        title: "灵性能量手势",
+        desc: "双手伸向空灵光晕的创意画面，适合冥想、科技交互与未来感视觉主题。",
+        keywords: ["手势", "灵光", "创意", "冥想", "科技", "抽象", "aoglang"],
+      },
+      {
+        title: "Ethereal hands reaching light",
+        desc: "Hands reaching toward an ethereal glow—meditation, tech UI concepts, and futuristic mood.",
+        keywords: ["hands", "ethereal", "light", "creative", "meditation", "futuristic", "aoglang"],
+      }
+    );
+  } else if (/binary.*light ray|blue light rays and binary/i.test(prompt)) {
+    finish(
+      "binary-blue-light-rays",
+      {
+        title: "二进制蓝光科技背景",
+        desc: "蓝色光线与二进制代码抽象背景，适合网络安全、数据与高科技发布会视觉。",
+        keywords: ["二进制", "蓝光", "科技", "背景", "数据", "网络", "aoglang"],
+      },
+      {
+        title: "Binary code blue light rays",
+        desc: "Abstract blue rays with binary code—cybersecurity, data, and tech event backgrounds.",
+        keywords: ["binary", "blue", "light", "tech", "data", "cyber", "aoglang"],
+      }
+    );
+  } else if (/world map.*blue light|silhouette of the world map/i.test(prompt)) {
+    finish(
+      "world-map-blue-light",
+      {
+        title: "世界地图蓝光轮廓",
+        desc: "蓝色光线勾勒的世界地图剪影，适合全球化、物流、通信与科技品牌视觉。",
+        keywords: ["世界地图", "蓝光", "轮廓", "全球", "科技", "通信", "aoglang"],
+      },
+      {
+        title: "World map blue light silhouette",
+        desc: "World map silhouette with blue light rays—global business, logistics, and telecom themes.",
+        keywords: ["world map", "blue light", "global", "tech", "silhouette", "aoglang"],
+      }
+    );
+  } else if (/customer service|customer_service/i.test(prompt)) {
+    pictureInferCounters.customerService += 1;
+    const n = pictureInferCounters.customerService;
+    finish(
+      `customer-service-smile-${String(n).padStart(2, "0")}`,
+      {
+        title: `微笑客服形象 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "微笑的中国女性客服工作人员，专业亲和，适合呼叫中心、在线客服与企业服务宣传。",
+        keywords: ["客服", "微笑", "女性", "服务", "呼叫中心", "商务", "aoglang"],
+      },
+      {
+        title: `Smiling customer service staff ${n > 1 ? n : ""}`.trim(),
+        desc: "Smiling Chinese customer service professional—call center, support, and corporate service visuals.",
+        keywords: ["customer service", "smile", "support", "call center", "business", "aoglang"],
+      }
+    );
+  } else if (/contact us.*call mobile|business style call/i.test(prompt)) {
+    pictureInferCounters.contactUsCall += 1;
+    const n = pictureInferCounters.contactUsCall;
+    finish(
+      `contact-us-mobile-call-${String(n).padStart(2, "0")}`,
+      {
+        title: `联系我们来电 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "商务风格女性使用手机通话，强调联系我们、客户沟通与移动办公场景。",
+        keywords: ["联系我们", "电话", "商务", "女性", "手机", "客服", "aoglang"],
+      },
+      {
+        title: `Contact us mobile call ${n > 1 ? n : ""}`.trim(),
+        desc: "Business-style woman on a mobile call—contact us, client communication, and remote work.",
+        keywords: ["contact us", "mobile", "call", "business", "woman", "support", "aoglang"],
+      }
+    );
+  } else if (/portrait.*middle-aged|smiling middle-aged man/i.test(prompt)) {
+    pictureInferCounters.middleAgedPortrait += 1;
+    const n = pictureInferCounters.middleAgedPortrait;
+    finish(
+      `middle-aged-man-portrait-${String(n).padStart(2, "0")}`,
+      {
+        title: `中年男士微笑肖像 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "微笑中年男性肖像，手势自然，适合金融、咨询、企业领导与信任感营销视觉。",
+        keywords: ["肖像", "男性", "中年", "微笑", "商务", "信任", "aoglang"],
+      },
+      {
+        title: `Smiling middle-aged man portrait ${n > 1 ? n : ""}`.trim(),
+        desc: "Portrait of a smiling middle-aged man—finance, consulting, leadership, and trust-focused branding.",
+        keywords: ["portrait", "man", "middle-aged", "smile", "business", "trust", "aoglang"],
+      }
+    );
+  } else if (/computer technician|technology office/i.test(prompt)) {
+    pictureInferCounters.computerTechnician += 1;
+    const n = pictureInferCounters.computerTechnician;
+    const slugTech =
+      n === 1 ? "computer-technician-office" : `computer-technician-office-${String(n).padStart(2, "0")}`;
+    finish(
+      slugTech,
+      {
+        title: `电脑技术员办公 ${n > 1 ? "· " + n : ""}`.trim(),
         desc: "技术员在简约办公室操作电脑，强调 IT 支持、企业科技与数字化运维场景。",
         keywords: ["电脑", "技术员", "办公室", "IT", "科技", "运维", "aoglang"],
       },
       {
-        title: "Computer technician at work",
+        title: `Computer technician at work ${n > 1 ? n : ""}`.trim(),
         desc: "Technician working at a computer in a clean office—IT support and enterprise tech.",
         keywords: ["technician", "computer", "office", "IT", "technology", "aoglang"],
       }
@@ -1678,15 +1902,18 @@ function inferPictureMeta(prompt, uploadFile) {
       }
     );
   } else if (/\bai\b|artificial int|high-tech light/i.test(p)) {
+    pictureInferCounters.aiLights += 1;
+    const n = pictureInferCounters.aiLights;
+    const slugAi = n === 1 ? "ai-high-tech-lights" : `ai-high-tech-lights-${String(n).padStart(2, "0")}`;
     finish(
-      "ai-high-tech-lights",
+      slugAi,
       {
-        title: "AI 高科技光效",
+        title: `AI 高科技光效 ${n > 1 ? "· " + n : ""}`.trim(),
         desc: "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
         keywords: ["AI", "人工智能", "高科技", "光效", "未来感", "科技", "aoglang"],
       },
       {
-        title: "AI high-tech light effects",
+        title: `AI high-tech light effects ${n > 1 ? n : ""}`.trim(),
         desc: "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
         keywords: ["AI", "high-tech", "lights", "futuristic", "technology", "aoglang"],
       }
@@ -1781,9 +2008,19 @@ function uniquePictureSlug(slug, usedSlugs) {
   return s;
 }
 
+/** 已发布页面的 upload 文件名 → 固定 slug，避免重复入库时顺序变化覆盖主图 */
+const UPLOAD_SLUG_OVERRIDE = {
+  "kolang1399_download_computer_technician_technology_office_simpl_a2d504ec-c5a5-46ff-a443-7dec8c74add6.png":
+    "computer-technician-office",
+  "kolang1399_technology_high-tech_light_effects_AI_artificial_int_2fe091d4-22fd-4463-bd54-f2943cf94670.png":
+    "ai-high-tech-lights",
+};
+
 function pictureEntryFromUpload(uploadFile, usedSlugs) {
   const prompt = promptFromUploadFilename(uploadFile);
-  const { slug: rawSlug, zh, en } = inferPictureMeta(prompt, uploadFile);
+  const inferred = inferPictureMeta(prompt, uploadFile);
+  const rawSlug = UPLOAD_SLUG_OVERRIDE[uploadFile.toLowerCase()] || inferred.slug;
+  const { zh, en } = inferred;
   const slug = uniquePictureSlug(rawSlug, usedSlugs);
   const ext = path.extname(uploadFile).toLowerCase();
   return {
@@ -1793,7 +2030,7 @@ function pictureEntryFromUpload(uploadFile, usedSlugs) {
     subdir: "pictures",
     w: ext === ".jpg" || ext === ".jpeg" ? 1600 : 1920,
     h: ext === ".jpg" || ext === ".jpeg" ? 1067 : 1080,
-    date: "2026-05-27",
+    date: "2026-06-02",
     zh: { ...zh, sections: pictureSections(zh, true) },
     en: { ...en, sections: pictureSections(en, false) },
   };
@@ -1822,6 +2059,12 @@ function discoverUploadPictures(usedSlugs) {
 function buildPicturesCatalog() {
   pictureInferCounters.protectiveSuit = 0;
   pictureInferCounters.waferChip = 0;
+  pictureInferCounters.aiLights = 0;
+  pictureInferCounters.computerTechnician = 0;
+  pictureInferCounters.livingRoomWoman = 0;
+  pictureInferCounters.customerService = 0;
+  pictureInferCounters.contactUsCall = 0;
+  pictureInferCounters.middleAgedPortrait = 0;
 
   const usedSlugs = new Set();
   const aerial = AERIAL_PICTURES.map((p) => {
