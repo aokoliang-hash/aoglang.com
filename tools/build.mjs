@@ -8,6 +8,18 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const SITE = "https://aoglang.com";
 const ADSENSE_CLIENT = "ca-pub-6958761551797888";
+const GA_MEASUREMENT_ID = "G-1J6FDXQL1B";
+
+function gtagScript() {
+  return `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA_MEASUREMENT_ID}');
+</script>`;
+}
 
 function adsenseScript() {
   return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}" crossorigin="anonymous"></script>`;
@@ -97,6 +109,7 @@ function head(lang, depth, meta) {
   <meta property="og:image" content="${SITE}/assets/img/og-default.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="${assets}/css/main.css">
+  ${gtagScript()}
   ${adsenseScript()}
   ${extra}
 </head>`;
@@ -2714,6 +2727,7 @@ write("index.html", `<!DOCTYPE html>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/main.css">
+  ${gtagScript()}
   ${adsenseScript()}
 </head>
 <body>
