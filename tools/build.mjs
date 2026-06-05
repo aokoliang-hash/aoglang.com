@@ -542,10 +542,276 @@ const VIDEOS = [
       ],
     },
   },
+  {
+    slug: "aerial-boat-turquoise-coast",
+    file: "video-04.mp4",
+    uploadFile: "1470038889.mp4",
+    poster: "video-04-poster.jpg",
+    w: 1280,
+    h: 720,
+    durationIso: "PT22S",
+    durationZh: "约 22 秒",
+    durationEn: "~22 sec",
+    date: "2026-06-03",
+    rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
+    zh: {
+      title: "碧蓝海岸航拍小船",
+      desc: "1280×720 俯拍短片：碧色海面、崖影与小船航迹，适合旅行、自然与航拍类内容推荐位。",
+      tags: ["视频", "航拍", "海岸", "小船", "碧蓝海水", "旅行", "自托管"],
+      sections: [
+        {
+          h: "视频简介",
+          p: "本条为 <strong>俯拍海岸小船</strong>短片（约 22 秒，1280×720）。画面一侧为深色崖壁投影，一侧为透亮碧色海面，小船划开白色航迹，适合旅行栏目、目的地宣传与社媒竖裁素材源。",
+        },
+        {
+          h: "观看与引用",
+          p: "支持 HTML5 内联播放。转载或嵌入时请链接本页，并保留 <code>poster</code> 封面以利于搜索摘要展示。",
+        },
+        {
+          h: "技术信息",
+          p: "源文件 <code>1470038889.mp4</code>，构建时同步至 <code>assets/media/video/video-04.mp4</code>。可与 <a href=\"../articles/drone-aerial-city-photography.html\">无人机航拍指南</a> 文章互链。",
+        },
+      ],
+    },
+    en: {
+      title: "Aerial boat on turquoise coast",
+      desc: "1280×720 top-down clip: teal water, cliff shadow, and a small boat trail—ideal for travel and nature video slots.",
+      tags: ["video", "aerial", "coast", "boat", "turquoise water", "travel", "self-hosted"],
+      sections: [
+        {
+          h: "Overview",
+          p: "A <strong>top-down coastal boat</strong> clip (~22 seconds, 1280×720) with dramatic cliff shadow and vivid teal water—great for travel reels and destination pages.",
+        },
+        {
+          h: "Watch & cite",
+          p: "Plays inline with HTML5 controls. Link to this page when embedding; keep the <code>poster</code> for rich search snippets.",
+        },
+        {
+          h: "Technical notes",
+          p: "Synced from <code>1470038889.mp4</code> to <code>assets/media/video/video-04.mp4</code>. Pair with our <a href=\"../articles/drone-aerial-city-photography.html\">drone aerial guide</a>.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "underwater-surfer-wave",
+    file: "video-05.mp4",
+    uploadFile: "yard_middle.mp4",
+    poster: "video-05-poster.jpg",
+    w: 1920,
+    h: 1080,
+    durationIso: "PT5S",
+    durationZh: "约 5 秒",
+    durationEn: "~5 sec",
+    date: "2026-06-03",
+    rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
+    zh: {
+      title: "水下冲浪破浪瞬间",
+      desc: "1920×1080 水下视角短片：冲浪者与浪沫气泡，适合运动、海洋与极限体育视觉。",
+      tags: ["视频", "冲浪", "水下", "海浪", "运动", "海洋", "自托管"],
+      sections: [
+        {
+          h: "视频简介",
+          p: "本条为 <strong>水下冲浪视角</strong>短片（约 5 秒，1920×1080）。镜头从浪底仰拍破浪白沫与冲浪者身影，气泡与碧色海水交织，适合运动品牌、海洋主题与动感片头。",
+        },
+        {
+          h: "适用场景",
+          p: "可用于体育资讯、冲浪教学预告、旅游海岛宣传，或与 <a href=\"../gallery/abstract-water-ripples.html\">水纹抽象图</a> 组成「水」主题内容簇。",
+        },
+        {
+          h: "SEO 说明",
+          p: "本页含 VideoObject 结构化数据、双语标题与封面图，便于视频类搜索结果展示。",
+        },
+      ],
+    },
+    en: {
+      title: "Underwater surfer in the wave",
+      desc: "1920×1080 underwater clip: surfer, foam, and bubbles—built for sports, ocean, and action visuals.",
+      tags: ["video", "surfing", "underwater", "wave", "sports", "ocean", "self-hosted"],
+      sections: [
+        {
+          h: "Overview",
+          p: "An <strong>underwater surfing</strong> shot (~5 seconds, 1920×1080) looking up through foam and teal water—ideal for sports brands and ocean campaigns.",
+        },
+        {
+          h: "Where to use it",
+          p: "Pair with our <a href=\"../gallery/abstract-water-ripples.html\">water ripple abstract</a> for a cohesive “water” content cluster on articles and galleries.",
+        },
+        {
+          h: "SEO",
+          p: "VideoObject schema, bilingual copy, and a poster image help video-rich results and accessibility.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "blue-butterfly-closeup",
+    file: "video-06.mp4",
+    uploadFile: "Title of the document.mp4",
+    poster: "video-06-poster.jpg",
+    w: 1920,
+    h: 1080,
+    durationIso: "PT6S",
+    durationZh: "约 6 秒",
+    durationEn: "~6 sec",
+    date: "2026-06-03",
+    rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
+    zh: {
+      title: "蓝蝶特写·好奇凝视",
+      desc: "1920×1080 电影感特写：蓝黑蝶翼与孩童好奇凝视，适合自然、亲子与慢镜头栏目。",
+      tags: ["视频", "蝴蝶", "自然", "特写", "电影感", "亲子", "自托管"],
+      sections: [
+        {
+          h: "视频简介",
+          p: "本条为 <strong>蓝蝶室内特写</strong>短片（约 6 秒，1920×1080）。浅景深突出蝶翼纹理与人物侧脸，氛围安静柔和，适合自然教育、亲子内容与情绪向品牌短片。",
+        },
+        {
+          h: "观看说明",
+          p: "建议配合耳机在较暗环境下观看以感受画面层次。引用请注明 <strong>aoglang</strong> 并链接本页。",
+        },
+        {
+          h: "技术信息",
+          p: "源文件 <code>Title of the document.mp4</code>，输出为 <code>video-06.mp4</code>，构建时自动生成封面 <code>video-06-poster.jpg</code>。",
+        },
+      ],
+    },
+    en: {
+      title: "Blue butterfly close-up",
+      desc: "1920×1080 cinematic macro: blue-black wings and a curious gaze—ideal for nature and family storytelling.",
+      tags: ["video", "butterfly", "nature", "close-up", "cinematic", "family", "self-hosted"],
+      sections: [
+        {
+          h: "Overview",
+          p: "A <strong>blue butterfly macro</strong> (~6 seconds, 1920×1080) with shallow depth of field—quiet, intimate, and great for nature or family campaigns.",
+        },
+        {
+          h: "How to watch",
+          p: "Best on a larger screen with sound if your cut includes ambience. Credit <strong>aoglang</strong> and link here when republishing.",
+        },
+        {
+          h: "Technical notes",
+          p: "Source <code>Title of the document.mp4</code> → <code>video-06.mp4</code>; poster generated at build time.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "global-network-globe",
+    file: "video-07.mp4",
+    uploadFile: "world-home-flat.mp4",
+    poster: "video-07-poster.jpg",
+    w: 594,
+    h: 594,
+    durationIso: "PT13S",
+    durationZh: "约 13 秒",
+    durationEn: "~13 sec",
+    date: "2026-06-03",
+    rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
+    zh: {
+      title: "全球网络地球动画",
+      desc: "594×594 方形循环动画：紫色线框地球与节点光点，适合科技、互联与数据可视化场景。",
+      tags: ["视频", "地球", "网络", "科技", "数据", "动画", "自托管"],
+      sections: [
+        {
+          h: "视频简介",
+          p: "本条为 <strong>线框地球网络动画</strong>（约 13 秒，594×594 方形）。紫色网格覆盖美洲轮廓，节点光点强调连接感，适合 SaaS、通信与全球化主题头图。",
+        },
+        {
+          h: "搭配建议",
+          p: "可与 <a href=\"../gallery/world-map-blue-light.html\">世界地图蓝光轮廓</a>、<a href=\"../gallery/binary-blue-light-rays.html\">二进制蓝光背景</a> 组成科技视觉专题。",
+        },
+        {
+          h: "发布流程",
+          p: "将 MP4 放入 <code>upload/video/</code> 后运行 <code>npm run build</code> 即可同步媒体、生成封面与双语 SEO 页面。",
+        },
+      ],
+    },
+    en: {
+      title: "Global network globe animation",
+      desc: "594×594 square loop: purple wireframe Earth with node lights—built for tech, connectivity, and data stories.",
+      tags: ["video", "globe", "network", "tech", "data", "animation", "self-hosted"],
+      sections: [
+        {
+          h: "Overview",
+          p: "A <strong>wireframe globe loop</strong> (~13 seconds, 594×594) with purple mesh and glowing nodes—ideal for SaaS heroes and connectivity themes.",
+        },
+        {
+          h: "Pair with galleries",
+          p: "Link to <a href=\"../gallery/world-map-blue-light.html\">world map blue light</a> and <a href=\"../gallery/binary-blue-light-rays.html\">binary blue rays</a> for a tech visual series.",
+        },
+        {
+          h: "Publishing",
+          p: "Drop MP4s into <code>upload/video/</code> and run <code>npm run build</code> to sync files, posters, and bilingual SEO pages.",
+        },
+      ],
+    },
+  },
 ];
 
 /** 文章数据：构建时生成 zh/en 页面、列表、首页与搜索索引 */
 const ARTICLES = [
+  {
+    slug: "new-video-uploads-collection",
+    date: "2026-06-03",
+    rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/video/video-04-poster.jpg",
+      w: 1280,
+      h: 720,
+      altZh: "碧蓝海岸航拍小船封面",
+      altEn: "Aerial boat on turquoise coast poster",
+    },
+    zh: {
+      title: "视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络",
+      desc: "解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。",
+      tags: ["文章", "视频", "航拍", "自然", "科技", "SEO", "自托管"],
+      intro:
+        "aoglang 视频栏目在原有暖色、高清与科技短片之外，新增 <strong>4 支题材各异的 MP4</strong>。下文按场景分组，并链到对应单支视频页面，便于读者浏览与搜索引擎理解内容簇。",
+      sections: [
+        {
+          h: "旅行与自然",
+          p: "俯拍碧色海面与崖影：<a href=\"../videos/aerial-boat-turquoise-coast.html\">碧蓝海岸航拍小船</a>（约 22 秒）；水下冲浪破浪：<a href=\"../videos/underwater-surfer-wave.html\">水下冲浪瞬间</a>（约 5 秒）。可与 <a href=\"drone-aerial-city-photography.html\">无人机航拍指南</a> 互链。",
+        },
+        {
+          h: "情绪特写与科技动画",
+          p: "电影感蓝蝶特写：<a href=\"../videos/blue-butterfly-closeup.html\">蓝蝶特写</a>；紫色线框地球循环：<a href=\"../videos/global-network-globe.html\">全球网络地球</a>，搭配 <a href=\"../gallery/world-map-blue-light.html\">世界地图光效</a> 图集。",
+        },
+        {
+          h: "视频 SEO 要点",
+          p: "每支视频应有独立 URL、<code>h1</code>、<code>meta description</code>、<code>poster</code> 封面与 VideoObject JSON-LD。详见 <a href=\"self-hosted-video-seo.html\">自托管视频 SEO</a>。",
+        },
+        {
+          h: "发布方式",
+          p: "将 MP4 放入 <code>upload/video/</code>，在 <code>tools/build.mjs</code> 的 <code>VIDEOS</code> 登记后执行 <code>npm run build</code>，即可同步至 <code>assets/media/video/</code> 并更新列表、RSS 与 sitemap。",
+        },
+      ],
+    },
+    en: {
+      title: "New videos: coast aerial, surfing, butterfly & globe",
+      desc: "Four new self-hosted MP4s with bilingual pages and VideoObject schema—coast drone, underwater surf, butterfly macro, and network globe.",
+      tags: ["article", "video", "aerial", "nature", "tech", "SEO", "self-hosted"],
+      intro:
+        "Beyond our warm-tone, HD, and tech clips, aoglang adds <strong>four new MP4s</strong> with dedicated SEO pages. Grouped by theme below with internal links.",
+      sections: [
+        {
+          h: "Travel & nature",
+          p: "Top-down teal coast: <a href=\"../videos/aerial-boat-turquoise-coast.html\">aerial boat clip</a> (~22 sec). Underwater surf: <a href=\"../videos/underwater-surfer-wave.html\">surfer in the wave</a>. See also <a href=\"drone-aerial-city-photography.html\">drone aerial guide</a>.",
+        },
+        {
+          h: "Macro & tech motion",
+          p: "Cinematic butterfly: <a href=\"../videos/blue-butterfly-closeup.html\">blue butterfly close-up</a>. Wireframe globe: <a href=\"../videos/global-network-globe.html\">global network globe</a>—pair with <a href=\"../gallery/world-map-blue-light.html\">world map blue light</a>.",
+        },
+        {
+          h: "Video SEO checklist",
+          p: "Unique URL, <code>h1</code>, description, <code>poster</code>, and VideoObject JSON-LD per clip. Read <a href=\"self-hosted-video-seo.html\">self-hosted video SEO</a>.",
+        },
+        {
+          h: "How we publish",
+          p: "Drop files into <code>upload/video/</code>, register in <code>VIDEOS</code>, run <code>npm run build</code> to sync media and update indexes, RSS, and sitemap.",
+        },
+      ],
+    },
+  },
   {
     slug: "people-business-portrait-gallery",
     date: "2026-06-02",
@@ -966,25 +1232,23 @@ const ARTICLES = [
 
 /** 首页「最新内容」顺序（构建时在 PICTURES 可用后生成） */
 const HOME_LATEST = [
+  { type: "article", slug: "new-video-uploads-collection" },
+  { type: "video", slug: "aerial-boat-turquoise-coast" },
+  { type: "video", slug: "underwater-surfer-wave" },
+  { type: "video", slug: "blue-butterfly-closeup" },
+  { type: "video", slug: "global-network-globe" },
   { type: "article", slug: "people-business-portrait-gallery" },
   { type: "gallery", slug: "customer-service-smile-01" },
   { type: "gallery", slug: "young-woman-phone-call" },
-  { type: "gallery", slug: "chinese-woman-living-room-01" },
   { type: "gallery", slug: "binary-blue-light-rays" },
   { type: "gallery", slug: "world-map-blue-light" },
-  { type: "gallery", slug: "contact-us-mobile-call-01" },
-  { type: "gallery", slug: "middle-aged-man-portrait-01" },
-  { type: "gallery", slug: "ethereal-hands-touch" },
   { type: "article", slug: "drone-aerial-city-photography" },
   { type: "gallery", slug: "tokyo-waterside-highway" },
   { type: "video", slug: "tech-visual-short" },
   { type: "gallery", slug: "ai-high-tech-lights-02" },
   { type: "article", slug: "webp-gallery-performance" },
-  { type: "article", slug: "welcome-aoglang" },
   { type: "video", slug: "warm-visual-clip" },
-  { type: "video", slug: "hd-motion-visual" },
   { type: "gallery", slug: "infinity-3d" },
-  { type: "article", slug: "static-site-guide" },
 ];
 
 function articleBySlug(slug) {
@@ -2517,8 +2781,8 @@ function videoSchemaJson(lang, v) {
 for (const lang of ["zh", "en"]) {
   const isZh = lang === "zh";
   const listDesc = isZh
-    ? "自托管 MP4 短片：暖色视觉与高清动感片段，附双语说明与 VideoObject 结构化数据。"
-    : "Self-hosted MP4 clips with bilingual captions, posters, and VideoObject schema for SEO.";
+    ? `${VIDEOS.length} 支自托管 MP4：海岸航拍、水下冲浪、自然特写与科技地球动画，附双语说明与 VideoObject 结构化数据。`
+    : `${VIDEOS.length} self-hosted MP4 clips—coast aerials, underwater surf, nature macros, and tech globe loops with bilingual SEO pages.`;
 
   write(
     `${lang}/videos/index.html`,
@@ -2694,7 +2958,7 @@ ${[...ARTICLES]
   .sort((a, b) => b.date.localeCompare(a.date))
   .map((a) => rssItem(a.zh.title, `${SITE}/zh/articles/${a.slug}.html`, a.zh.desc, a.rssDate))
   .join("\n")}
-${VIDEOS.map((v) => rssItem(v.zh.title, `${SITE}/zh/videos/${v.slug}.html`, v.zh.desc, "Tue, 27 May 2026 00:00:00 GMT")).join("\n")}
+${VIDEOS.map((v) => rssItem(v.zh.title, `${SITE}/zh/videos/${v.slug}.html`, v.zh.desc, v.rssDate || "Tue, 27 May 2026 00:00:00 GMT")).join("\n")}
 </channel>
 </rss>`);
 
@@ -2709,7 +2973,7 @@ ${[...ARTICLES]
   .sort((a, b) => b.date.localeCompare(a.date))
   .map((a) => rssItem(a.en.title, `${SITE}/en/articles/${a.slug}.html`, a.en.desc, a.rssDate))
   .join("\n")}
-${VIDEOS.map((v) => rssItem(v.en.title, `${SITE}/en/videos/${v.slug}.html`, v.en.desc, "Tue, 27 May 2026 00:00:00 GMT")).join("\n")}
+${VIDEOS.map((v) => rssItem(v.en.title, `${SITE}/en/videos/${v.slug}.html`, v.en.desc, v.rssDate || "Tue, 27 May 2026 00:00:00 GMT")).join("\n")}
 </channel>
 </rss>`);
 

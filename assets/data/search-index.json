@@ -2,6 +2,21 @@
   "items": [
     {
       "lang": "zh",
+      "title": "视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络",
+      "desc": "解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。",
+      "url": "articles/new-video-uploads-collection.html",
+      "tags": [
+        "文章",
+        "视频",
+        "航拍",
+        "自然",
+        "科技",
+        "SEO",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "人物与商务视觉上新：居家、客服、通话与科技背景",
       "desc": "解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。",
       "url": "articles/people-business-portrait-gallery.html",
@@ -964,6 +979,66 @@
     },
     {
       "lang": "zh",
+      "title": "碧蓝海岸航拍小船",
+      "desc": "1280×720 俯拍短片：碧色海面、崖影与小船航迹，适合旅行、自然与航拍类内容推荐位。",
+      "url": "videos/aerial-boat-turquoise-coast.html",
+      "tags": [
+        "视频",
+        "航拍",
+        "海岸",
+        "小船",
+        "碧蓝海水",
+        "旅行",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "水下冲浪破浪瞬间",
+      "desc": "1920×1080 水下视角短片：冲浪者与浪沫气泡，适合运动、海洋与极限体育视觉。",
+      "url": "videos/underwater-surfer-wave.html",
+      "tags": [
+        "视频",
+        "冲浪",
+        "水下",
+        "海浪",
+        "运动",
+        "海洋",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "蓝蝶特写·好奇凝视",
+      "desc": "1920×1080 电影感特写：蓝黑蝶翼与孩童好奇凝视，适合自然、亲子与慢镜头栏目。",
+      "url": "videos/blue-butterfly-closeup.html",
+      "tags": [
+        "视频",
+        "蝴蝶",
+        "自然",
+        "特写",
+        "电影感",
+        "亲子",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "全球网络地球动画",
+      "desc": "594×594 方形循环动画：紫色线框地球与节点光点，适合科技、互联与数据可视化场景。",
+      "url": "videos/global-network-globe.html",
+      "tags": [
+        "视频",
+        "地球",
+        "网络",
+        "科技",
+        "数据",
+        "动画",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "认识 aoglang 视频（示例）",
       "desc": "HTML5 视频播放与嵌入说明。",
       "url": "videos/intro-aoglang.html",
@@ -988,6 +1063,21 @@
       "url": "contact/",
       "tags": [
         "联系"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "New videos: coast aerial, surfing, butterfly & globe",
+      "desc": "Four new self-hosted MP4s with bilingual pages and VideoObject schema—coast drone, underwater surf, butterfly macro, and network globe.",
+      "url": "articles/new-video-uploads-collection.html",
+      "tags": [
+        "article",
+        "video",
+        "aerial",
+        "nature",
+        "tech",
+        "SEO",
+        "self-hosted"
       ]
     },
     {
@@ -1926,6 +2016,66 @@
         "short",
         "self-hosted",
         "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Aerial boat on turquoise coast",
+      "desc": "1280×720 top-down clip: teal water, cliff shadow, and a small boat trail—ideal for travel and nature video slots.",
+      "url": "videos/aerial-boat-turquoise-coast.html",
+      "tags": [
+        "video",
+        "aerial",
+        "coast",
+        "boat",
+        "turquoise water",
+        "travel",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Underwater surfer in the wave",
+      "desc": "1920×1080 underwater clip: surfer, foam, and bubbles—built for sports, ocean, and action visuals.",
+      "url": "videos/underwater-surfer-wave.html",
+      "tags": [
+        "video",
+        "surfing",
+        "underwater",
+        "wave",
+        "sports",
+        "ocean",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Blue butterfly close-up",
+      "desc": "1920×1080 cinematic macro: blue-black wings and a curious gaze—ideal for nature and family storytelling.",
+      "url": "videos/blue-butterfly-closeup.html",
+      "tags": [
+        "video",
+        "butterfly",
+        "nature",
+        "close-up",
+        "cinematic",
+        "family",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Global network globe animation",
+      "desc": "594×594 square loop: purple wireframe Earth with node lights—built for tech, connectivity, and data stories.",
+      "url": "videos/global-network-globe.html",
+      "tags": [
+        "video",
+        "globe",
+        "network",
+        "tech",
+        "data",
+        "animation",
+        "self-hosted"
       ]
     },
     {

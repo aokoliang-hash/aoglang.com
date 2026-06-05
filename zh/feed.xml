@@ -6,6 +6,12 @@
   <description>最新文章</description>
   <language>zh-CN</language>
   <item>
+    <title>视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络</title>
+    <link>https://aoglang.com/zh/articles/new-video-uploads-collection.html</link>
+    <description>解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>人物与商务视觉上新：居家、客服、通话与科技背景</title>
     <link>https://aoglang.com/zh/articles/people-business-portrait-gallery.html</link>
     <description>解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。</description>
@@ -70,6 +76,30 @@
     <link>https://aoglang.com/zh/videos/tech-visual-short.html</link>
     <description>1440×960 自托管 MP4，动感科技视觉节奏，适合栏目推荐与社媒短视频位。</description>
     <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>碧蓝海岸航拍小船</title>
+    <link>https://aoglang.com/zh/videos/aerial-boat-turquoise-coast.html</link>
+    <description>1280×720 俯拍短片：碧色海面、崖影与小船航迹，适合旅行、自然与航拍类内容推荐位。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>水下冲浪破浪瞬间</title>
+    <link>https://aoglang.com/zh/videos/underwater-surfer-wave.html</link>
+    <description>1920×1080 水下视角短片：冲浪者与浪沫气泡，适合运动、海洋与极限体育视觉。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>蓝蝶特写·好奇凝视</title>
+    <link>https://aoglang.com/zh/videos/blue-butterfly-closeup.html</link>
+    <description>1920×1080 电影感特写：蓝黑蝶翼与孩童好奇凝视，适合自然、亲子与慢镜头栏目。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>全球网络地球动画</title>
+    <link>https://aoglang.com/zh/videos/global-network-globe.html</link>
+    <description>594×594 方形循环动画：紫色线框地球与节点光点，适合科技、互联与数据可视化场景。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

@@ -28,6 +28,16 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://aoglang.com/zh/articles/new-video-uploads-collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/new-video-uploads-collection.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/new-video-uploads-collection.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/new-video-uploads-collection.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://aoglang.com/zh/articles/people-business-portrait-gallery.html</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/people-business-portrait-gallery.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/people-business-portrait-gallery.html"/>
@@ -695,6 +705,46 @@
   </url>
   <url>
     <loc>https://aoglang.com/en/videos/tech-visual-short.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/aerial-boat-turquoise-coast.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/aerial-boat-turquoise-coast.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/aerial-boat-turquoise-coast.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/aerial-boat-turquoise-coast.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/underwater-surfer-wave.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/underwater-surfer-wave.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/underwater-surfer-wave.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/underwater-surfer-wave.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/blue-butterfly-closeup.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/blue-butterfly-closeup.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/blue-butterfly-closeup.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/blue-butterfly-closeup.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/videos/global-network-globe.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/global-network-globe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/global-network-globe.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/videos/global-network-globe.html</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
