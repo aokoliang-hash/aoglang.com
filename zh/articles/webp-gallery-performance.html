@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"图集网站如何用 WebP 与缩略图提升加载速度","description":"构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。","datePublished":"2026-05-31","inLanguage":"zh-Hans"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"图集网站如何用 WebP 与缩略图提升加载速度","description":"构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。","datePublished":"2026-05-31","inLanguage":"zh-Hans","author":{"@type":"Organization","name":"aoglang 编辑团队","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -79,13 +79,25 @@
       <p class="card-meta">2026-05-31 · <a href="../../en/articles/webp-gallery-performance.html" hreflang="en">English</a></p>
     </header>
     <article class="prose">
-      <p>图集页往往因大图导致首屏缓慢。aoglang 在构建阶段用 <strong>sharp</strong> 将 upload 原图转为 WebP，并区分列表缩略图与详情主图。</p>
+      <p>图集页往往因大图导致首屏缓慢。aoglang 在构建阶段用 <strong>sharp</strong> 将 upload 原图转为 WebP，并区分列表缩略图与详情主图。本文详解参数选择、构建流程与对 Core Web Vitals 的影响。</p>
       <h2>为什么要两套尺寸</h2>
       <p>瀑布流列表可能同时展示数十张卡片，若每张都加载 4K PNG，移动网络下体验很差。本站规则：<strong>卡片用 *-thumb.webp（宽≤480px）</strong>，<strong>单图页用 *.webp（宽≤1400px）</strong>，原图仅保留在本地 upload 目录。</p>
-      <h2>与 SEO 的关系</h2>
-      <p>更快的 LCP 有利于体验信号；同时每张图仍有独立 URL、<code>title</code>、<code>meta description</code> 与 ImageObject 结构化数据。浏览 <a href="../gallery/">图集索引</a> 时，搜索引擎与用户都能从缩略图进入完整说明页。</p>
+      <h2>sharp 构建参数</h2>
+      <p>在 <code>tools/build.mjs</code> 中：<code>IMAGE_MAIN_MAX = 1400</code>、<code>IMAGE_THUMB_MAX = 480</code>，WebP 质量主图 82、缩略图 78。若原图已小于目标宽度则跳过放大，避免无意义插值。运行 <code>npm run build</code> 时仅处理有变化的 upload 文件（已有 WebP 则跳过）。</p>
+      <h2>HTML 中的 width/height</h2>
+      <p>列表卡片与详情页 <code>&lt;img&gt;</code> 都填写 <code>width</code> 与 <code>height</code>，配合 CSS <code>--thumb-ar</code> 比例变量，减少布局偏移（CLS）。这是静态图集站提升体验分的低成本手段。</p>
+      <h2>与 SEO 和 AdSense 的关系</h2>
+      <p>更快的 LCP 有利于体验信号；Google 将页面体验纳入排名因素。AdSense 审核也会看「用户是否愿意停留」——首屏 3 秒内应出现内容而非空白。专题文章 + 轻量缩略图列表，比一次性加载数十张 4K 图更易通过质量评估。详见 <a href="aoglang-site-seo-case-study.html">SEO 复盘</a>。</p>
+      <h2>ImageObject 与图片 SEO</h2>
+      <p>每张旗舰单图仍有 ImageObject JSON-LD；非旗舰单图 noindex 但保留可分享 URL。缩略图不参与 schema 的 contentUrl，主图 URL 指向 1400px WebP。</p>
       <h2>发布新图流程</h2>
-      <p>将 PNG/JPG 放入 <code>upload/picture/</code>，运行 <code>npm run build</code>，脚本会复制并优化到 <code>assets/img/gallery/</code>，并再生双语 HTML。更多站点结构见 <a href="static-site-guide.html">静态网站搭建指南</a>。</p>
+      <p>将 PNG/JPG 放入 <code>upload/picture/</code>，运行 <code>npm run build</code>，脚本复制并优化到 <code>assets/img/gallery/</code>，并再生双语 HTML、sitemap 与搜索索引。更多结构见 <a href="static-site-guide.html">静态网站搭建指南</a>。</p>
+      <h2>故障排查</h2>
+      <p>若缩略图未生成：确认已安装 <code>sharp</code>（<code>npm install</code>）且 Node 在 PATH 中。Windows 下若 npm 报 node 找不到，使用完整路径或把 Node 加入系统环境变量。</p>
+      <footer class="article-byline">
+        <p>作者 <strong>aoglang 编辑团队</strong> · 发布于 2026-05-31 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>转载请注明出处并链接原文。</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">

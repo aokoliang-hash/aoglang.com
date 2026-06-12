@@ -3,7 +3,9 @@
   "private": true,
   "description": "aoglang static HTML site",
   "scripts": {
-    "build": "node tools/build.mjs"
+    "build": "node tools/build.mjs",
+    "sync": "powershell -ExecutionPolicy Bypass -File tools/sync-from-github.ps1",
+    "ping-sitemap": "node tools/ping-sitemap.mjs"
   },
   "dependencies": {
     "sharp": "^0.34.2"

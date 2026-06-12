@@ -6,18 +6,17 @@ param(
     [string]$Proxy = $env:GIT_PROXY,
     [string]$Branch = "main",
     [string]$Repo = "aokoliang-hash/aoglang.com",
-    [string]$Target = (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent)
+    [string]$Target = ""
 )
 
 $ErrorActionPreference = "Stop"
+if (-not $Target) {
+    $Target = Split-Path $PSScriptRoot -Parent
+}
 $zipUrl = "https://codeload.github.com/$Repo/zip/refs/heads/$Branch"
 $zipPath = Join-Path $env:TEMP "aoglang-$Branch.zip"
 $extractRoot = Join-Path $env:TEMP "aoglang-sync-$Branch"
 $srcDir = Join-Path $extractRoot "$($Repo.Split('/')[-1])-$Branch"
-
-if (-not $Target) {
-    $Target = Split-Path $PSScriptRoot -Parent
-}
 
 Write-Host "Target: $Target"
 Write-Host "Downloading $zipUrl ..."

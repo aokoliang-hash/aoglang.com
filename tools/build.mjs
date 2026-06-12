@@ -31,10 +31,16 @@ const INDEXABLE_PICTURE_SLUGS = new Set([
 
 /** 首页「精选专题」文章 slug */
 const HOME_FEATURED = [
+  "aoglang-site-seo-case-study",
   "tokyo-aerial-complete-guide",
   "fuzhou-energy-aerial-series",
   "business-portrait-visual-handbook",
+  "infinity-3d-complete-guide",
+  "video-shorts-collection-guide",
 ];
+
+/** 视频栏目深度解读文章 */
+const VIDEO_FEATURE_SLUG = "video-shorts-collection-guide";
 
 function gtagScript() {
   return `<!-- Google tag (gtag.js) -->
@@ -785,7 +791,7 @@ function pictureTopicArticleSlug(p) {
   const slug = p.slug;
   if (slug.startsWith("tokyo-")) return "tokyo-aerial-complete-guide";
   if (/fuzhou|wind-turbines|haikou-shipyard/.test(slug)) return "fuzhou-energy-aerial-series";
-  if (slug.startsWith("wqd-")) return "infinity-3d-brand-visuals";
+  if (slug.startsWith("wqd-")) return "infinity-3d-complete-guide";
   if (
     /customer-service|living-room|phone-call|contact-us|middle-aged|computer-technician|binary-blue|world-map|ai-high-tech|ethereal-hands|young-woman|hand-|protective-suit|desk-headphones|iphone|laptop-news|newspaper|urban-snapshot|senior-outdoor/.test(
       slug
@@ -793,8 +799,8 @@ function pictureTopicArticleSlug(p) {
   ) {
     return "business-portrait-visual-handbook";
   }
-  if (/wafer|electric-grid|earth-from-space|abstract-water|hikers-mountain/.test(slug)) {
-    return "tech-lifestyle-visual-storytelling";
+  if (/wafer|electric-grid|earth-from-space|abstract-water|hikers-mountain|protective-suit|desk-headphones|newspaper|iphone-screen|laptop-news|urban-snapshot/.test(slug)) {
+    return "tech-industry-visual-handbook";
   }
   return null;
 }
@@ -827,7 +833,7 @@ function aboutPageBody(lang) {
       <p><a href="https://aogl.cn" rel="noopener noreferrer" target="_blank">aogl.cn</a> 为关联品牌站点。aoglang.com 独立运营，内容侧重视觉创作分享与静态站实践，与 aogl.cn 在定位与栏目上有所区分。</p>
       <h2>联系我们</h2>
       <p>内容合作、纠错或授权咨询：<a href="mailto:${SITE_AUTHOR.email}">${SITE_AUTHOR.email}</a>，或通过<a href="../contact/">联系表单</a>留言。</p>
-      <p>推荐从<a href="../articles/tokyo-aerial-complete-guide.html">东京航拍完全指南</a>、<a href="../articles/fuzhou-energy-aerial-series.html">福州与海上风电航拍专题</a>或<a href="../articles/business-portrait-visual-handbook.html">人物商务视觉手册</a>开始阅读。</p>
+      <p>推荐从<a href="../articles/aoglang-site-seo-case-study.html">站点 SEO 复盘</a>、<a href="../articles/tokyo-aerial-complete-guide.html">东京航拍完全指南</a>、<a href="../articles/infinity-3d-complete-guide.html">无穷符号 3D 完全指南</a>、<a href="../articles/video-shorts-collection-guide.html">自托管短片合集解读</a>或<a href="../articles/business-portrait-visual-handbook.html">人物商务视觉手册</a>开始阅读。</p>
     </article>`;
   }
   return `    <h1>About aoglang</h1>
@@ -846,7 +852,7 @@ function aboutPageBody(lang) {
       <p><a href="https://aogl.cn" rel="noopener noreferrer" target="_blank">aogl.cn</a> is a related brand site. aoglang.com runs independently with a focus on visual storytelling and static-site practice.</p>
       <h2>Contact</h2>
       <p>Partnerships, corrections, or licensing: <a href="mailto:${SITE_AUTHOR.email}">${SITE_AUTHOR.email}</a> or the <a href="../contact/">contact form</a>.</p>
-      <p>Start with our <a href="../articles/tokyo-aerial-complete-guide.html">Tokyo aerial guide</a>, <a href="../articles/fuzhou-energy-aerial-series.html">Fuzhou &amp; offshore wind feature</a>, or <a href="../articles/business-portrait-visual-handbook.html">business portrait handbook</a>.</p>
+      <p>Start with our <a href="../articles/aoglang-site-seo-case-study.html">SEO case study</a>, <a href="../articles/tokyo-aerial-complete-guide.html">Tokyo aerial guide</a>, <a href="../articles/infinity-3d-complete-guide.html">Infinity 3D guide</a>, <a href="../articles/video-shorts-collection-guide.html">Video collection feature</a>, or <a href="../articles/business-portrait-visual-handbook.html">Business portrait handbook</a>.</p>
     </article>`;
 }
 
@@ -864,6 +870,400 @@ function homeFeaturedSection(lang) {
 
 /** 文章数据：构建时生成 zh/en 页面、列表、首页与搜索索引 */
 const ARTICLES = [
+  {
+    slug: "aoglang-site-seo-case-study",
+    date: "2026-06-16",
+    rssDate: "Tue, 16 Jun 2026 00:00:00 GMT",
+    thumb: null,
+    zh: {
+      title: "aoglang 站点 SEO 复盘：从薄内容到专题化静态站",
+      desc: "真实复盘 aoglang.com 的 SEO 改造：专题文章、noindex 薄页、sitemap 精简、Search Console 与 AdSense 准备清单。",
+      tags: ["文章", "SEO", "复盘", "静态站", "AdSense", "Search Console", "案例"],
+      intro:
+        "aoglang 是一个<strong>纯 HTML 双语静态站</strong>，曾面临 Google AdSense「低价值内容」拒审。2026 年 6 月我们进行了一轮系统性 SEO 改造：以<strong>深度专题</strong>替代批量薄页、精简 sitemap、强化 E-E-A-T。本文记录改造前后策略、技术实现与<strong>Google Search Console 操作步骤</strong>，供同类站点参考。",
+      sections: [
+        {
+          h: "改造前的问题诊断",
+          p: "拒审原因可归纳为：① 50+ 张结构相同的单图页（每张仅 100 字模板文案）；② 深度文章不足 10 篇且偏短；③ 关于页过于简略，缺乏作者/编辑信息；④ 站点在短时间内大量上新，呈现「程序化 SEO」特征。技术 SEO（sitemap、hreflang、canonical）虽已就绪，但<strong>内容价值</strong>未达标。",
+        },
+        {
+          h: "核心策略：专题优先 + 薄页 noindex",
+          p: "我们在 <code>tools/build.mjs</code> 中引入 <code>INDEXABLE_PICTURE_SLUGS</code>：仅 8 张航拍旗舰单图保留索引，其余单图页输出 <code>&lt;meta name=\"robots\" content=\"noindex, follow\"&gt;</code>，搜索权重集中于 <a href=\"tokyo-aerial-complete-guide.html\">东京航拍完全指南</a>、<a href=\"business-portrait-visual-handbook.html\">人物商务手册</a> 等 15+ 篇专题。sitemap 从 280+ URL 精简至<strong>文章 + 合辑 + 旗舰图</strong>。",
+        },
+        {
+          h: "E-E-A-T 与信任页",
+          p: "扩充<a href=\"../about/\">关于我们</a>（站点定位、内容标准、与 aogl.cn 关系）；更新<a href=\"../privacy/\">隐私政策</a>（Analytics、AdSense Cookie 说明）；文章底部自动添加<strong>作者署名</strong>与 BlogPosting schema。联系表单指向真实邮箱 hello@aoglang.com。",
+        },
+        {
+          h: "技术 SEO 清单（已实现）",
+          p: "双语独立 URL + <code>hreflang</code>；根目录 <code>robots.txt</code> 指向 <code>sitemap.xml</code>；每页 <code>canonical</code>、Open Graph、JSON-LD（WebSite、BlogPosting、ImageObject、VideoObject）；RSS（<code>zh/feed.xml</code>）；站内搜索索引（<code>assets/data/search-index.json</code>）；<code>ads.txt</code> 置于根目录。",
+        },
+        {
+          h: "Google Search Console 配置步骤",
+          p: "① 访问 <a href=\"https://search.google.com/search-console\" rel=\"noopener noreferrer\" target=\"_blank\">Google Search Console</a>，添加资源「网址前缀」<code>https://aoglang.com</code>；② 用 DNS TXT 或 HTML 文件验证所有权；③ 左侧「站点地图」→ 输入 <code>sitemap.xml</code> → 提交；④ 使用「网址检查」测试首页与 2–3 篇专题是否「可编入索引」；⑤ 每周查看「网页编制索引」与「体验」→ Core Web Vitals。",
+        },
+        {
+          h: "部署后通知搜索引擎",
+          p: "每次重大更新并部署后，在项目根目录执行：<code>npm run ping-sitemap</code>（向 Google ping sitemap，见 <code>tools/ping-sitemap.mjs</code>）。Bing 需在其 Webmaster Tools 手动提交。",
+        },
+        {
+          h: "Bing Webmaster 与其他渠道",
+          p: "同步注册 <a href=\"https://www.bing.com/webmasters\" rel=\"noopener noreferrer\" target=\"_blank\">Bing Webmaster Tools</a> 并提交同一 sitemap。可在 GitHub README、RSS 阅读器、摄影社区分享<strong>专题文章链接</strong>（而非单图薄页），获取自然外链。",
+        },
+        {
+          h: "内容持续更新建议",
+          p: "AdSense 复审前建议：深度专题 ≥ 15 篇（已完成）；每周 1 篇 1200 字以上新文；2–3 个月自然搜索展示逐步上升；避免恢复批量单图 SEO 页。内容矩阵：航拍（<a href=\"tokyo-aerial-complete-guide.html\">东京</a>、<a href=\"fuzhou-energy-aerial-series.html\">福州/风电</a>）、3D（<a href=\"infinity-3d-complete-guide.html\">无穷符号</a>）、视频（<a href=\"video-shorts-collection-guide.html\">短片合集</a>）、工业（<a href=\"tech-industry-visual-handbook.html\">科技工业</a>）。",
+        },
+        {
+          h: "AdSense 复审 checklist",
+          p: "□ ads.txt 已授权 □ 关于/联系/隐私完整 □ 深度原创内容充足 □ 薄页已 noindex □ Search Console 无大量抓取错误 □ 改造后持续更新 2–3 个月 □ 勾选「已解决低价值内容」后再申请。",
+        },
+        {
+          h: "相关技术文档",
+          p: "构建流程：<a href=\"static-site-guide.html\">静态网站搭建指南</a>。图片性能：<a href=\"webp-gallery-performance.html\">WebP 优化</a>。视频 SEO：<a href=\"self-hosted-video-seo.html\">自托管 MP4 实践</a>。仓库 README 含完整部署与 GSC 说明。",
+        },
+      ],
+    },
+    en: {
+      title: "aoglang SEO case study: from thin pages to feature-first static HTML",
+      desc: "How aoglang.com pivoted from thin gallery URLs to long-form features, noindex rules, a lean sitemap, and Search Console setup for AdSense readiness.",
+      tags: ["article", "SEO", "case study", "static site", "AdSense", "Search Console"],
+      intro:
+        "aoglang is a bilingual static HTML site that faced AdSense <strong>low-value content</strong> rejection. In June 2026 we rebuilt the content strategy around <strong>long-form features</strong>, noindex thin gallery URLs, and stronger trust pages. This case study documents the before/after and <strong>Google Search Console</strong> steps.",
+      sections: [
+        {
+          h: "What was wrong",
+          p: "50+ identical single-image templates, fewer than ten short articles, a thin About page, and a burst of new URLs that looked like programmatic SEO—despite solid technical SEO basics.",
+        },
+        {
+          h: "Feature-first + noindex",
+          p: "Only eight flagship aerial URLs stay indexable; other gallery pages emit <code>noindex, follow</code>. Weight moves to features like the <a href=\"tokyo-aerial-complete-guide.html\">Tokyo aerial guide</a> and <a href=\"business-portrait-visual-handbook.html\">portrait handbook</a>. Sitemap shrank dramatically.",
+        },
+        {
+          h: "E-E-A-T & trust",
+          p: "Expanded <a href=\"../about/\">About</a>, <a href=\"../privacy/\">Privacy</a> (Analytics/AdSense cookies), author bylines, and Organization schema.",
+        },
+        {
+          h: "Technical SEO already in place",
+          p: "hreflang, canonical, OG tags, JSON-LD, RSS, search JSON, root <code>ads.txt</code>, and <code>robots.txt</code> → <code>sitemap.xml</code>.",
+        },
+        {
+          h: "Google Search Console",
+          p: "Add property <code>https://aoglang.com</code>, verify, submit <code>sitemap.xml</code>, URL-inspect key features weekly, monitor indexing and Core Web Vitals.",
+        },
+        {
+          h: "Ping after deploy",
+          p: "Run <code>npm run ping-sitemap</code> after major deploys (<code>tools/ping-sitemap.mjs</code>). Submit separately in Bing Webmaster Tools.",
+        },
+        {
+          h: "Bing & distribution",
+          p: "Submit the same sitemap to Bing Webmaster Tools; share feature URLs (not thin gallery pages) for natural links.",
+        },
+        {
+          h: "Ongoing content",
+          p: "15+ features done; aim for one 1200+ word post per week and 2–3 months of updates before AdSense re-review.",
+        },
+        {
+          h: "AdSense checklist",
+          p: "Authorized ads.txt, trust pages, substantive content, noindex thin URLs, clean Search Console, sustained updates—then request review.",
+        },
+        {
+          h: "Related docs",
+          p: "<a href=\"static-site-guide.html\">Static site guide</a> · <a href=\"webp-gallery-performance.html\">WebP performance</a> · <a href=\"self-hosted-video-seo.html\">Video SEO</a> · README for deploy/GSC.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "tech-industry-visual-handbook",
+    date: "2026-06-15",
+    rssDate: "Mon, 15 Jun 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/gallery/pictures/wafer-chip-inspection-01-thumb.webp",
+      w: 1920,
+      h: 1080,
+      altZh: "晶圆芯片检测特写",
+      altEn: "Wafer chip inspection close-up",
+    },
+    zh: {
+      title: "科技与工业视觉手册：半导体、能源与办公场景",
+      desc: "晶圆检测、电网光效、地球太空视角与办公资讯场景——如何为 B2B 与科技媒体选对图、写对说明，附 aoglang 作品索引。",
+      tags: ["文章", "科技", "工业", "半导体", "能源", "B2B", "手册"],
+      intro:
+        "科技类内容配图不只是「蓝色背景 + 电路板」。<strong>半导体制造、能源基建、太空视角与办公资讯</strong>各有视觉语言。本手册整合 aoglang 图库中相关作品，帮助编辑、运营与设计者按行业场景快速选型，并避免「一张图到处用」的同质化问题。",
+      sections: [
+        {
+          h: "半导体与先进制造",
+          p: "晶圆与芯片检测题材强调<strong>精度、洁净与微观尺度</strong>。本站 <a href=\"../gallery/wafer-chip-inspection-01.html\">晶圆检测 01</a> 至 <a href=\"../gallery/wafer-chip-inspection-04.html\">04</a> 提供不同角度特写，适合半导体行业报道、设备厂商白皮书与招聘页。文案应点明「制造/检测/洁净室」而非空泛「高科技」。",
+        },
+        {
+          h: "能源与电网视觉",
+          p: "<a href=\"../gallery/electric-grid-energy-lines.html\">电网能量流光</a> 与 <a href=\"../gallery/earth-from-space.html\">地球太空视角</a> 常用于能源政策、电力交易与 ESG 报告。与航拍风电系列（见 <a href=\"fuzhou-energy-aerial-series.html\">福州与海上风电专题</a>）组合，可覆盖「宏观—微观—基建」三层叙事。",
+        },
+        {
+          h: "办公、资讯与数字设备",
+          p: "<a href=\"../gallery/laptop-news-desk.html\">笔记本新闻桌面</a>、<a href=\"../gallery/newspaper-top-view.html\">报纸俯拍</a>、<a href=\"../gallery/iphone-screen-closeup.html\">iPhone 屏幕特写</a> 适合媒体、财经与 SaaS 资讯类内容。注意与<a href=\"business-portrait-visual-handbook.html\">人物商务手册</a>中的客服/通话题材区分：本组偏「信息消费」而非「人际沟通」。",
+        },
+        {
+          h: "防护、户外与生活方式交叉",
+          p: "<a href=\"../gallery/protective-suit-portrait-01.html\">防护服人物</a> 系列面向医疗、工业安全与科普；<a href=\"../gallery/hikers-mountain-summit.html\">登山者山顶</a>、<a href=\"../gallery/senior-outdoor-relax.html\">户外休憩</a> 则适合健康、养老与运动品牌——在 B2B 站点中可作为「人文侧」平衡过于冰冷的科技画面。",
+        },
+        {
+          h: "抽象背景的使用边界",
+          p: "<a href=\"../gallery/abstract-water-ripples.html\">抽象水纹</a> 等低语义图像适合章节过渡与 PPT，但<strong>不宜作为整站主视觉</strong>。科技文章应以本手册中的「有场景」图片为主，抽象背景为辅。",
+        },
+        {
+          h: "alt 与 meta 写作示例",
+          p: "示例 alt：「洁净室环境下晶圆芯片显微镜检测特写，适合半导体制造主题」。避免：「科技、芯片、高清、背景」。meta description 写清<strong>行业 + 场景 + 用途</strong>，50–120 字为宜。",
+        },
+        {
+          h: "与 3D、视频栏目联动",
+          p: "静态工业图可与 <a href=\"infinity-3d-complete-guide.html\">3D 无穷符号视觉</a>、<a href=\"../videos/global-network-globe.html\">全球网络地球动画</a> 组合用于发布会 Keynote。动效负责「吸睛」，静态图负责「信息密度」。",
+        },
+        {
+          h: "作品索引",
+          p: "半导体：<a href=\"../gallery/wafer-chip-inspection-01.html\">01</a>–<a href=\"../gallery/wafer-chip-inspection-04.html\">04</a>。能源：<a href=\"../gallery/electric-grid-energy-lines.html\">电网</a> · <a href=\"../gallery/earth-from-space.html\">地球</a>。办公：<a href=\"../gallery/laptop-news-desk.html\">笔记本桌面</a> · <a href=\"../gallery/desk-headphones-work.html\">耳机办公</a>。",
+        },
+      ],
+    },
+    en: {
+      title: "Tech & industry visual handbook: chips, energy & office scenes",
+      desc: "Wafer inspection, power-grid art, Earth from space, and news-desk scenes—how to pick B2B visuals with an indexed tour of the aoglang gallery.",
+      tags: ["article", "tech", "industry", "semiconductor", "energy", "B2B", "handbook"],
+      intro:
+        "Tech storytelling needs more than blue circuit backgrounds. This handbook maps <strong>semiconductor, energy, space, and desk/news</strong> imagery in our gallery to real B2B use cases.",
+      sections: [
+        {
+          h: "Semiconductor & advanced manufacturing",
+          p: "Wafer and inspection close-ups stress precision and cleanrooms—see <a href=\"../gallery/wafer-chip-inspection-01.html\">wafer inspection 01</a> through <a href=\"../gallery/wafer-chip-inspection-04.html\">04</a> for fab reports and recruiting pages.",
+        },
+        {
+          h: "Energy & grid visuals",
+          p: "<a href=\"../gallery/electric-grid-energy-lines.html\">Electric grid lines</a> and <a href=\"../gallery/earth-from-space.html\">Earth from space</a> pair with aerial wind features in <a href=\"fuzhou-energy-aerial-series.html\">Fuzhou &amp; offshore wind</a> for macro-to-infrastructure narratives.",
+        },
+        {
+          h: "Office, news & devices",
+          p: "<a href=\"../gallery/laptop-news-desk.html\">Laptop news desk</a>, <a href=\"../gallery/newspaper-top-view.html\">newspaper top view</a>, and <a href=\"../gallery/iphone-screen-closeup.html\">iPhone screen close-up</a> suit media and SaaS stories—distinct from people-focused support shots in the <a href=\"business-portrait-visual-handbook.html\">portrait handbook</a>.",
+        },
+        {
+          h: "Safety, outdoor & lifestyle crossovers",
+          p: "<a href=\"../gallery/protective-suit-portrait-01.html\">Protective suit portraits</a>, <a href=\"../gallery/hikers-mountain-summit.html\">hikers on a summit</a>, and <a href=\"../gallery/senior-outdoor-relax.html\">senior relaxing outdoors</a> humanize otherwise cold tech pages.",
+        },
+        {
+          h: "Abstract backgrounds—use sparingly",
+          p: "<a href=\"../gallery/abstract-water-ripples.html\">Abstract water ripples</a> work for transitions, not as the only visual language of a site.",
+        },
+        {
+          h: "Alt & meta examples",
+          p: "Good alt: “Wafer chip inspection under microscope in a cleanroom, for semiconductor manufacturing stories.” Skip keyword lists.",
+        },
+        {
+          h: "Mix with 3D & video",
+          p: "Pair stills with <a href=\"infinity-3d-complete-guide.html\">Infinity 3D art</a> and the <a href=\"../videos/global-network-globe.html\">network globe clip</a> for keynotes.",
+        },
+        {
+          h: "Index",
+          p: "Chips: <a href=\"../gallery/wafer-chip-inspection-01.html\">01</a>–<a href=\"../gallery/wafer-chip-inspection-04.html\">04</a>. Energy: <a href=\"../gallery/electric-grid-energy-lines.html\">grid</a> · <a href=\"../gallery/earth-from-space.html\">Earth</a>.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "video-shorts-collection-guide",
+    date: "2026-06-14",
+    rssDate: "Sun, 14 Jun 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/video/video-04-poster.jpg",
+      w: 1280,
+      h: 720,
+      altZh: "碧蓝海岸航拍小船",
+      altEn: "Aerial boat on turquoise coast",
+    },
+    zh: {
+      title: "自托管短片合集解读：旅行、自然、宏观与科技动画",
+      desc: "逐支解读 aoglang 8 支 MP4 短片：题材分组、时长与码率建议、poster 与 VideoObject SEO，以及每支视频的适用场景。",
+      tags: ["文章", "视频", "自托管", "MP4", "合集", "SEO", "专题"],
+      intro:
+        "短视频平台很方便，但<strong>自托管 MP4</strong> 让你完全掌控加载速度、页面 SEO 与品牌呈现。aoglang 视频栏目现有 <strong>8 支自托管短片</strong>（约 5–22 秒），每支均有独立双语页面。本文是完整导读：按题材分组、说明技术实现，并给出运营与搜索优化建议。",
+      sections: [
+        {
+          h: "栏目概览：为什么做自托管短片页",
+          p: "每支视频对应唯一 URL、<code>h1</code>、封面 poster、时长说明与 VideoObject JSON-LD——详见 <a href=\"self-hosted-video-seo.html\">自托管视频 SEO 实践</a>。相比仅嵌入第三方 iframe，静态页 + MP4 更利于<strong>长尾检索</strong>（如「碧蓝海岸航拍短片」「蓝蝶特写视频」）与站内主题集群。",
+        },
+        {
+          h: "旅行与自然类",
+          p: "<a href=\"../videos/aerial-boat-turquoise-coast.html\">碧蓝海岸航拍小船</a>（约 22 秒）俯拍海面与崖影，适合旅行、地理类内容；<a href=\"../videos/underwater-surfer-wave.html\">水下冲浪瞬间</a>（约 5 秒）强调运动张力。可与 <a href=\"tokyo-aerial-complete-guide.html\">东京航拍指南</a>、<a href=\"../gallery/tokyo-waterside-highway.html\">滨水高速图集</a> 互链，形成「空中—水面—水下」视觉线。",
+        },
+        {
+          h: "情绪特写与微距",
+          p: "<a href=\"../videos/blue-butterfly-closeup.html\">蓝蝶特写</a>（约 6 秒）电影感微距，适合自然、环保与情绪向品牌；<a href=\"../videos/warm-visual-clip.html\">暖色视觉短片</a>（约 14 秒）强调色温与氛围，可用作 mood board 或页面背景循环（需控制自动播放与无障碍）。",
+        },
+        {
+          h: "科技动画与抽象动效",
+          p: "<a href=\"../videos/global-network-globe.html\">全球网络地球</a>（约 13 秒）线框地球循环，搭配 <a href=\"../gallery/world-map-blue-light.html\">世界地图光效</a> 静帧；<a href=\"../videos/tech-visual-short.html\">科技视觉短片</a>、<a href=\"../videos/hd-motion-visual.html\">高清动感视觉</a> 适合 SaaS、通信与发布会预告。",
+        },
+        {
+          h: "压缩、体积与 CDN 建议",
+          p: "5–15 秒短片建议码率控制在<strong>2–5 Mbps</strong>（1080p）或更低分辨率换体积。首屏务必设置 poster，避免白屏。超过 20 MB 的文件考虑 CDN 或降低分辨率；构建脚本将 upload 同步至 <code>assets/media/video/</code>，详见 <a href=\"new-video-uploads-collection.html\">视频上新解读</a>。",
+        },
+        {
+          h: "无障碍与用户体验",
+          p: "使用 <code>controls</code> 与 <code>playsinline</code>；不默认有声自动播放。提供文字说明（本页 sections）满足「看不懂画面也能理解内容」。为听障用户提供摘要段落，为视障用户确保 poster 的 alt 在周围文案中体现。",
+        },
+        {
+          h: "发布新视频的流程",
+          p: "1) 将 MP4 放入 <code>upload/video/</code>；2) 在 <code>VIDEOS</code> 数组登记 slug、poster、双语文案；3) <code>npm run build</code>；4) 更新本篇或 <a href=\"new-video-uploads-collection.html\">上新文章</a>；5) 在相关图集/航拍专题中添加内链。",
+        },
+        {
+          h: "全部视频链接",
+          p: "<a href=\"../videos/aerial-boat-turquoise-coast.html\">海岸航拍</a> · <a href=\"../videos/underwater-surfer-wave.html\">水下冲浪</a> · <a href=\"../videos/blue-butterfly-closeup.html\">蓝蝶</a> · <a href=\"../videos/global-network-globe.html\">地球网络</a> · <a href=\"../videos/warm-visual-clip.html\">暖色</a> · <a href=\"../videos/tech-visual-short.html\">科技</a> · <a href=\"../videos/hd-motion-visual.html\">高清动感</a> · <a href=\"../videos/\">列表页</a>。",
+        },
+      ],
+    },
+    en: {
+      title: "Self-hosted shorts collection: travel, nature, macro & tech motion",
+      desc: "All eight aoglang MP4 clips explained—grouping, compression, posters, VideoObject SEO, and where each clip fits editorially.",
+      tags: ["article", "video", "self-hosted", "MP4", "collection", "SEO", "feature"],
+      intro:
+        "Self-hosted MP4s give you speed, SEO, and branding control. aoglang hosts <strong>eight bilingual clip pages</strong> (~5–22 sec each). This feature groups them by theme with technical and publishing notes.",
+      sections: [
+        {
+          h: "Why dedicated clip pages",
+          p: "Unique URLs, posters, duration text, and VideoObject schema—see <a href=\"self-hosted-video-seo.html\">self-hosted video SEO</a>. Better for long-tail queries than iframe-only embeds.",
+        },
+        {
+          h: "Travel & nature",
+          p: "<a href=\"../videos/aerial-boat-turquoise-coast.html\">Aerial boat on teal coast</a> (~22 sec) and <a href=\"../videos/underwater-surfer-wave.html\">underwater surf</a> (~5 sec). Cross-link <a href=\"tokyo-aerial-complete-guide.html\">Tokyo aerial guide</a> for air-to-water storytelling.",
+        },
+        {
+          h: "Macro & mood",
+          p: "<a href=\"../videos/blue-butterfly-closeup.html\">Blue butterfly macro</a> and <a href=\"../videos/warm-visual-clip.html\">warm visual clip</a> (~14 sec) for nature and brand mood boards.",
+        },
+        {
+          h: "Tech motion",
+          p: "<a href=\"../videos/global-network-globe.html\">Network globe</a> with <a href=\"../gallery/world-map-blue-light.html\">world map still</a>; plus <a href=\"../videos/tech-visual-short.html\">tech visual short</a> and <a href=\"../videos/hd-motion-visual.html\">HD motion visual</a>.",
+        },
+        {
+          h: "Compression & CDN",
+          p: "Target ~2–5 Mbps for 1080p shorts under 15 sec; always ship a poster image. See <a href=\"new-video-uploads-collection.html\">new uploads notes</a> for the build pipeline.",
+        },
+        {
+          h: "Accessibility",
+          p: "Use controls and playsinline; no loud autoplay. Surround players with descriptive prose for users who cannot see the footage.",
+        },
+        {
+          h: "Adding a new clip",
+          p: "Drop MP4 in <code>upload/video/</code>, register in <code>VIDEOS</code>, run <code>npm run build</code>, then update this feature or the uploads article.",
+        },
+        {
+          h: "All clips",
+          p: "<a href=\"../videos/aerial-boat-turquoise-coast.html\">Coast</a> · <a href=\"../videos/underwater-surfer-wave.html\">Surf</a> · <a href=\"../videos/blue-butterfly-closeup.html\">Butterfly</a> · <a href=\"../videos/global-network-globe.html\">Globe</a> · <a href=\"../videos/\">index</a>.",
+        },
+      ],
+    },
+  },
+  {
+    slug: "infinity-3d-complete-guide",
+    date: "2026-06-13",
+    rssDate: "Sat, 13 Jun 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/gallery/wqd/wqd-05-thumb.webp",
+      w: 1920,
+      h: 1080,
+      altZh: "双色光影无穷环 3D 视觉",
+      altEn: "Dual-lit chrome infinity 3D",
+    },
+    zh: {
+      title: "无穷符号 3D 视觉完全指南：十件作品与品牌应用",
+      desc: "逐件解读铜色金属、螺旋缎带、双色镀铬与虹彩玻璃等 10 款 3D 无穷符号作品，含发布会、Keynote 与网站头图应用建议。",
+      tags: ["文章", "3D", "无穷符号", "品牌", "抽象", "合辑", "指南"],
+      intro:
+        "无穷符号（∞）象征连续、迭代与无限可能，是科技品牌常用的<strong>抽象视觉母题</strong>。aoglang <a href=\"../gallery/infinity-3d.html\">无穷符号 3D 合辑</a> 收录 10 件不同材质与光感的 3D 作品。本文逐件解读创作意图与适用场景，帮助设计者与运营在 Keynote、官网与社媒中<strong>选对款式、写对文案</strong>。",
+      sections: [
+        {
+          h: "合辑页与单件作品的关系",
+          p: "合辑页展示系列全貌；单件页面（如 <a href=\"../gallery/wqd-05.html\">双色光影无穷环</a>）便于分享与下载引用。单件 URL 已设 <code>noindex</code>，搜索权重集中在本篇与 <a href=\"../gallery/infinity-3d.html\">合辑页</a>——避免 10 个薄页稀释站点质量。",
+        },
+        {
+          h: "01 铜色金属 · 02 橙金螺旋 · 03 波浪层叠",
+          p: "<a href=\"../gallery/wqd-01.html\">铜色金属无穷环</a>：暖色、稳重，适合金融科技与「传承/持续」叙事。<a href=\"../gallery/wqd-02.html\">橙金螺旋缎带</a> 与 <a href=\"../gallery/wqd-03.html\">橙色波浪层叠</a> 强调<strong>动感与能量</strong>，适合创新发布、创业活动背景。",
+        },
+        {
+          h: "04 渐变背景螺旋",
+          p: "<a href=\"../gallery/wqd-04.html\">渐变背景螺旋</a> 用暖黄到浅蓝的背景衬托主体，适合需要「留白」的封面与横幅——主体可左侧放置标题文字。",
+        },
+        {
+          h: "05 双色光影 · 06 青绿莫比乌斯",
+          p: "<a href=\"../gallery/wqd-05.html\">双色光影无穷环</a> 是系列中最「赛博」的一款，冷蓝 + 暖金对撞，适合 AI、云计算主题。<a href=\"../gallery/wqd-06.html\">青绿渐变扭曲环</a> 的莫比乌斯结构适合数据、循环与可持续发展故事。",
+        },
+        {
+          h: "07 哑光橙 · 08 单色橙铜 · 09 层叠橙带",
+          p: "三件<strong>橙色系极简</strong>款式（<a href=\"../gallery/wqd-07.html\">07</a>、<a href=\"../gallery/wqd-08.html\">08</a>、<a href=\"../gallery/wqd-09.html\">09</a>）适合 App 图标、按钮周边与品牌规范展示——干扰少、识别度高。",
+        },
+        {
+          h: "10 虹彩玻璃方块",
+          p: "<a href=\"../gallery/wqd-10.html\">虹彩玻璃方块无穷</a> 轻盈、未来，适合元宇宙、新材料与创意产业。与<a href=\"../videos/hd-motion-visual.html\">高清动感短片</a> 搭配可制作 10–15 秒 loop 预告。",
+        },
+        {
+          h: "品牌应用 checklist",
+          p: "① 确认主色与品牌色板是否冲突；② 亮底用 07/08，暗底用 05/10；③ 发布会主屏用 02/05，文档内页用 01/07；④ 每件写独立说明，勿十张共用一句 caption。",
+        },
+        {
+          h: "与 AI 光效、商务视觉的组合",
+          p: "3D 无穷系列偏「符号与材质」；<a href=\"../gallery/ai-high-tech-lights.html\">AI 高科技光效</a> 偏「氛围与背景」。企业官网可 3D 无穷作 Hero，AI 光效作章节分隔。人物场景见 <a href=\"business-portrait-visual-handbook.html\">商务视觉手册</a>。",
+        },
+        {
+          h: "全部作品链接",
+          p: "<a href=\"../gallery/infinity-3d.html\">合辑页</a> · <a href=\"../gallery/wqd-01.html\">01</a>–<a href=\"../gallery/wqd-10.html\">10</a> · 延伸阅读 <a href=\"infinity-3d-brand-visuals.html\">品牌抽象 SEO 笔记</a>。",
+        },
+      ],
+    },
+    en: {
+      title: "Infinity 3D complete guide: ten renders & brand use cases",
+      desc: "All ten infinity-themed 3D pieces explained—materials, lighting, and where each fits keynotes, heroes, and social posts.",
+      tags: ["article", "3D", "infinity", "branding", "abstract", "collection", "guide"],
+      intro:
+        "The infinity motif signals continuity and iteration—a staple of tech branding. Our <a href=\"../gallery/infinity-3d.html\">Infinity 3D collection</a> includes ten distinct renders. This guide walks each piece and when to use it.",
+      sections: [
+        {
+          h: "Collection vs single URLs",
+          p: "The collection page carries SEO weight; individual URLs (e.g. <a href=\"../gallery/wqd-05.html\">dual-lit chrome</a>) are for sharing and are <code>noindex</code> to avoid thin-page spam.",
+        },
+        {
+          h: "01 copper · 02 spiral · 03 waves",
+          p: "<a href=\"../gallery/wqd-01.html\">Copper metallic</a> for fintech gravitas; <a href=\"../gallery/wqd-02.html\">orange-gold spiral</a> and <a href=\"../gallery/wqd-03.html\">layered waves</a> for launch energy.",
+        },
+        {
+          h: "04 gradient spiral",
+          p: "<a href=\"../gallery/wqd-04.html\">Spiral on gradient sky</a> leaves room for headline copy on campaigns.",
+        },
+        {
+          h: "05 dual-lit · 06 teal Möbius",
+          p: "<a href=\"../gallery/wqd-05.html\">Dual-lit chrome</a> for AI/cloud stories; <a href=\"../gallery/wqd-06.html\">teal Möbius twist</a> for loops and sustainability narratives.",
+        },
+        {
+          h: "07–09 minimal orange family",
+          p: "Matte and layered orange icons (<a href=\"../gallery/wqd-07.html\">07</a>–<a href=\"../gallery/wqd-09.html\">09</a>) for app branding and UI marketing.",
+        },
+        {
+          h: "10 iridescent glass",
+          p: "<a href=\"../gallery/wqd-10.html\">Iridescent glass blocks</a> for creative tech and metaverse themes—pair with the <a href=\"../videos/hd-motion-visual.html\">HD motion clip</a>.",
+        },
+        {
+          h: "Brand checklist",
+          p: "Match brand palette; dark slides → 05/10; docs → 01/07; unique caption per render.",
+        },
+        {
+          h: "Mix with AI lights & portraits",
+          p: "Combine with <a href=\"../gallery/ai-high-tech-lights.html\">AI light stills</a> and the <a href=\"business-portrait-visual-handbook.html\">portrait handbook</a> for full-site art direction.",
+        },
+        {
+          h: "Links",
+          p: "<a href=\"../gallery/infinity-3d.html\">Collection</a> · <a href=\"../gallery/wqd-01.html\">01</a>–<a href=\"../gallery/wqd-10.html\">10</a> · Also <a href=\"infinity-3d-brand-visuals.html\">brand SEO notes</a>.",
+        },
+      ],
+    },
+  },
   {
     slug: "tokyo-aerial-complete-guide",
     date: "2026-06-12",
@@ -1291,43 +1691,91 @@ const ARTICLES = [
     },
     zh: {
       title: "无人机城市航拍指南：东京、福州与海上风电",
-      desc: "从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。",
-      tags: ["文章", "航拍", "无人机", "城市", "SEO", "图集"],
+      desc: "城市与能源题材航拍的完整方法论：设备准备、飞行规划、构图、合规、后期、SEO 发布与 aoglang 作品索引。",
+      tags: ["文章", "航拍", "无人机", "城市", "SEO", "图集", "指南"],
       intro:
-        "航拍类视觉在 aoglang 图集中占重要位置。本文梳理<strong>城市与能源题材航拍</strong>如何写成可被搜索理解的文章，并链到本站对应单图页面。",
+        "城市航拍是 aoglang 图集的核心题材之一。本文是<strong>方法论总览</strong>，覆盖从起飞前规划到网页发布的完整流程；各城市/题材的深度解读请配合 <a href=\"tokyo-aerial-complete-guide.html\">东京完全指南</a> 与 <a href=\"fuzhou-energy-aerial-series.html\">福州与风电专题</a> 阅读。",
       sections: [
         {
+          h: "航拍前：设备与天气",
+          p: "消费级无人机（1 英寸传感器及以上）已能满足 Web 发布需求。出发前检查：电池满电、桨叶无损、存储空间充足、GPS 搜星正常。避免强风、降雨与大雾；城市热岛效应可能导致局部气流紊乱，建议先在开阔处悬停观察。",
+        },
+        {
           h: "选题与关键词：从地标到行业场景",
-          p: "单张图片的 SEO 不只靠文件名。为作品写清<strong>地点 + 视角 + 时段</strong>（如「东京滨水高速黄昏航拍」），并在正文中自然出现「无人机」「高速公路」「城市天际线」等检索词。可对照本站 <a href=\"../gallery/tokyo-waterside-highway.html\">东京滨水高速</a>、<a href=\"../gallery/fuzhou-stadium-aerial-01.html\">福州体育场航拍</a> 等页面的标题结构。",
+          p: "单张图片的 SEO 不只靠文件名。为作品写清<strong>地点 + 视角 + 时段</strong>（如「东京滨水高速黄昏航拍」），并在正文中自然出现「无人机」「高速公路」「城市天际线」等检索词。对照 <a href=\"../gallery/tokyo-waterside-highway.html\">东京滨水高速</a>、<a href=\"../gallery/fuzhou-stadium-aerial-01.html\">福州体育场</a> 的标题结构。",
         },
         {
-          h: "成组发布：同主题多张图如何互链",
-          p: "同一城市的不同机位（如 <a href=\"../gallery/tokyo-highway-bridge-01.html\">高速桥面 01</a> 与 <a href=\"../gallery/tokyo-highway-bridge-02.html\">02</a>）适合在文章里组成「系列」，引导读者浏览合辑，也帮助搜索引擎理解内容簇。能源题材可链到 <a href=\"../gallery/wind-turbines-drone-01.html\">海上风电航拍</a>。",
+          h: "构图：引导线、高度与安全距离",
+          p: "高架/高速题材：让道路从画面一角斜向延伸。体育场/港口：45° 俯拍展示几何，远景纳入城市背景。高度并非越高越好——过高会损失细节，过低则受障碍物限制。始终与行人、车辆保持安全距离，遵守当地限高（常见 120m 或更低）。",
         },
         {
-          h: "配图与性能",
-          p: "列表页应使用 WebP 缩略图，详情页提供宽度适中的主图，避免一次加载数 MB 的 PNG。本站构建脚本会在 <code>npm run build</code> 时自动生成主图与 <code>-thumb.webp</code>，详见 <a href=\"webp-gallery-performance.html\">图集 WebP 优化指南</a>。",
+          h: "合规：日本、中国与公域飞行",
+          p: "日本人口密集区飞行限制严格，需查阅国土交通省无人机地图。中国各城市有禁飞区（机场、政府周边等），使用官方 App 查询。本文不构成法律建议——<strong>违规飞行风险自负</strong>。能源题材如 <a href=\"../gallery/wind-turbines-drone-01.html\">海上风电</a> 还需注意海上风力与返航电量。",
+        },
+        {
+          h: "成组发布：系列互链",
+          p: "同一城市不同机位（<a href=\"../gallery/tokyo-highway-bridge-01.html\">桥面 01</a> 与 <a href=\"../gallery/tokyo-highway-bridge-02.html\">02</a>）应在专题文章中组成系列，而非孤立单页。能源与城市可跨链：<a href=\"fuzhou-energy-aerial-series.html\">福州与风电专题</a>。",
+        },
+        {
+          h: "后期与导出",
+          p: "RAW/JPEG 轻度调整：曝光、对比、清晰度，避免过度饱和。Web 导出宽度 1400–1920px 即可；列表缩略图由构建脚本生成 480px WebP——见 <a href=\"webp-gallery-performance.html\">WebP 优化指南</a>。保留 upload 原图供印刷或二次裁切。",
+        },
+        {
+          h: "网页发布与 noindex 策略",
+          p: "并非每张航拍都需要独立 SEO 落地页。本站仅<strong>8 张旗舰航拍</strong>保留 sitemap 收录，其余单图 noindex，由专题文章承载搜索意图——详见 <a href=\"aoglang-site-seo-case-study.html\">站点 SEO 复盘</a>。新作品优先更新专题段落。",
+        },
+        {
+          h: "与视频栏目联动",
+          p: "静态航拍可与 <a href=\"../videos/aerial-boat-turquoise-coast.html\">海岸俯拍短片</a> 组合：图片负责封面与文章头图，视频负责动态预览。参见 <a href=\"video-shorts-collection-guide.html\">短片合集解读</a>。",
+        },
+        {
+          h: "作品索引",
+          p: "东京：<a href=\"../gallery/tokyo-waterside-highway.html\">滨水高速</a> · <a href=\"../gallery/tokyo-highway-bridge-01.html\">桥面 01</a> · <a href=\"../gallery/tokyo-highway-bridge-02.html\">02</a>。福州/能源：<a href=\"fuzhou-energy-aerial-series.html\">专题</a>。深度：<a href=\"tokyo-aerial-complete-guide.html\">东京完全指南</a>。",
         },
       ],
     },
     en: {
       title: "Drone city aerials: Tokyo, Fuzhou & offshore wind",
-      desc: "How to turn aerial gallery shots into SEO-friendly articles with clear topics, alt text, and internal links.",
-      tags: ["article", "aerial", "drone", "urban", "SEO", "gallery"],
+      desc: "Full workflow for urban and energy drone work—gear, planning, composition, compliance, post, SEO publishing, and gallery links.",
+      tags: ["article", "aerial", "drone", "urban", "SEO", "gallery", "guide"],
       intro:
-        "Aerial visuals are a core part of the aoglang gallery. This guide explains how to write <strong>discoverable copy</strong> around city and energy themes and link to individual photo pages.",
+        "Urban aerials anchor the aoglang gallery. This article is the <strong>methodology overview</strong>; pair it with the <a href=\"tokyo-aerial-complete-guide.html\">Tokyo feature</a> and <a href=\"fuzhou-energy-aerial-series.html\">Fuzhou &amp; wind feature</a> for city-specific depth.",
       sections: [
         {
-          h: "Topics and keywords: from landmarks to industries",
-          p: "Image SEO needs more than filenames. State <strong>place + angle + time</strong> (e.g. dusk drone view of Tokyo’s waterfront expressway) and use phrases people search for. Compare with pages like <a href=\"../gallery/tokyo-waterside-highway.html\">Tokyo waterside highway</a> and <a href=\"../gallery/fuzhou-stadium-aerial-01.html\">Fuzhou stadium aerial</a>.",
+          h: "Before flight: gear & weather",
+          p: "Check batteries, props, storage, and GPS lock. Avoid strong wind, rain, and fog; urban heat islands can create turbulent pockets—hover and assess first.",
         },
         {
-          h: "Publishing in sets with internal links",
-          p: "Multiple angles of one city (e.g. <a href=\"../gallery/tokyo-highway-bridge-01.html\">highway bridge 01</a> and <a href=\"../gallery/tokyo-highway-bridge-02.html\">02</a>) work well as a series in an article. Energy shots can link to <a href=\"../gallery/wind-turbines-drone-01.html\">offshore wind turbines</a>.",
+          h: "Topics and keywords",
+          p: "Write <strong>place + angle + time</strong> in titles and body copy. Compare <a href=\"../gallery/tokyo-waterside-highway.html\">Tokyo waterside highway</a> and <a href=\"../gallery/fuzhou-stadium-aerial-01.html\">Fuzhou stadium</a> page structures.",
         },
         {
-          h: "Images and performance",
-          p: "Use WebP thumbs on indexes and moderately sized heroes on detail pages. Our build generates <code>-thumb.webp</code> variants—see <a href=\"webp-gallery-performance.html\">WebP gallery performance</a>.",
+          h: "Composition & altitude",
+          p: "Use roads as leading lines; 45° stadium shots show geometry; offshore wind frames need scale plus single-unit close-ups. Respect local height limits and obstacle clearance.",
+        },
+        {
+          h: "Compliance",
+          p: "Follow Japan MLIT maps and China no-fly zones—this is creative guidance, not legal advice. Offshore wind shoots need extra battery margin.",
+        },
+        {
+          h: "Publish as linked sets",
+          p: "Bridge pairs and city series belong inside features like <a href=\"tokyo-aerial-complete-guide.html\">Tokyo aerial guide</a>, not isolated thin URLs.",
+        },
+        {
+          h: "Post & export",
+          p: "Restrained edits; 1400–1920px Web heroes and 480px thumbs via the build—see <a href=\"webp-gallery-performance.html\">WebP performance</a>.",
+        },
+        {
+          h: "noindex strategy",
+          p: "Only eight flagship aerial URLs stay indexable; see <a href=\"aoglang-site-seo-case-study.html\">SEO case study</a>. Update features when adding shots.",
+        },
+        {
+          h: "Mix with video",
+          p: "Pair stills with <a href=\"../videos/aerial-boat-turquoise-coast.html\">coast aerial clip</a>—<a href=\"video-shorts-collection-guide.html\">video collection guide</a>.",
+        },
+        {
+          h: "Gallery index",
+          p: "Tokyo: <a href=\"../gallery/tokyo-waterside-highway.html\">waterside</a> · <a href=\"../gallery/tokyo-highway-bridge-01.html\">bridge 01</a> · <a href=\"../gallery/tokyo-highway-bridge-02.html\">02</a>. Fuzhou/energy: <a href=\"fuzhou-energy-aerial-series.html\">feature</a>.",
         },
       ],
     },
@@ -1348,19 +1796,35 @@ const ARTICLES = [
       desc: "构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。",
       tags: ["文章", "WebP", "性能", "图集", "SEO", "静态站"],
       intro:
-        "图集页往往因大图导致首屏缓慢。aoglang 在构建阶段用 <strong>sharp</strong> 将 upload 原图转为 WebP，并区分列表缩略图与详情主图。",
+        "图集页往往因大图导致首屏缓慢。aoglang 在构建阶段用 <strong>sharp</strong> 将 upload 原图转为 WebP，并区分列表缩略图与详情主图。本文详解参数选择、构建流程与对 Core Web Vitals 的影响。",
       sections: [
         {
           h: "为什么要两套尺寸",
           p: "瀑布流列表可能同时展示数十张卡片，若每张都加载 4K PNG，移动网络下体验很差。本站规则：<strong>卡片用 *-thumb.webp（宽≤480px）</strong>，<strong>单图页用 *.webp（宽≤1400px）</strong>，原图仅保留在本地 upload 目录。",
         },
         {
-          h: "与 SEO 的关系",
-          p: "更快的 LCP 有利于体验信号；同时每张图仍有独立 URL、<code>title</code>、<code>meta description</code> 与 ImageObject 结构化数据。浏览 <a href=\"../gallery/\">图集索引</a> 时，搜索引擎与用户都能从缩略图进入完整说明页。",
+          h: "sharp 构建参数",
+          p: "在 <code>tools/build.mjs</code> 中：<code>IMAGE_MAIN_MAX = 1400</code>、<code>IMAGE_THUMB_MAX = 480</code>，WebP 质量主图 82、缩略图 78。若原图已小于目标宽度则跳过放大，避免无意义插值。运行 <code>npm run build</code> 时仅处理有变化的 upload 文件（已有 WebP 则跳过）。",
+        },
+        {
+          h: "HTML 中的 width/height",
+          p: "列表卡片与详情页 <code>&lt;img&gt;</code> 都填写 <code>width</code> 与 <code>height</code>，配合 CSS <code>--thumb-ar</code> 比例变量，减少布局偏移（CLS）。这是静态图集站提升体验分的低成本手段。",
+        },
+        {
+          h: "与 SEO 和 AdSense 的关系",
+          p: "更快的 LCP 有利于体验信号；Google 将页面体验纳入排名因素。AdSense 审核也会看「用户是否愿意停留」——首屏 3 秒内应出现内容而非空白。专题文章 + 轻量缩略图列表，比一次性加载数十张 4K 图更易通过质量评估。详见 <a href=\"aoglang-site-seo-case-study.html\">SEO 复盘</a>。",
+        },
+        {
+          h: "ImageObject 与图片 SEO",
+          p: "每张旗舰单图仍有 ImageObject JSON-LD；非旗舰单图 noindex 但保留可分享 URL。缩略图不参与 schema 的 contentUrl，主图 URL 指向 1400px WebP。",
         },
         {
           h: "发布新图流程",
-          p: "将 PNG/JPG 放入 <code>upload/picture/</code>，运行 <code>npm run build</code>，脚本会复制并优化到 <code>assets/img/gallery/</code>，并再生双语 HTML。更多站点结构见 <a href=\"static-site-guide.html\">静态网站搭建指南</a>。",
+          p: "将 PNG/JPG 放入 <code>upload/picture/</code>，运行 <code>npm run build</code>，脚本复制并优化到 <code>assets/img/gallery/</code>，并再生双语 HTML、sitemap 与搜索索引。更多结构见 <a href=\"static-site-guide.html\">静态网站搭建指南</a>。",
+        },
+        {
+          h: "故障排查",
+          p: "若缩略图未生成：确认已安装 <code>sharp</code>（<code>npm install</code>）且 Node 在 PATH 中。Windows 下若 npm 报 node 找不到，使用完整路径或把 Node 加入系统环境变量。",
         },
       ],
     },
@@ -1369,19 +1833,35 @@ const ARTICLES = [
       desc: "Build-time 1400px heroes and 480px thumbs—indexes stay light while detail pages stay sharp.",
       tags: ["article", "WebP", "performance", "gallery", "SEO", "static"],
       intro:
-        "Galleries often feel slow because indexes load huge PNGs. aoglang converts uploads to <strong>WebP at build time</strong> with separate thumb and hero sizes.",
+        "Galleries often feel slow because indexes load huge PNGs. aoglang converts uploads to <strong>WebP at build time</strong> with separate thumb and hero sizes—parameters, HTML hints, and Core Web Vitals impact below.",
       sections: [
         {
           h: "Why two sizes",
           p: "Masonry grids may show dozens of cards at once. We serve <strong>*-thumb.webp (≤480px wide)</strong> on lists and <strong>*.webp (≤1400px)</strong> on detail pages; originals stay in <code>upload/picture/</code> only.",
         },
         {
-          h: "SEO impact",
-          p: "Better LCP helps user experience; each image still has its own URL, meta description, and ImageObject schema. Browse the <a href=\"../gallery/\">gallery index</a> to see thumbs linking to full write-ups.",
+          h: "sharp settings",
+          p: "In <code>tools/build.mjs</code>: main max 1400px, thumb max 480px, WebP quality 82/78. Skips upscaling when sources are already smaller.",
+        },
+        {
+          h: "width/height in HTML",
+          p: "Every <code>&lt;img&gt;</code> includes dimensions plus <code>--thumb-ar</code> to reduce CLS on masonry cards.",
+        },
+        {
+          h: "SEO & AdSense",
+          p: "Better LCP supports rankings and quality reviews—see <a href=\"aoglang-site-seo-case-study.html\">SEO case study</a>.",
+        },
+        {
+          h: "ImageObject",
+          p: "Flagship photos keep ImageObject schema pointing at 1400px WebP heroes; thin gallery URLs are noindex.",
         },
         {
           h: "Adding new photos",
-          p: "Drop files into <code>upload/picture/</code>, run <code>npm run build</code>, and HTML plus optimized assets regenerate. See the <a href=\"static-site-guide.html\">static site guide</a> for the full checklist.",
+          p: "Drop files into <code>upload/picture/</code>, run <code>npm run build</code>. See <a href=\"static-site-guide.html\">static site guide</a>.",
+        },
+        {
+          h: "Troubleshooting",
+          p: "Install <code>sharp</code> via <code>npm install</code>; ensure Node is on PATH (especially on Windows).",
         },
       ],
     },
@@ -1456,19 +1936,35 @@ const ARTICLES = [
       desc: "HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。",
       tags: ["文章", "视频", "SEO", "MP4", "自托管", "结构化数据"],
       intro:
-        "视频不必全部依赖外链平台。本站 <a href=\"../videos/\">视频栏目</a> 提供自托管 MP4 示例，每支短片均有独立说明页。",
+        "视频不必全部依赖外链平台。本站 <a href=\"../videos/\">视频栏目</a> 提供自托管 MP4 示例，每支短片均有独立说明页。本文详解页面结构、结构化数据与完整发布流程；栏目总览见 <a href=\"video-shorts-collection-guide.html\">短片合集解读</a>。",
       sections: [
         {
           h: "页面必备元素",
           p: "每支视频应有：<strong>唯一 URL</strong>、清晰的 <code>h1</code> 与 <code>meta description</code>、封面图 <code>poster</code>、时长说明，以及 VideoObject JSON-LD。参考 <a href=\"../videos/tech-visual-short.html\">科技视觉短片</a> 与 <a href=\"../videos/warm-visual-clip.html\">暖色视觉短片</a>。",
         },
         {
+          h: "VideoObject 字段示例",
+          p: "构建脚本输出 <code>@type: VideoObject</code>，含 <code>name</code>、<code>description</code>、<code>contentUrl</code>（指向 <code>assets/media/video/*.mp4</code>）、<code>thumbnailUrl</code>、<code>duration</code>（ISO 8601，如 PT14S）、<code>uploadDate</code>。可在 Google 富媒体结果测试工具中验证。",
+        },
+        {
+          h: "poster 与首屏体验",
+          p: "poster 图片应接近视频首帧，尺寸与视频比例一致，避免 CLS。构建时若 poster 不存在会尝试用 ffmpeg 从 MP4 截取；也可手动放入 <code>assets/img/video/</code>。",
+        },
+        {
           h: "体积与加载",
-          p: "短视频适合控制在十余秒内，并压缩码率；首屏仍可用 poster 图片避免空白。若文件过大，可外链 CDN 并在文章中说明源地址。",
+          p: "短视频适合控制在十余秒内，并压缩码率；首屏仍可用 poster 图片避免空白。若文件过大，可外链 CDN 并在文章中说明源地址。5–15 秒 1080p 建议 2–5 Mbps。",
+        },
+        {
+          h: "无障碍",
+          p: "使用 <code>controls</code> 与 <code>playsinline</code>；不默认有声自动播放。每页 sections 文字说明视频内容，满足听障/无声环境用户。",
         },
         {
           h: "与图集、文章联动",
-          p: "在视频页底部链到相关 <a href=\"../gallery/ai-high-tech-lights.html\">科技光效图集</a> 或本专栏文章，形成主题集群，有利于用户停留与站内权重传递。",
+          p: "视频页链到 <a href=\"../gallery/ai-high-tech-lights.html\">科技光效</a>、<a href=\"video-shorts-collection-guide.html\">合集专题</a>，形成主题集群。",
+        },
+        {
+          h: "发布流程（VIDEOS 数组）",
+          p: "MP4 放入 <code>upload/video/</code> → 在 <code>tools/build.mjs</code> 的 <code>VIDEOS</code> 登记 slug、poster、双语 sections → <code>npm run build</code> → 更新 <a href=\"video-shorts-collection-guide.html\">合集文章</a> 与 sitemap。",
         },
       ],
     },
@@ -1477,19 +1973,35 @@ const ARTICLES = [
       desc: "Posters, bilingual copy, VideoObject schema, and internal links for short clips hosted on a static site.",
       tags: ["article", "video", "SEO", "MP4", "self-hosted", "schema"],
       intro:
-        "You do not have to embed every clip from a third-party platform. The <a href=\"../videos/\">video section</a> hosts MP4 examples with dedicated pages.",
+        "You do not have to embed every clip from a third-party platform. The <a href=\"../videos/\">video section</a> hosts MP4 examples with dedicated pages. For the full collection write-up, see <a href=\"video-shorts-collection-guide.html\">self-hosted shorts collection</a>.",
       sections: [
         {
           h: "What each page needs",
           p: "Provide a <strong>unique URL</strong>, clear <code>h1</code> and <code>meta description</code>, a <code>poster</code> image, duration text, and VideoObject JSON-LD—see <a href=\"../videos/tech-visual-short.html\">tech visual short</a> and <a href=\"../videos/warm-visual-clip.html\">warm visual clip</a>.",
         },
         {
+          h: "VideoObject fields",
+          p: "The build emits <code>VideoObject</code> with <code>contentUrl</code>, <code>thumbnailUrl</code>, ISO <code>duration</code> (e.g. PT14S), and <code>uploadDate</code>. Validate in Google’s rich results test.",
+        },
+        {
+          h: "Posters & first paint",
+          p: "Posters should match aspect ratio and approximate the first frame. ffmpeg can generate missing posters during build.",
+        },
+        {
           h: "File size",
-          p: "Keep shorts under ~15 seconds with sensible compression; posters prevent layout shift. Host very large files on a CDN and link from the article.",
+          p: "Keep shorts under ~15 seconds; target ~2–5 Mbps at 1080p. Use CDN for very large sources.",
+        },
+        {
+          h: "Accessibility",
+          p: "Use controls and playsinline; no loud autoplay. Surround players with descriptive copy.",
         },
         {
           h: "Link galleries and articles",
-          p: "Cross-link related stills such as <a href=\"../gallery/ai-high-tech-lights.html\">AI high-tech lights</a> to build topical clusters.",
+          p: "Cross-link <a href=\"../gallery/ai-high-tech-lights.html\">AI lights</a> and the <a href=\"video-shorts-collection-guide.html\">collection feature</a>.",
+        },
+        {
+          h: "Publish workflow",
+          p: "Drop MP4 in <code>upload/video/</code>, register in <code>VIDEOS</code>, run <code>npm run build</code>, update the collection article and sitemap.",
         },
       ],
     },
@@ -1510,7 +2022,7 @@ const ARTICLES = [
       desc: "从办公场景、能源光效到户外休憩，用文章串联图集与视频，覆盖科技、生活方式与工业等长尾词。",
       tags: ["文章", "科技", "生活方式", "视觉", "内容策划", "SEO"],
       intro:
-        "除航拍外，本站图集还包含<strong>科技、办公、能源与人物</strong>等题材。通过文章解释「为什么拍、适合什么场景」，比单张图片更易获得文字搜索流量。",
+        "除航拍外，本站图集还包含<strong>科技、办公、能源与人物</strong>等题材。完整工业与半导体选题请阅 <a href=\"tech-industry-visual-handbook.html\">科技与工业视觉手册</a>；本文补充生活方式与内容策划思路。",
       sections: [
         {
           h: "按使用场景分组",
@@ -1531,7 +2043,7 @@ const ARTICLES = [
       desc: "Connect office, energy, and leisure shots with articles that capture long-tail queries beyond image filenames.",
       tags: ["article", "tech", "lifestyle", "visual", "content", "SEO"],
       intro:
-        "Beyond aerials, the gallery covers <strong>tech, work, energy, and people</strong>. Articles explain intent and use cases—often easier to rank than image-only URLs.",
+        "Beyond aerials, the gallery covers <strong>tech, work, energy, and people</strong>. For semiconductor and industrial picks, read the <a href=\"tech-industry-visual-handbook.html\">tech &amp; industry handbook</a>; this article adds lifestyle planning notes.",
       sections: [
         {
           h: "Group by use case",
@@ -1557,15 +2069,23 @@ const ARTICLES = [
       title: "欢迎来到 aoglang",
       desc: "了解 aoglang 纯 HTML 双语内容站：文章、图集与视频栏目及 SEO 设计。",
       tags: ["文章", "指南", "静态站", "双语"],
-      intro: "本站是<strong>纯 HTML 静态站</strong>：无数据库、无 PHP，适合个人或小团队内容分享。每种语言使用独立页面，利于 SEO。",
+      intro: "本站是<strong>纯 HTML 静态站</strong>：无数据库、无 PHP，由编辑团队维护的中英文双语内容站。我们专注发布<strong>深度专题文章</strong>，配合图集与自托管视频，而非批量堆叠薄内容页面。",
       sections: [
         {
           h: "你能在这里找到什么",
-          p: "栏目包括：<strong><a href=\"./\">文章</a></strong>（教程与策划）、<strong><a href=\"../gallery/\">图集</a></strong>（航拍、3D 与生活方式视觉）、<strong><a href=\"../videos/\">视频</a></strong>（自托管 MP4 短片）。",
+          p: "栏目包括：<strong><a href=\"./\">文章</a></strong>（航拍指南、视觉手册、静态站实践）、<strong><a href=\"../gallery/\">图集</a></strong>（航拍、3D 与人物商务视觉）、<strong><a href=\"../videos/\">视频</a></strong>（自托管 MP4 短片）。建议从精选专题开始阅读。",
+        },
+        {
+          h: "精选专题（推荐起点）",
+          p: "<a href=\"aoglang-site-seo-case-study.html\">站点 SEO 复盘</a> · <a href=\"tokyo-aerial-complete-guide.html\">东京航拍完全指南</a> · <a href=\"infinity-3d-complete-guide.html\">无穷符号 3D 完全指南</a> · <a href=\"video-shorts-collection-guide.html\">自托管短片合集</a> · <a href=\"business-portrait-visual-handbook.html\">人物商务视觉手册</a> · <a href=\"tech-industry-visual-handbook.html\">科技工业视觉手册</a>。",
+        },
+        {
+          h: "关于内容与授权",
+          p: "内容由 aoglang 编辑团队撰写或审核。转载请注明来源并链接原文；商业使用请邮件 <a href=\"mailto:hello@aoglang.com\">hello@aoglang.com</a>。详见<a href=\"../about/\">关于我们</a>。",
         },
         {
           h: "下一步",
-          p: "阅读 <a href=\"static-site-guide.html\">静态网站搭建指南</a>，或从 <a href=\"drone-aerial-city-photography.html\">航拍 SEO 指南</a>、<a href=\"../gallery/tokyo-waterside-highway.html\">东京滨水高速</a> 进入浏览。",
+          p: "阅读 <a href=\"static-site-guide.html\">静态网站搭建指南</a>，或浏览 <a href=\"../gallery/tokyo-waterside-highway.html\">东京滨水高速</a> 航拍作品。",
         },
       ],
     },
@@ -1573,15 +2093,23 @@ const ARTICLES = [
       title: "Welcome to aoglang",
       desc: "About the aoglang bilingual static site—articles, galleries, videos, and SEO.",
       tags: ["article", "guide", "static", "bilingual"],
-      intro: "This is a <strong>pure HTML static site</strong>—no database, no PHP. Each language has its own URLs for better SEO.",
+      intro: "This is a <strong>pure HTML static site</strong>—no database, no PHP—maintained as a bilingual editorial project with <strong>in-depth features</strong>, galleries, and self-hosted video.",
       sections: [
         {
           h: "What you'll find",
-          p: "Sections include <strong><a href=\"./\">articles</a></strong>, the <strong><a href=\"../gallery/\">gallery</a></strong>, and <strong><a href=\"../videos/\">videos</a></strong> with self-hosted clips.",
+          p: "Sections include <strong><a href=\"./\">articles</a></strong> (aerial guides, visual handbooks, static-site notes), the <strong><a href=\"../gallery/\">gallery</a></strong>, and <strong><a href=\"../videos/\">videos</a></strong>. Start with the featured guides below.",
+        },
+        {
+          h: "Featured guides",
+          p: "<a href=\"aoglang-site-seo-case-study.html\">SEO case study</a> · <a href=\"tokyo-aerial-complete-guide.html\">Tokyo aerial guide</a> · <a href=\"infinity-3d-complete-guide.html\">Infinity 3D guide</a> · <a href=\"video-shorts-collection-guide.html\">Video collection</a> · <a href=\"business-portrait-visual-handbook.html\">Portrait handbook</a> · <a href=\"tech-industry-visual-handbook.html\">Tech &amp; industry handbook</a>.",
+        },
+        {
+          h: "Content & licensing",
+          p: "Editorial content by the aoglang team. Credit and link when republishing; email <a href=\"mailto:hello@aoglang.com\">hello@aoglang.com</a> for commercial use. See <a href=\"../about/\">About</a>.",
         },
         {
           h: "Next steps",
-          p: "Read the <a href=\"static-site-guide.html\">static site guide</a> or start with <a href=\"drone-aerial-city-photography.html\">drone aerial SEO tips</a>.",
+          p: "Read the <a href=\"static-site-guide.html\">static site guide</a> or browse <a href=\"../gallery/tokyo-waterside-highway.html\">Tokyo waterside highway</a>.",
         },
       ],
     },
@@ -1595,19 +2123,31 @@ const ARTICLES = [
       title: "静态网站搭建指南",
       desc: "纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。",
       tags: ["文章", "SEO", "静态站", "sitemap"],
-      intro: "使用生成脚本维护双语页面，可避免手工漏改链接或站点地图。",
+      intro: "aoglang 使用 Node.js 构建脚本（<code>tools/build.mjs</code>）维护双语页面。本文说明目录结构、内容发布流程，以及我们如何通过<strong>专题文章优先、单图页 noindex</strong>策略提升内容质量。",
       sections: [
         {
           h: "目录结构",
-          p: "<pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> 新文章在 <code>tools/build.mjs</code> 的 <code>ARTICLES</code> 数组中登记后运行 <code>npm run build</code>。",
+          p: "<pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> 新文章在 <code>ARTICLES</code> 数组登记后运行 <code>npm run build</code>，自动生成列表、RSS、搜索索引与 sitemap。",
+        },
+        {
+          h: "内容策略：专题优先",
+          p: "深度专题（如 <a href=\"tokyo-aerial-complete-guide.html\">东京航拍完全指南</a>）是 SEO 与 AdSense 审核的核心。批量单图页默认 <code>noindex</code>，仅保留航拍旗舰作品在 sitemap 中——见 <code>INDEXABLE_PICTURE_SLUGS</code>。",
         },
         {
           h: "每篇新文章 checklist",
-          p: "填写 slug、日期、双语 title/description、正文 sections；构建会自动写入列表页、首页最新内容（若加入 <code>HOME_LATEST</code>）、RSS、搜索索引与 sitemap。",
+          p: "填写 slug、日期、双语 title/description、至少 4 段 sections（每段 80 字以上）；构建会写入作者署名、BlogPosting schema、RSS 与首页精选（若加入 <code>HOME_FEATURED</code> 或 <code>HOME_LATEST</code>）。",
         },
         {
           h: "图片与性能",
           p: "图集使用 WebP 主图与缩略图，详见 <a href=\"webp-gallery-performance.html\">WebP 优化指南</a>。视频大文件可外链 CDN。",
+        },
+        {
+          h: "部署后通知搜索引擎",
+          p: "执行 <code>npm run build</code> 上传后运行 <code>npm run ping-sitemap</code>，向 Google/Bing ping sitemap。并在 Search Console 手动提交 <code>sitemap.xml</code>——详见 <a href=\"aoglang-site-seo-case-study.html\">站点 SEO 复盘</a>。",
+        },
+        {
+          h: "E-E-A-T 与关于页",
+          p: "保持<a href=\"../about/\">关于我们</a>、<a href=\"../contact/\">联系</a>、<a href=\"../privacy/\">隐私政策</a>更新。文章底部自动添加作者署名（<code>SITE_AUTHOR</code>）。",
         },
       ],
     },
@@ -1615,19 +2155,31 @@ const ARTICLES = [
       title: "Static site guide",
       desc: "Folder layout, SEO, RSS, sitemap, and search index checklist for aoglang.",
       tags: ["article", "SEO", "static", "sitemap"],
-      intro: "A build script keeps bilingual pages, feeds, and maps in sync.",
+      intro: "A Node build script (<code>tools/build.mjs</code>) keeps bilingual pages in sync. This guide covers layout, publishing, and our <strong>feature-first / noindex thin gallery</strong> quality strategy.",
       sections: [
         {
           h: "Folder layout",
-          p: "<pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> Register new posts in the <code>ARTICLES</code> array, then run <code>npm run build</code>.",
+          p: "<pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> Register posts in <code>ARTICLES</code>, then run <code>npm run build</code>.",
+        },
+        {
+          h: "Feature-first content",
+          p: "Long-form features (e.g. <a href=\"tokyo-aerial-complete-guide.html\">Tokyo aerial guide</a>) carry SEO weight. Most single-image URLs are <code>noindex</code>; only flagship aerials stay in the sitemap—see <code>INDEXABLE_PICTURE_SLUGS</code>.",
         },
         {
           h: "New article checklist",
-          p: "Set slug, date, bilingual copy, and sections—the build updates indexes, home “Latest”, RSS, search JSON, and sitemap when listed in <code>HOME_LATEST</code>.",
+          p: "Set slug, date, bilingual copy, and several substantive sections; the build adds author bylines, BlogPosting schema, RSS, and home listings when configured in <code>HOME_FEATURED</code> / <code>HOME_LATEST</code>.",
         },
         {
           h: "Images and video",
           p: "See <a href=\"webp-gallery-performance.html\">WebP gallery performance</a>. Host very large MP4 files on a CDN if needed.",
+        },
+        {
+          h: "After deploy",
+          p: "Run <code>npm run ping-sitemap</code> after upload; also submit <code>sitemap.xml</code> in Search Console—see <a href=\"aoglang-site-seo-case-study.html\">SEO case study</a>.",
+        },
+        {
+          h: "Trust pages",
+          p: "Keep <a href=\"../about/\">About</a>, <a href=\"../contact/\">Contact</a>, and <a href=\"../privacy/\">Privacy</a> current. Author credit comes from <code>SITE_AUTHOR</code>.",
         },
       ],
     },
@@ -1636,18 +2188,18 @@ const ARTICLES = [
 
 /** 首页「最新内容」顺序（构建时在 PICTURES 可用后生成） */
 const HOME_LATEST = [
+  { type: "article", slug: "aoglang-site-seo-case-study" },
+  { type: "article", slug: "tech-industry-visual-handbook" },
+  { type: "article", slug: "video-shorts-collection-guide" },
+  { type: "article", slug: "infinity-3d-complete-guide" },
   { type: "article", slug: "tokyo-aerial-complete-guide" },
-  { type: "article", slug: "fuzhou-energy-aerial-series" },
-  { type: "article", slug: "business-portrait-visual-handbook" },
-  { type: "article", slug: "new-video-uploads-collection" },
   { type: "video", slug: "aerial-boat-turquoise-coast" },
-  { type: "video", slug: "underwater-surfer-wave" },
   { type: "article", slug: "drone-aerial-city-photography" },
+  { type: "article", slug: "fuzhou-energy-aerial-series" },
+  { type: "gallery", slug: "infinity-3d" },
+  { type: "article", slug: "business-portrait-visual-handbook" },
   { type: "gallery", slug: "tokyo-waterside-highway" },
   { type: "article", slug: "webp-gallery-performance" },
-  { type: "video", slug: "warm-visual-clip" },
-  { type: "gallery", slug: "infinity-3d" },
-  { type: "article", slug: "self-hosted-video-seo" },
 ];
 
 function articleBySlug(slug) {
@@ -2744,9 +3296,53 @@ function pictureEntryFromUpload(uploadFile, usedSlugs) {
     w: ext === ".jpg" || ext === ".jpeg" ? 1600 : 1920,
     h: ext === ".jpg" || ext === ".jpeg" ? 1067 : 1080,
     date: "2026-06-02",
-    zh: { ...zh, sections: pictureSections(zh, true) },
-    en: { ...en, sections: pictureSections(en, false) },
+    zh: { ...zh, sections: [] },
+    en: { ...en, sections: [] },
   };
+}
+
+/** 从已发布 HTML 恢复图集条目（upload 不在本地时仍能重建页面） */
+function pictureEntryFromExistingHtml(slug, usedSlugs) {
+  if (usedSlugs.has(slug)) return null;
+  usedSlugs.add(slug);
+  const htmlPath = path.join(root, "zh/gallery", `${slug}.html`);
+  if (!fs.existsSync(htmlPath)) return null;
+  const html = fs.readFileSync(htmlPath, "utf8");
+  const titleZh = html.match(/<title>([^—<]+)/)?.[1]?.trim() || slug;
+  const descZh = html.match(/<meta name="description" content="([^"]+)"/)?.[1] || titleZh;
+  const titleEnMatch = fs.existsSync(path.join(root, "en/gallery", `${slug}.html`))
+    ? fs.readFileSync(path.join(root, "en/gallery", `${slug}.html`), "utf8")
+    : "";
+  const titleEn = titleEnMatch.match(/<title>([^—<]+)/)?.[1]?.trim() || titleZh;
+  const descEn = titleEnMatch.match(/<meta name="description" content="([^"]+)"/)?.[1] || descZh;
+  const kwMatch = html.match(/class="gallery-keywords">([\s\S]*?)<\/p>/);
+  const keywords = kwMatch
+    ? [...kwMatch[1].matchAll(/<span class="tag">([^<]+)<\/span>/g)].map((m) => m[1])
+    : [slug.replace(/-/g, " "), "aoglang"];
+  return {
+    slug,
+    uploadFile: `${slug}.webp`,
+    file: `${slug}.webp`,
+    subdir: slug.startsWith("wqd-") ? "wqd" : "pictures",
+    w: 1400,
+    h: 785,
+    date: "2026-06-02",
+    collection: slug.startsWith("wqd-") ? INFINITY_SLUG : undefined,
+    zh: { title: titleZh, desc: descZh, keywords },
+    en: { title: titleEn, desc: descEn, keywords },
+  };
+}
+
+function discoverExistingGalleryHtml(usedSlugs) {
+  const dir = path.join(root, "zh/gallery");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".html"))
+    .map((f) => f.replace(/\.html$/, ""))
+    .filter((slug) => !["index", "infinity-3d", "spring-scenes"].includes(slug))
+    .map((slug) => pictureEntryFromExistingHtml(slug, usedSlugs))
+    .filter(Boolean);
 }
 
 /** 扫描 upload/picture，自动加入未在 AERIAL / WQD 登记的新图 */
@@ -2784,13 +3380,17 @@ function buildPicturesCatalog() {
     usedSlugs.add(p.slug);
     return {
       ...p,
-      zh: { ...p.zh, sections: pictureSections(p.zh, true) },
-      en: { ...p.en, sections: pictureSections(p.en, false) },
+      zh: { ...p.zh },
+      en: { ...p.en },
     };
   });
   const discovered = discoverUploadPictures(usedSlugs);
   if (discovered.length) {
     console.log("discovered", discovered.length, "new picture(s) from upload/picture");
+  }
+  const fromHtml = discoverExistingGalleryHtml(usedSlugs);
+  if (fromHtml.length) {
+    console.log("restored", fromHtml.length, "picture(s) from existing gallery HTML");
   }
 
   const wqd = WQD_GALLERY.map((item, i) => {
@@ -2805,11 +3405,11 @@ function buildPicturesCatalog() {
       h: item.h,
       date: "2026-05-27",
       collection: INFINITY_SLUG,
-      zh: { ...item.zh, sections: pictureSections(item.zh, true) },
-      en: { ...item.en, sections: pictureSections(item.en, false) },
+      zh: { ...item.zh },
+      en: { ...item.en },
     };
   });
-  return [...aerial, ...discovered, ...wqd];
+  return [...aerial, ...discovered, ...fromHtml, ...wqd];
 }
 
 const PICTURES = buildPicturesCatalog();
@@ -2932,11 +3532,15 @@ function picturePageBody(lang, p) {
   const otherLabel = isZh ? "English" : "中文版";
   const assetP = relPrefix(3);
   const imgSrc = pictureAssetPath(p, assetP, "main");
-  const sections = loc.sections
+  const topicSlug = pictureTopicArticleSlug(p);
+  const sections = pictureSections(loc, isZh, p)
     .map((s) => `      <h2>${s.h}</h2>\n      <p>${s.p}</p>`)
     .join("\n");
   const collectionLink = p.collection
-    ? `<p class="card-meta">${isZh ? "所属合辑：" : "Collection: "}<a href="${p.collection}.html">${isZh ? "无穷符号 3D 视觉" : "Infinity 3D visuals"}</a></p>`
+    ? `<p class="card-meta">${isZh ? "所属合辑：" : "Collection: "}<a href="${p.collection}.html">${isZh ? "无穷符号 3D 视觉" : "Infinity 3D visuals"}</a> · <a href="../articles/infinity-3d-brand-visuals.html">${isZh ? "阅读 3D 专题" : "Read 3D feature"}</a></p>`
+    : "";
+  const noindexNote = !pictureIsIndexable(p)
+    ? `<p class="gallery-noindex-note">${isZh ? "提示：本页主要为作品分享，完整解读请阅读" : "Note: full context lives in our feature article "}<a href="../articles/${topicSlug || "tokyo-aerial-complete-guide"}.html">${isZh ? "对应专题" : "linked here"}</a>。</p>`
     : "";
 
   return `    <ol class="breadcrumb"><li><a href="../">${isZh ? "首页" : "Home"}</a></li><li><a href="./">${isZh ? "图集" : "Gallery"}</a></li><li aria-current="page">${loc.title}</li></ol>
@@ -2944,6 +3548,7 @@ function picturePageBody(lang, p) {
       <h1>${loc.title}</h1>
       <p class="card-meta">${p.w}×${p.h} · ${p.date} · <a href="${crossLangHref(otherLang, `gallery/${p.slug}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
       ${collectionLink}
+      ${noindexNote}
       <p class="gallery-intro">${loc.desc}</p>
     </header>
     <article class="prose picture-article">
@@ -2951,9 +3556,9 @@ function picturePageBody(lang, p) {
         <img src="${imgSrc}" width="${p.w}" height="${p.h}" alt="${loc.title}" loading="eager" decoding="async">
       </figure>
 ${sections}
-      <h2>${isZh ? "关键词" : "Keywords"}</h2>
+      <h2>${isZh ? "标签" : "Tags"}</h2>
       <p class="gallery-keywords">${pictureTagsHtml(loc.keywords)}</p>
-      <p>${isZh ? "更多：" : "More: "}<a href="./">${isZh ? "全部图片" : "All images"}</a>${p.collection ? ` · <a href="${p.collection}.html">${isZh ? "3D 无穷合辑" : "Infinity set"}</a>` : ""} · <a href="../videos/">${isZh ? "视频" : "Videos"}</a></p>
+      <p>${isZh ? "更多：" : "More: "}<a href="./">${isZh ? "图集首页" : "Gallery index"}</a>${p.collection ? ` · <a href="${p.collection}.html">${isZh ? "3D 无穷合辑" : "Infinity set"}</a>` : ""}${topicSlug ? ` · <a href="../articles/${topicSlug}.html">${isZh ? "阅读专题" : "Read feature"}</a>` : ""} · <a href="../videos/">${isZh ? "视频" : "Videos"}</a></p>
     </article>`;
 }
 
@@ -2972,7 +3577,26 @@ function pictureSchemaJson(lang, p) {
   });
 }
 
+function galleryTopicArticleCards(isZh) {
+  return HOME_FEATURED.map((slug) => {
+    const a = articleBySlug(slug);
+    const loc = isZh ? a.zh : a.en;
+    const thumb = articleThumbProps(a, isZh ? "zh" : "en");
+    return cardArticle({
+      thumbStyle: cardThumbAttr(thumb.w, thumb.h),
+      imgSrc: `../../${thumb.src}`,
+      imgW: thumb.w,
+      imgH: thumb.h,
+      imgAlt: thumb.alt || loc.title,
+      href: `../articles/${a.slug}.html`,
+      heading: loc.title,
+      meta: `<span class="tag">${isZh ? "专题" : "Feature"}</span> ${a.date}`,
+    });
+  }).join("\n      ");
+}
+
 function galleryIndexCards(isZh) {
+  const topicCards = galleryTopicArticleCards(isZh);
   const pictureCards = PICTURES.map((p) => {
     const loc = isZh ? p.zh : p.en;
     return cardArticle({
@@ -3006,14 +3630,51 @@ function galleryIndexCards(isZh) {
     heading: isZh ? "无穷符号 3D 合辑" : "Infinity 3D collection",
     meta: isZh ? '<span class="tag">合辑</span>10 张' : '<span class="tag">Set</span>10 images',
   });
-  return `${pictureCards}\n      ${infinity}\n      ${spring}`;
+  return `${topicCards}\n      ${infinity}\n      ${pictureCards}\n      ${spring}`;
+}
+
+function galleryAllWorkCards(isZh) {
+  const pictureCards = PICTURES.map((p) => {
+    const loc = isZh ? p.zh : p.en;
+    return cardArticle({
+      thumbStyle: cardThumbAttr(p.w, p.h),
+      imgSrc: pictureAssetPath(p, "../../", "thumb"),
+      imgW: p.w,
+      imgH: p.h,
+      imgAlt: loc.title,
+      href: `${p.slug}.html`,
+      heading: loc.title,
+      meta: `<span class="tag">${isZh ? "图片" : "Photo"}</span>`,
+    });
+  }).join("\n      ");
+  const spring = cardArticle({
+    thumbStyle: cardThumbAttr(800, 600),
+    imgSrc: "../../assets/img/gallery/spring-1.svg",
+    imgW: 800,
+    imgH: 600,
+    imgAlt: isZh ? "春日图集" : "Spring scenes",
+    href: "spring-scenes.html",
+    heading: isZh ? "春日图集（示例）" : "Spring scenes (demo)",
+    meta: isZh ? '<span class="tag">示例</span>6 张' : '<span class="tag">Demo</span>6 photos',
+  });
+  const infinity = cardArticle({
+    thumbStyle: cardThumbAttr(1920, 1080),
+    imgSrc: "../../assets/img/gallery/wqd/wqd-01-thumb.webp",
+    imgW: 1920,
+    imgH: 1080,
+    imgAlt: isZh ? "无穷符号 3D 视觉合辑" : "Infinity 3D collection",
+    href: `${INFINITY_SLUG}.html`,
+    heading: isZh ? "无穷符号 3D 合辑" : "Infinity 3D collection",
+    meta: isZh ? '<span class="tag">合辑</span>10 张' : '<span class="tag">Set</span>10 images',
+  });
+  return `${infinity}\n      ${pictureCards}\n      ${spring}`;
 }
 
 for (const lang of ["zh", "en"]) {
   const isZh = lang === "zh";
   const listDesc = isZh
-    ? `${PICTURES.length} 张独立图片页：航拍、城市、风电与 3D 无穷视觉，每张含双语说明与 ImageObject 结构化数据。`
-    : `${PICTURES.length} dedicated image pages—aerial, urban, wind energy & 3D infinity art with bilingual SEO copy.`;
+    ? `深度专题文章配合图集作品。建议先阅读专题，再浏览单张作品详情。`
+    : `In-depth features paired with gallery work—start with a feature, then browse individual photos.`;
 
   write(
     `${lang}/gallery/index.html`,
@@ -3029,12 +3690,16 @@ for (const lang of ["zh", "en"]) {
       },
       `    <h1>${isZh ? "图集" : "Gallery"}</h1>
     <p class="gallery-intro">${listDesc}</p>
-    <div class="masonry-grid">${galleryIndexCards(isZh)}</div>`
+    <h2 class="section-title">${isZh ? "精选专题" : "Featured guides"}</h2>
+    <div class="masonry-grid">${galleryTopicArticleCards(isZh)}</div>
+    <h2 class="section-title">${isZh ? "全部作品" : "All work"}</h2>
+    <div class="masonry-grid">${galleryAllWorkCards(isZh)}</div>`
     )
   );
 
   for (const p of PICTURES) {
     const loc = isZh ? p.zh : p.en;
+    const indexable = pictureIsIndexable(p);
     write(
       `${lang}/gallery/${p.slug}.html`,
       page(lang, 3, "gallery", `gallery/${p.slug}.html`, {
@@ -3042,6 +3707,7 @@ for (const lang of ["zh", "en"]) {
         desc: loc.desc,
         canonical: `${SITE}/${lang}/gallery/${p.slug}.html`,
         type: "article",
+        noindex: !indexable,
         extra: `<script type="application/ld+json">${pictureSchemaJson(lang, p)}</script>`,
       }, picturePageBody(lang, p))
     );
@@ -3061,6 +3727,7 @@ for (const lang of ["zh", "en"]) {
       title: isZh ? "春日图集 — aoglang" : "Spring scenes — aoglang",
       desc: isZh ? "六张示例摄影图集，含中英文说明。" : "Sample gallery with six photos and captions.",
       canonical: `${SITE}/${lang}/gallery/spring-scenes.html`,
+      noindex: true,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">图集</a></li><li aria-current="page">春日图集</li></ol>
     <header class="article-header"><h1>春日图集</h1><p class="card-meta"><a href="${crossLangHref("en", "gallery/spring-scenes.html", 3)}" hreflang="en">English</a></p></header>
@@ -3074,14 +3741,16 @@ for (const lang of ["zh", "en"]) {
   const wqdFigs = wqdFiguresHtml(lang, relPrefix(3));
   const metaZh = {
     title: "无穷符号 3D 视觉图集 — aoglang",
-    desc: "十张无穷符号主题 3D 视觉作品，附中文说明与搜索关键词。",
-    intro: "十张三维无穷符号与缎带抽象视觉合辑；每张作品另有独立页面（见下方卡片链接），便于 SEO 与分享。",
+    desc: "十张无穷符号主题 3D 视觉作品，附中文说明与品牌应用建议。",
+    intro:
+      "十张三维无穷符号与缎带抽象视觉合辑，涵盖铜色金属、螺旋缎带、双色镀铬与虹彩玻璃等风格。建议先阅读 <a href=\"../articles/infinity-3d-complete-guide.html\">无穷符号 3D 完全指南</a> 了解每件作品的适用场景，再通过下方卡片浏览单件详情。",
     h1: "无穷符号 3D 视觉",
   };
   const metaEn = {
     title: "Infinity 3D visual gallery — aoglang",
-    desc: "Ten infinity-themed 3D visuals with captions and searchable keywords.",
-    intro: "Ten infinity-themed 3D visuals in one collection—each piece also has its own dedicated page (links below).",
+    desc: "Ten infinity-themed 3D visuals with captions and brand use-case notes.",
+    intro:
+      "Ten infinity-themed 3D renders—from copper metal to iridescent glass. Read the <a href=\"../articles/infinity-3d-complete-guide.html\">Infinity 3D complete guide</a> first, then browse individual pieces below.",
     h1: "Infinity 3D visuals",
   };
   const m = isZh ? metaZh : metaEn;
@@ -3102,6 +3771,9 @@ for (const lang of ["zh", "en"]) {
       <p class="card-meta">${isZh ? "10 张" : "10 images"} · <a href="${crossLangHref(otherLang, `gallery/${INFINITY_SLUG}.html`, 3)}" hreflang="${otherLang}">${otherLabel}</a></p>
       <p class="gallery-intro">${m.intro}</p>
     </header>
+    <article class="prose">
+      <p>${isZh ? "合辑页集中展示系列全貌；单件作品页面主要用于分享链接。完整解读与品牌应用 checklist 见" : "This collection page is the SEO hub; single-piece URLs are mainly for sharing. Full write-up: "}<a href="../articles/infinity-3d-complete-guide.html">${isZh ? "3D 完全指南" : "Infinity 3D complete guide"}</a>。</p>
+    </article>
     <div class="gallery-grid prose-wide">${wqdFigs}</div>`
     )
   );
@@ -3182,10 +3854,11 @@ function videoPageBody(lang, v) {
         ${isZh ? "您的浏览器不支持 HTML5 视频播放。" : "Your browser does not support HTML5 video."}
       </video>
       <p class="video-meta">${isZh ? "格式：MP4（H.264）· 自托管" : "Format: MP4 (H.264) · self-hosted"}</p>
+      <p class="gallery-noindex-note">${isZh ? "完整栏目解读：" : "Full collection guide: "}<a href="../articles/${VIDEO_FEATURE_SLUG}.html">${isZh ? "自托管短片合集解读" : "Self-hosted shorts collection"}</a></p>
 ${sections}
       <h2>${isZh ? "相关标签" : "Tags"}</h2>
       <p class="gallery-keywords">${videoTagsHtml(loc.tags)}</p>
-      <p>${isZh ? "更多内容：" : "More: "}<a href="./">${isZh ? "全部视频" : "All videos"}</a> · <a href="../gallery/">${isZh ? "图集" : "Gallery"}</a> · <a href="../articles/">${isZh ? "文章" : "Articles"}</a></p>
+      <p>${isZh ? "更多内容：" : "More: "}<a href="./">${isZh ? "全部视频" : "All videos"}</a> · <a href="../articles/${VIDEO_FEATURE_SLUG}.html">${isZh ? "视频专题" : "Video feature"}</a> · <a href="../gallery/">${isZh ? "图集" : "Gallery"}</a> · <a href="../articles/">${isZh ? "文章" : "Articles"}</a></p>
     </article>`;
 }
 
@@ -3211,8 +3884,23 @@ function videoSchemaJson(lang, v) {
 for (const lang of ["zh", "en"]) {
   const isZh = lang === "zh";
   const listDesc = isZh
-    ? `${VIDEOS.length} 支自托管 MP4：海岸航拍、水下冲浪、自然特写与科技地球动画，附双语说明与 VideoObject 结构化数据。`
-    : `${VIDEOS.length} self-hosted MP4 clips—coast aerials, underwater surf, nature macros, and tech globe loops with bilingual SEO pages.`;
+    ? `${VIDEOS.length} 支自托管 MP4 短片，建议先阅读专题文章了解每支视频的题材与 SEO 实践。`
+    : `${VIDEOS.length} self-hosted MP4 clips—start with the feature article for context and SEO notes.`;
+  const videoFeatureCard = (() => {
+    const a = articleBySlug(VIDEO_FEATURE_SLUG);
+    const loc = isZh ? a.zh : a.en;
+    const thumb = articleThumbProps(a, lang);
+    return cardArticle({
+      thumbStyle: cardThumbAttr(thumb.w, thumb.h),
+      imgSrc: `../../${thumb.src}`,
+      imgW: thumb.w,
+      imgH: thumb.h,
+      imgAlt: thumb.alt || loc.title,
+      href: `../articles/${a.slug}.html`,
+      heading: loc.title,
+      meta: `<span class="tag">${isZh ? "专题" : "Feature"}</span> ${a.date}`,
+    });
+  })();
 
   write(
     `${lang}/videos/index.html`,
@@ -3228,8 +3916,11 @@ for (const lang of ["zh", "en"]) {
       },
       `    <h1>${isZh ? "视频" : "Videos"}</h1>
     <p class="gallery-intro">${listDesc}</p>
+    <h2 class="section-title">${isZh ? "推荐阅读" : "Start here"}</h2>
+    <div class="masonry-grid">${videoFeatureCard}</div>
+    <h2 class="section-title">${isZh ? "全部短片" : "All clips"}</h2>
     <div class="masonry-grid">${videoIndexCards(isZh)}</div>
-    <p class="prose" style="margin-top:2rem"><a href="intro-aoglang.html">${isZh ? "HTML5 播放与嵌入示例" : "HTML5 & embed demo"}</a></p>`
+    <p class="prose" style="margin-top:2rem"><a href="intro-aoglang.html">${isZh ? "认识 aoglang（站点介绍视频）" : "Intro to aoglang (site video)"}</a></p>`
     )
   );
 
@@ -3251,27 +3942,28 @@ for (const lang of ["zh", "en"]) {
     `${lang}/videos/intro-aoglang.html`,
     page(lang, 3, "videos", "videos/intro-aoglang.html", {
       title: isZh ? "认识 aoglang — 视频" : "Intro to aoglang — Video",
-      desc: isZh ? "HTML5 视频播放与嵌入示例。" : "HTML5 video playback and embed demo.",
+      desc: isZh ? "aoglang 站点介绍与自托管视频示例。" : "About aoglang and a self-hosted video sample.",
       canonical: `${SITE}/${lang}/videos/intro-aoglang.html`,
+      noindex: true,
       extra: `<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"${isZh ? "认识 aoglang" : "Intro to aoglang"}","uploadDate":"2026-05-27"}</script>`,
     }, isZh
       ? `    <ol class="breadcrumb"><li><a href="../">首页</a></li><li><a href="./">视频</a></li><li aria-current="page">认识 aoglang</li></ol>
     <header class="article-header"><h1>认识 aoglang</h1><p class="card-meta"><a href="${crossLangHref("en", "videos/intro-aoglang.html", 3)}" hreflang="en">English</a></p></header>
     <article class="prose">
-      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video/video-01-poster.jpg">
+        <source src="${relPrefix(3)}assets/media/video/video-01.mp4" type="video/mp4">
         您的浏览器不支持视频播放。
       </video>
-      <p>MDN 示例视频。本站自托管短片请见<a href="./">视频列表</a>。</p>
+      <p>aoglang 分享航拍、3D 视觉与人物商务类原创作品，并提供自托管 MP4 短片。更多作品请浏览<a href="./">视频列表</a>，或从<a href="../articles/tokyo-aerial-complete-guide.html">东京航拍完全指南</a>开始阅读。</p>
     </article>`
       : `    <ol class="breadcrumb"><li><a href="../">Home</a></li><li><a href="./">Videos</a></li><li aria-current="page">Intro</li></ol>
     <header class="article-header"><h1>Intro to aoglang</h1><p class="card-meta"><a href="${crossLangHref("zh", "videos/intro-aoglang.html", 3)}" hreflang="zh">中文版</a></p></header>
     <article class="prose">
-      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video-poster.svg">
-        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      <video class="player" controls width="100%" poster="${relPrefix(3)}assets/img/video/video-01-poster.jpg">
+        <source src="${relPrefix(3)}assets/media/video/video-01.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
-      <p>MDN sample clip. See <a href="./">video list</a> for self-hosted MP4s on this site.</p>
+      <p>aoglang publishes aerial, 3D, and business portrait work plus self-hosted MP4 clips. Browse the <a href="./">video list</a> or start with our <a href="../articles/tokyo-aerial-complete-guide.html">Tokyo aerial guide</a>.</p>
     </article>`
     )
   );
@@ -3323,7 +4015,7 @@ for (const lang of ["zh", "en"]) {
         <label for="message">留言</label>
         <textarea id="message" name="message" required></textarea>
         <button type="submit" class="btn">发送</button>
-        <p class="form-note">表单由 FormSubmit 转发至邮箱。请将 hello@aoglang.com 改为你的真实邮箱，并在 FormSubmit 确认邮件中激活。</p>
+        <p class="form-note">留言将发送至 ${SITE_AUTHOR.email}。我们通常在一至两个工作日内回复。</p>
       </form>
     </div>`
       : `    <h1>Contact</h1>
@@ -3340,7 +4032,7 @@ for (const lang of ["zh", "en"]) {
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
         <button type="submit" class="btn">Send</button>
-        <p class="form-note">Powered by FormSubmit. Replace hello@aoglang.com with your address and confirm via their activation email.</p>
+        <p class="form-note">Messages go to ${SITE_AUTHOR.email}. We usually reply within one to two business days.</p>
       </form>
     </div>`
     )
@@ -3349,18 +4041,38 @@ for (const lang of ["zh", "en"]) {
 
 // About, privacy, terms
 write("zh/about/index.html", page("zh", 2, "about", "about/", {
-  title: "关于 — aoglang", desc: "关于 aoglang 内容分享站。", canonical: `${SITE}/zh/about/`,
-}, `    <h1>关于 aoglang</h1><article class="prose"><p>aoglang 致力于用简洁、开放的静态网页分享文章、摄影与视频。全站双语，尊重访问者与搜索引擎。</p><p>内容版权归各作者所有；转载请注明出处。</p></article>`));
+  title: "关于 — aoglang",
+  desc: "aoglang 是中英文双语内容站，分享航拍、3D 视觉、人物商务场景与静态网站内容运营实践。",
+  canonical: `${SITE}/zh/about/`,
+  extra: `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "aoglang",
+    url: `${SITE}/zh/`,
+    email: SITE_AUTHOR.email,
+    description: "Bilingual articles, galleries and videos on aerial photography and visual storytelling.",
+  })}</script>`,
+}, aboutPageBody("zh")));
 write("en/about/index.html", page("en", 2, "about", "about/", {
-  title: "About — aoglang", desc: "About the aoglang content site.", canonical: `${SITE}/en/about/`,
-}, `    <h1>About aoglang</h1><article class="prose"><p>aoglang shares articles, photos and videos through fast, accessible static HTML. Bilingual by design.</p><p>Content rights belong to respective authors; please credit when republishing.</p></article>`));
+  title: "About — aoglang",
+  desc: "aoglang is a bilingual site for aerial photography, 3D visuals, business portraits, and static-site publishing.",
+  canonical: `${SITE}/en/about/`,
+  extra: `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "aoglang",
+    url: `${SITE}/en/`,
+    email: SITE_AUTHOR.email,
+    description: "Bilingual articles, galleries and videos on aerial photography and visual storytelling.",
+  })}</script>`,
+}, aboutPageBody("en")));
 
 write("zh/privacy/index.html", page("zh", 2, "privacy", "privacy/", {
   title: "隐私政策 — aoglang", desc: "aoglang 隐私政策说明。", canonical: `${SITE}/zh/privacy/`,
-}, `    <h1>隐私政策</h1><article class="prose"><p>我们可能使用匿名访问统计（如 Google Analytics），不收集可识别个人身份的信息除非您通过联系表单自愿提供。</p><p>联系表单数据由第三方 FormSubmit 处理，请参阅其隐私条款。</p><p>最后更新：2026-05-27</p></article>`));
+}, `    <h1>隐私政策</h1><article class="prose"><p>我们可能使用匿名访问统计（Google Analytics），用于了解页面访问量与来源，不用于识别个人身份。</p><p>若您启用 Google AdSense 等广告服务，Google 及其合作伙伴可能使用 Cookie 展示个性化或非个性化广告。您可在 Google 广告设置中管理偏好：<a href="https://adssettings.google.com" rel="noopener noreferrer" target="_blank">adssettings.google.com</a>。</p><p>联系表单数据由第三方 FormSubmit 处理，请参阅其隐私条款。除您主动提交的信息外，我们不收集可识别个人身份的数据。</p><p>最后更新：2026-06-12</p></article>`));
 write("en/privacy/index.html", page("en", 2, "privacy", "privacy/", {
   title: "Privacy — aoglang", desc: "aoglang privacy policy.", canonical: `${SITE}/en/privacy/`,
-}, `    <h1>Privacy policy</h1><article class="prose"><p>We may use anonymous analytics. We do not collect personal data unless you submit the contact form.</p><p>Form data is processed by FormSubmit; see their policy.</p><p>Last updated: 2026-05-27</p></article>`));
+}, `    <h1>Privacy policy</h1><article class="prose"><p>We may use Google Analytics for anonymous traffic statistics—not to identify individuals.</p><p>When Google AdSense or similar ad services are active, Google and partners may use cookies to serve ads. Manage preferences at <a href="https://adssettings.google.com" rel="noopener noreferrer" target="_blank">adssettings.google.com</a>.</p><p>Contact form data is processed by FormSubmit; see their policy. We do not collect personal data unless you submit the form.</p><p>Last updated: 2026-06-12</p></article>`));
 
 write("zh/terms/index.html", page("zh", 2, "terms", "terms/", {
   title: "使用条款 — aoglang", desc: "aoglang 网站使用条款。", canonical: `${SITE}/zh/terms/`,
@@ -3568,12 +4280,10 @@ const urls = [
   "/zh/articles/", "/en/articles/",
   ...ARTICLES.flatMap((a) => [`/zh/articles/${a.slug}.html`, `/en/articles/${a.slug}.html`]),
   "/zh/gallery/", "/en/gallery/",
-  "/zh/gallery/spring-scenes.html", "/en/gallery/spring-scenes.html",
-  ...PICTURES.flatMap((p) => [`/zh/gallery/${p.slug}.html`, `/en/gallery/${p.slug}.html`]),
   "/zh/gallery/infinity-3d.html", "/en/gallery/infinity-3d.html",
+  ...PICTURES.filter(pictureIsIndexable).flatMap((p) => [`/zh/gallery/${p.slug}.html`, `/en/gallery/${p.slug}.html`]),
   "/zh/videos/", "/en/videos/",
   ...VIDEOS.flatMap((v) => [`/zh/videos/${v.slug}.html`, `/en/videos/${v.slug}.html`]),
-  "/zh/videos/intro-aoglang.html", "/en/videos/intro-aoglang.html",
   "/zh/contact/", "/en/contact/",
   "/zh/about/", "/en/about/",
   "/zh/privacy/", "/en/privacy/",
@@ -3613,4 +4323,40 @@ function rootSectionRedirectHtml(section, opts = {}) {
   return `<!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-  <
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title}</title>
+  <meta http-equiv="refresh" content="0;url=../zh/${path}${targetSuffix}">
+  <link rel="canonical" href="${SITE}/zh/${path}">
+  <script>
+(function () {
+  var lang = /^zh/i.test(navigator.language || "") ? "zh" : "en";
+  var q = location.search || "";
+  location.replace("../" + lang + "/${path}" + q + "${targetSuffix}");
+})();
+  </script>
+</head>
+<body>
+  <p>${labelZh} <a href="../zh/${path}${targetSuffix}">中文</a> · <a href="../en/${path}${targetSuffix}">English</a></p>
+</body>
+</html>`;
+}
+
+const rootRedirects = [
+  "articles",
+  "gallery",
+  "videos",
+  "contact",
+  "about",
+  "privacy",
+  "terms",
+];
+for (const section of rootRedirects) {
+  write(`${section}/index.html`, rootSectionRedirectHtml(section));
+}
+write(
+  "search/index.html",
+  rootSectionRedirectHtml("", { hash: "#search", labelZh: "前往首页搜索", labelEn: "Go to home search" })
+);
+
+console.log("Done.");

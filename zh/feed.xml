@@ -6,6 +6,48 @@
   <description>最新文章</description>
   <language>zh-CN</language>
   <item>
+    <title>aoglang 站点 SEO 复盘：从薄内容到专题化静态站</title>
+    <link>https://aoglang.com/zh/articles/aoglang-site-seo-case-study.html</link>
+    <description>真实复盘 aoglang.com 的 SEO 改造：专题文章、noindex 薄页、sitemap 精简、Search Console 与 AdSense 准备清单。</description>
+    <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>科技与工业视觉手册：半导体、能源与办公场景</title>
+    <link>https://aoglang.com/zh/articles/tech-industry-visual-handbook.html</link>
+    <description>晶圆检测、电网光效、地球太空视角与办公资讯场景——如何为 B2B 与科技媒体选对图、写对说明，附 aoglang 作品索引。</description>
+    <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>自托管短片合集解读：旅行、自然、宏观与科技动画</title>
+    <link>https://aoglang.com/zh/articles/video-shorts-collection-guide.html</link>
+    <description>逐支解读 aoglang 8 支 MP4 短片：题材分组、时长与码率建议、poster 与 VideoObject SEO，以及每支视频的适用场景。</description>
+    <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>无穷符号 3D 视觉完全指南：十件作品与品牌应用</title>
+    <link>https://aoglang.com/zh/articles/infinity-3d-complete-guide.html</link>
+    <description>逐件解读铜色金属、螺旋缎带、双色镀铬与虹彩玻璃等 10 款 3D 无穷符号作品，含发布会、Keynote 与网站头图应用建议。</description>
+    <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>东京城市航拍完全指南：机位、构图与作品解读</title>
+    <link>https://aoglang.com/zh/articles/tokyo-aerial-complete-guide.html</link>
+    <description>从滨水高速到桥面视角，系统解读 aoglang 东京航拍系列：选点思路、黄金时段、安全合规与后期方向，附全部相关作品链接。</description>
+    <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>福州与海上风电航拍专题：地标、能源与工业视觉</title>
+    <link>https://aoglang.com/zh/articles/fuzhou-energy-aerial-series.html</link>
+    <description>解读福州体育场、海口船厂与海上风电无人机作品：题材选择、行业应用场景、组图发布策略与 aoglang 实拍经验。</description>
+    <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>人物与商务视觉创作手册：场景、受众与配图指南</title>
+    <link>https://aoglang.com/zh/articles/business-portrait-visual-handbook.html</link>
+    <description>系统解读客服、通话、居家、科技背景等人物商务题材：谁在用、怎么选图、如何写 alt 与专题文案，附 aoglang 全部相关作品索引。</description>
+    <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络</title>
     <link>https://aoglang.com/zh/articles/new-video-uploads-collection.html</link>
     <description>解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。</description>
@@ -20,7 +62,7 @@
   <item>
     <title>无人机城市航拍指南：东京、福州与海上风电</title>
     <link>https://aoglang.com/zh/articles/drone-aerial-city-photography.html</link>
-    <description>从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。</description>
+    <description>城市与能源题材航拍的完整方法论：设备准备、飞行规划、构图、合规、后期、SEO 发布与 aoglang 作品索引。</description>
     <pubDate>Sun, 01 Jun 2026 00:00:00 GMT</pubDate>
   </item>
   <item>

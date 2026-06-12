@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"自托管 MP4 视频页：体验与搜索引擎优化实践","description":"HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。","datePublished":"2026-05-29","inLanguage":"zh-Hans"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"自托管 MP4 视频页：体验与搜索引擎优化实践","description":"HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。","datePublished":"2026-05-29","inLanguage":"zh-Hans","author":{"@type":"Organization","name":"aoglang 编辑团队","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -79,13 +79,25 @@
       <p class="card-meta">2026-05-29 · <a href="../../en/articles/self-hosted-video-seo.html" hreflang="en">English</a></p>
     </header>
     <article class="prose">
-      <p>视频不必全部依赖外链平台。本站 <a href="../videos/">视频栏目</a> 提供自托管 MP4 示例，每支短片均有独立说明页。</p>
+      <p>视频不必全部依赖外链平台。本站 <a href="../videos/">视频栏目</a> 提供自托管 MP4 示例，每支短片均有独立说明页。本文详解页面结构、结构化数据与完整发布流程；栏目总览见 <a href="video-shorts-collection-guide.html">短片合集解读</a>。</p>
       <h2>页面必备元素</h2>
       <p>每支视频应有：<strong>唯一 URL</strong>、清晰的 <code>h1</code> 与 <code>meta description</code>、封面图 <code>poster</code>、时长说明，以及 VideoObject JSON-LD。参考 <a href="../videos/tech-visual-short.html">科技视觉短片</a> 与 <a href="../videos/warm-visual-clip.html">暖色视觉短片</a>。</p>
+      <h2>VideoObject 字段示例</h2>
+      <p>构建脚本输出 <code>@type: VideoObject</code>，含 <code>name</code>、<code>description</code>、<code>contentUrl</code>（指向 <code>assets/media/video/*.mp4</code>）、<code>thumbnailUrl</code>、<code>duration</code>（ISO 8601，如 PT14S）、<code>uploadDate</code>。可在 Google 富媒体结果测试工具中验证。</p>
+      <h2>poster 与首屏体验</h2>
+      <p>poster 图片应接近视频首帧，尺寸与视频比例一致，避免 CLS。构建时若 poster 不存在会尝试用 ffmpeg 从 MP4 截取；也可手动放入 <code>assets/img/video/</code>。</p>
       <h2>体积与加载</h2>
-      <p>短视频适合控制在十余秒内，并压缩码率；首屏仍可用 poster 图片避免空白。若文件过大，可外链 CDN 并在文章中说明源地址。</p>
+      <p>短视频适合控制在十余秒内，并压缩码率；首屏仍可用 poster 图片避免空白。若文件过大，可外链 CDN 并在文章中说明源地址。5–15 秒 1080p 建议 2–5 Mbps。</p>
+      <h2>无障碍</h2>
+      <p>使用 <code>controls</code> 与 <code>playsinline</code>；不默认有声自动播放。每页 sections 文字说明视频内容，满足听障/无声环境用户。</p>
       <h2>与图集、文章联动</h2>
-      <p>在视频页底部链到相关 <a href="../gallery/ai-high-tech-lights.html">科技光效图集</a> 或本专栏文章，形成主题集群，有利于用户停留与站内权重传递。</p>
+      <p>视频页链到 <a href="../gallery/ai-high-tech-lights.html">科技光效</a>、<a href="video-shorts-collection-guide.html">合集专题</a>，形成主题集群。</p>
+      <h2>发布流程（VIDEOS 数组）</h2>
+      <p>MP4 放入 <code>upload/video/</code> → 在 <code>tools/build.mjs</code> 的 <code>VIDEOS</code> 登记 slug、poster、双语 sections → <code>npm run build</code> → 更新 <a href="video-shorts-collection-guide.html">合集文章</a> 与 sitemap。</p>
+      <footer class="article-byline">
+        <p>作者 <strong>aoglang 编辑团队</strong> · 发布于 2026-05-29 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>转载请注明出处并链接原文。</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">
