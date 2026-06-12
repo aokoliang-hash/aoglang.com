@@ -1,0 +1,11 @@
+{
+  "name": "aoglang",
+  "private": true,
+  "description": "aoglang static HTML site",
+  "scripts": {
+    "build": "node tools/build.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.34.2"
+  }
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>aoglang 文章</title>
+  <link>https://aoglang.com/zh/</link>
+  <description>最新文章</description>
+  <language>zh-CN</language>
+  <item>
+    <title>视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络</title>
+    <link>https://aoglang.com/zh/articles/new-video-uploads-collection.html</link>
+    <description>解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>人物与商务视觉上新：居家、客服、通话与科技背景</title>
+    <link>https://aoglang.com/zh/articles/people-business-portrait-gallery.html</link>
+    <description>解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。</description>
+    <pubDate>Mon, 02 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>无人机城市航拍指南：东京、福州与海上风电</title>
+    <link>https://aoglang.com/zh/articles/drone-aerial-city-photography.html</link>
+    <description>从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。</description>
+    <pubDate>Sun, 01 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>图集网站如何用 WebP 与缩略图提升加载速度</title>
+    <link>https://aoglang.com/zh/articles/webp-gallery-performance.html</link>
+    <description>构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。</description>
+    <pubDate>Sat, 31 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>无穷符号 3D 视觉：品牌抽象与合辑页 SEO</title>
+    <link>https://aoglang.com/zh/articles/infinity-3d-brand-visuals.html</link>
+    <description>十张无穷符号主题 3D 作品如何既保留合辑页又拆分单图 URL，兼顾品牌叙事与长尾关键词。</description>
+    <pubDate>Fri, 30 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>自托管 MP4 视频页：体验与搜索引擎优化实践</title>
+    <link>https://aoglang.com/zh/articles/self-hosted-video-seo.html</link>
+    <description>HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。</description>
+    <pubDate>Thu, 29 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>科技与生活类视觉：如何组织成可搜索的专题</title>
+    <link>https://aoglang.com/zh/articles/tech-lifestyle-visual-storytelling.html</link>
+    <description>从办公场景、能源光效到户外休憩，用文章串联图集与视频，覆盖科技、生活方式与工业等长尾词。</description>
+    <pubDate>Wed, 28 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>欢迎来到 aoglang</title>
+    <link>https://aoglang.com/zh/articles/welcome-aoglang.html</link>
+    <description>了解 aoglang 纯 HTML 双语内容站：文章、图集与视频栏目及 SEO 设计。</description>
+    <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>静态网站搭建指南</title>
+    <link>https://aoglang.com/zh/articles/static-site-guide.html</link>
+    <description>纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。</description>
+    <pubDate>Mon, 26 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>暖色视觉短片</title>
+    <link>https://aoglang.com/zh/videos/warm-visual-clip.html</link>
+    <description>960×540 自托管 MP4 短片，暖色调画面与柔和节奏，适合作为 aoglang 视频栏目示例与视觉灵感。</description>
+    <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>高清动感视觉短片</title>
+    <link>https://aoglang.com/zh/videos/hd-motion-visual.html</link>
+    <description>1280×720 高清 MP4 短片，16:9 画幅与流畅动感，适合产品展示、创意片头与视频栏目推荐位。</description>
+    <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>科技视觉短片</title>
+    <link>https://aoglang.com/zh/videos/tech-visual-short.html</link>
+    <description>1440×960 自托管 MP4，动感科技视觉节奏，适合栏目推荐与社媒短视频位。</description>
+    <pubDate>Tue, 27 May 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>碧蓝海岸航拍小船</title>
+    <link>https://aoglang.com/zh/videos/aerial-boat-turquoise-coast.html</link>
+    <description>1280×720 俯拍短片：碧色海面、崖影与小船航迹，适合旅行、自然与航拍类内容推荐位。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>水下冲浪破浪瞬间</title>
+    <link>https://aoglang.com/zh/videos/underwater-surfer-wave.html</link>
+    <description>1920×1080 水下视角短片：冲浪者与浪沫气泡，适合运动、海洋与极限体育视觉。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>蓝蝶特写·好奇凝视</title>
+    <link>https://aoglang.com/zh/videos/blue-butterfly-closeup.html</link>
+    <description>1920×1080 电影感特写：蓝黑蝶翼与孩童好奇凝视，适合自然、亲子与慢镜头栏目。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>全球网络地球动画</title>
+    <link>https://aoglang.com/zh/videos/global-network-globe.html</link>
+    <description>594×594 方形循环动画：紫色线框地球与节点光点，适合科技、互联与数据可视化场景。</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

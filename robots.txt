@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aoglang.com/sitemap.xml
+
+# 若站点在子目录（如 /aoglang.com/），请将 Sitemap 改为：
+# Sitemap: https://你的域名/aoglang.com/sitemap.xml

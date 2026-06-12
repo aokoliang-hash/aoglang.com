@@ -1,0 +1,2110 @@
+{
+  "items": [
+    {
+      "lang": "zh",
+      "title": "视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络",
+      "desc": "解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。",
+      "url": "articles/new-video-uploads-collection.html",
+      "tags": [
+        "文章",
+        "视频",
+        "航拍",
+        "自然",
+        "科技",
+        "SEO",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "人物与商务视觉上新：居家、客服、通话与科技背景",
+      "desc": "解读本次 upload 新增的人物与商务题材图：客厅坐姿、电话沟通、客服微笑、科技二进制光效与世界地图轮廓等，每张均有独立 SEO 页面。",
+      "url": "articles/people-business-portrait-gallery.html",
+      "tags": [
+        "文章",
+        "人物",
+        "商务",
+        "客服",
+        "图集",
+        "SEO",
+        "肖像"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "无人机城市航拍指南：东京、福州与海上风电",
+      "desc": "从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。",
+      "url": "articles/drone-aerial-city-photography.html",
+      "tags": [
+        "文章",
+        "航拍",
+        "无人机",
+        "城市",
+        "SEO",
+        "图集"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "图集网站如何用 WebP 与缩略图提升加载速度",
+      "desc": "构建时生成 1400px 主图与 480px 缩略图，列表与首页用 thumb、详情用主图，显著降低首屏流量。",
+      "url": "articles/webp-gallery-performance.html",
+      "tags": [
+        "文章",
+        "WebP",
+        "性能",
+        "图集",
+        "SEO",
+        "静态站"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "无穷符号 3D 视觉：品牌抽象与合辑页 SEO",
+      "desc": "十张无穷符号主题 3D 作品如何既保留合辑页又拆分单图 URL，兼顾品牌叙事与长尾关键词。",
+      "url": "articles/infinity-3d-brand-visuals.html",
+      "tags": [
+        "文章",
+        "3D",
+        "无穷符号",
+        "品牌",
+        "图集",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "自托管 MP4 视频页：体验与搜索引擎优化实践",
+      "desc": "HTML5 自托管视频如何设置 poster、双语文案、VideoObject 与栏目内链，让短片页面也可被检索。",
+      "url": "articles/self-hosted-video-seo.html",
+      "tags": [
+        "文章",
+        "视频",
+        "SEO",
+        "MP4",
+        "自托管",
+        "结构化数据"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "科技与生活类视觉：如何组织成可搜索的专题",
+      "desc": "从办公场景、能源光效到户外休憩，用文章串联图集与视频，覆盖科技、生活方式与工业等长尾词。",
+      "url": "articles/tech-lifestyle-visual-storytelling.html",
+      "tags": [
+        "文章",
+        "科技",
+        "生活方式",
+        "视觉",
+        "内容策划",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "欢迎来到 aoglang",
+      "desc": "了解 aoglang 纯 HTML 双语内容站：文章、图集与视频栏目及 SEO 设计。",
+      "url": "articles/welcome-aoglang.html",
+      "tags": [
+        "文章",
+        "指南",
+        "静态站",
+        "双语"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "静态网站搭建指南",
+      "desc": "纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。",
+      "url": "articles/static-site-guide.html",
+      "tags": [
+        "文章",
+        "SEO",
+        "静态站",
+        "sitemap"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "东京滨水高速航拍",
+      "desc": "无人机俯瞰东京滨水区与城市高速，黄昏光线下的交通流线与水面反光，呈现都市节奏与空间层次。",
+      "url": "gallery/tokyo-waterside-highway.html",
+      "tags": [
+        "东京",
+        "航拍",
+        "无人机",
+        "滨水",
+        "高速公路",
+        "城市",
+        "黄昏",
+        "日本",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "东京城市高架桥电影感航拍 I",
+      "desc": "电影感构图下的东京高架与桥梁，车辆光轨与楼宇轮廓交织，强调现代都市的交通动脉。",
+      "url": "gallery/tokyo-highway-bridge-01.html",
+      "tags": [
+        "东京",
+        "电影感",
+        "高架桥",
+        "航拍",
+        "城市交通",
+        "夜景",
+        "建筑",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "东京城市高架桥电影感航拍 II",
+      "desc": "另一视角的东京高架桥梁群，冷暖对比与纵深构图突出立体交通网络与都市密度。",
+      "url": "gallery/tokyo-highway-bridge-02.html",
+      "tags": [
+        "东京",
+        "高架",
+        "桥梁",
+        "航拍",
+        "都市",
+        "交通",
+        "透视",
+        "电影感",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "海上风力发电机航拍 I",
+      "desc": "无人机写实镜头下的海上风电场，风机阵列与海面天际线，传达清洁能源与壮阔尺度。",
+      "url": "gallery/wind-turbines-drone-01.html",
+      "tags": [
+        "风电",
+        "风力发电",
+        "无人机",
+        "航拍",
+        "清洁能源",
+        "海洋",
+        "可持续",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "海上风力发电机航拍 II",
+      "desc": "风电场景的另一构图，强调风机叶片几何与海面纹理，适合能源、环保主题内容配图。",
+      "url": "gallery/wind-turbines-drone-02.html",
+      "tags": [
+        "风电场",
+        "航拍",
+        "叶片",
+        "海洋",
+        "绿色能源",
+        "环保",
+        "无人机",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "福州体育场航拍 I",
+      "desc": "福州体育场馆及周边城市肌理航拍，展现大型公建与城市格局的鸟瞰视角。",
+      "url": "gallery/fuzhou-stadium-aerial-01.html",
+      "tags": [
+        "福州",
+        "体育场",
+        "航拍",
+        "建筑",
+        "城市",
+        "公建",
+        "鸟瞰",
+        "福建",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "福州体育场航拍 II",
+      "desc": "体育场区域的另一航拍角度，突出场馆轮廓、道路系统与周边街区，适合旅行与城市摄影栏目。",
+      "url": "gallery/fuzhou-stadium-aerial-02.html",
+      "tags": [
+        "福州",
+        "体育馆",
+        "无人机",
+        "城市摄影",
+        "旅行",
+        "福建",
+        "地标",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "都市街景快照",
+      "desc": "街头瞬间抓拍，记录城市日常光影与行人节奏，适合生活方式与纪实类内容配图。",
+      "url": "gallery/urban-snapshot-b2.html",
+      "tags": [
+        "街景",
+        "都市",
+        "街拍",
+        "纪实",
+        "生活方式",
+        "城市",
+        "摄影",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "二进制蓝光科技背景",
+      "desc": "蓝色光线与二进制代码抽象背景，适合网络安全、数据与高科技发布会视觉。",
+      "url": "gallery/binary-blue-light-rays.html",
+      "tags": [
+        "二进制",
+        "蓝光",
+        "科技",
+        "背景",
+        "数据",
+        "网络",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "抽象水波纹理",
+      "desc": "虚化的水波与涟漪抽象背景，柔和色调适合冥想、SPA、自然与背景素材场景。",
+      "url": "gallery/abstract-water-ripples.html",
+      "tags": [
+        "水波",
+        "抽象",
+        "背景",
+        "纹理",
+        "冥想",
+        "自然",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "世界地图蓝光轮廓",
+      "desc": "蓝色光线勾勒的世界地图剪影，适合全球化、物流、通信与科技品牌视觉。",
+      "url": "gallery/world-map-blue-light.html",
+      "tags": [
+        "世界地图",
+        "蓝光",
+        "轮廓",
+        "全球",
+        "科技",
+        "通信",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "海口船厂航拍",
+      "desc": "海口船厂与货船鸟瞰视角，展现港口物流、造船工业与海岸经济活力。",
+      "url": "gallery/haikou-shipyard-aerial.html",
+      "tags": [
+        "海口",
+        "船厂",
+        "航拍",
+        "港口",
+        "货船",
+        "物流",
+        "工业",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "客厅地面坐姿",
+      "desc": "中国女性居家客厅地面坐姿，自然光与轻松氛围，适合生活方式、家居与人物类内容配图。",
+      "url": "gallery/chinese-woman-living-room-01.html",
+      "tags": [
+        "女性",
+        "客厅",
+        "居家",
+        "生活方式",
+        "人物",
+        "肖像",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "客厅地面坐姿 · 2",
+      "desc": "中国女性居家客厅地面坐姿，自然光与轻松氛围，适合生活方式、家居与人物类内容配图。",
+      "url": "gallery/chinese-woman-living-room-02.html",
+      "tags": [
+        "女性",
+        "客厅",
+        "居家",
+        "生活方式",
+        "人物",
+        "肖像",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "iPhone 屏幕特写",
+      "desc": "智能手机屏幕特写画面，突出玻璃质感与界面光感，适合科技产品、数码评测类内容配图。",
+      "url": "gallery/iphone-screen-closeup.html",
+      "tags": [
+        "iPhone",
+        "手机",
+        "屏幕",
+        "特写",
+        "科技",
+        "数码",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "防护服人物特写",
+      "desc": "白色防护服人物近景，强调安全、医疗或洁净场景氛围，适合科普与工业安全类视觉。",
+      "url": "gallery/protective-suit-portrait-01.html",
+      "tags": [
+        "防护服",
+        "人物",
+        "特写",
+        "安全",
+        "医疗",
+        "工业",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "防护服人物特写 · 2",
+      "desc": "白色防护服人物近景，强调安全、医疗或洁净场景氛围，适合科普与工业安全类视觉。",
+      "url": "gallery/protective-suit-portrait-02.html",
+      "tags": [
+        "防护服",
+        "人物",
+        "特写",
+        "安全",
+        "医疗",
+        "工业",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "指尖能量波纹",
+      "desc": "手指触碰空气、能量波纹扩散的创意画面，适合科技交互、UI 概念与未来感视觉。",
+      "url": "gallery/hand-energy-gesture.html",
+      "tags": [
+        "手势",
+        "能量",
+        "科技",
+        "交互",
+        "创意",
+        "未来感",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "年轻女性电话交谈",
+      "desc": "开心打电话的年轻中国女性，适合电信、社交应用、客服与移动沟通类视觉。",
+      "url": "gallery/young-woman-phone-call.html",
+      "tags": [
+        "女性",
+        "电话",
+        "通话",
+        "微笑",
+        "电信",
+        "移动",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "戴耳机办公",
+      "desc": "戴耳机伏案工作的人物场景，传递专注、远程办公与数字生活方式。",
+      "url": "gallery/desk-headphones-work.html",
+      "tags": [
+        "耳机",
+        "办公",
+        "远程工作",
+        "专注",
+        "生活方式",
+        "人物",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "灵性能量手势",
+      "desc": "双手伸向空灵光晕的创意画面，适合冥想、科技交互与未来感视觉主题。",
+      "url": "gallery/ethereal-hands-touch.html",
+      "tags": [
+        "手势",
+        "灵光",
+        "创意",
+        "冥想",
+        "科技",
+        "抽象",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "户外椅上的长者",
+      "desc": "长者坐在户外椅上休憩，温暖自然光与宁静氛围，适合养老、健康与生活类内容。",
+      "url": "gallery/senior-outdoor-relax.html",
+      "tags": [
+        "长者",
+        "户外",
+        "休憩",
+        "生活方式",
+        "健康",
+        "摄影",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "微笑客服形象",
+      "desc": "微笑的中国女性客服工作人员，专业亲和，适合呼叫中心、在线客服与企业服务宣传。",
+      "url": "gallery/customer-service-smile-01.html",
+      "tags": [
+        "客服",
+        "微笑",
+        "女性",
+        "服务",
+        "呼叫中心",
+        "商务",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "美甲手部特写",
+      "desc": "女性手部与粉色美甲特写，适合美容、时尚、护肤与生活方式类视觉内容。",
+      "url": "gallery/hand-pink-nails-closeup.html",
+      "tags": [
+        "美甲",
+        "手部",
+        "特写",
+        "美容",
+        "时尚",
+        "护肤",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "联系我们来电",
+      "desc": "商务风格女性使用手机通话，强调联系我们、客户沟通与移动办公场景。",
+      "url": "gallery/contact-us-mobile-call-01.html",
+      "tags": [
+        "联系我们",
+        "电话",
+        "商务",
+        "女性",
+        "手机",
+        "客服",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "联系我们来电 · 2",
+      "desc": "商务风格女性使用手机通话，强调联系我们、客户沟通与移动办公场景。",
+      "url": "gallery/contact-us-mobile-call-02.html",
+      "tags": [
+        "联系我们",
+        "电话",
+        "商务",
+        "女性",
+        "手机",
+        "客服",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "电脑技术员办公",
+      "desc": "技术员在简约办公室操作电脑，强调 IT 支持、企业科技与数字化运维场景。",
+      "url": "gallery/computer-technician-office.html",
+      "tags": [
+        "电脑",
+        "技术员",
+        "办公室",
+        "IT",
+        "科技",
+        "运维",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "电脑技术员办公 · 2",
+      "desc": "技术员在简约办公室操作电脑，强调 IT 支持、企业科技与数字化运维场景。",
+      "url": "gallery/computer-technician-office-02.html",
+      "tags": [
+        "电脑",
+        "技术员",
+        "办公室",
+        "IT",
+        "科技",
+        "运维",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "电网能量流光",
+      "desc": "电网与电流动态光线效果，充满科技张力，适合能源、电力与高科技主题配图。",
+      "url": "gallery/electric-grid-energy-lines.html",
+      "tags": [
+        "电网",
+        "电流",
+        "能源",
+        "科技",
+        "光效",
+        "电力",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "笔记本与新闻资讯",
+      "desc": "笔记本电脑与新闻、报纸资讯场景，适合媒体、资讯与商务办公类内容。",
+      "url": "gallery/laptop-news-desk.html",
+      "tags": [
+        "笔记本",
+        "新闻",
+        "资讯",
+        "媒体",
+        "办公",
+        "报纸",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "中年男士微笑肖像",
+      "desc": "微笑中年男性肖像，手势自然，适合金融、咨询、企业领导与信任感营销视觉。",
+      "url": "gallery/middle-aged-man-portrait-01.html",
+      "tags": [
+        "肖像",
+        "男性",
+        "中年",
+        "微笑",
+        "商务",
+        "信任",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "中年男士微笑肖像 · 2",
+      "desc": "微笑中年男性肖像，手势自然，适合金融、咨询、企业领导与信任感营销视觉。",
+      "url": "gallery/middle-aged-man-portrait-02.html",
+      "tags": [
+        "肖像",
+        "男性",
+        "中年",
+        "微笑",
+        "商务",
+        "信任",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "AI 高科技光效",
+      "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
+      "url": "gallery/ai-high-tech-lights.html",
+      "tags": [
+        "AI",
+        "人工智能",
+        "高科技",
+        "光效",
+        "未来感",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "AI 高科技光效 · 2",
+      "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
+      "url": "gallery/ai-high-tech-lights-02.html",
+      "tags": [
+        "AI",
+        "人工智能",
+        "高科技",
+        "光效",
+        "未来感",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "AI 高科技光效 · 3",
+      "desc": "人工智能与高科技光效视觉，蓝紫色调与未来感线条，适合 AI、科技品牌与发布会素材。",
+      "url": "gallery/ai-high-tech-lights-03.html",
+      "tags": [
+        "AI",
+        "人工智能",
+        "高科技",
+        "光效",
+        "未来感",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "太空视角地球",
+      "desc": "从太空俯瞰地球的背景画面，适合环保、航天、全球议题与科幻类视觉。",
+      "url": "gallery/earth-from-space.html",
+      "tags": [
+        "地球",
+        "太空",
+        "航天",
+        "环保",
+        "全球",
+        "科幻",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "山顶徒步者",
+      "desc": "三名徒步者站在山顶眺望远方，传达户外探险、旅行与团队精神。",
+      "url": "gallery/hikers-mountain-summit.html",
+      "tags": [
+        "徒步",
+        "登山",
+        "山顶",
+        "户外",
+        "旅行",
+        "风景",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "报纸俯拍",
+      "desc": "黑白报纸俯拍构图，复古新闻质感，适合媒体、历史与 editorial 设计。",
+      "url": "gallery/newspaper-top-view.html",
+      "tags": [
+        "报纸",
+        "俯拍",
+        "黑白",
+        "媒体",
+        "新闻",
+        "复古",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "晶圆芯片检测特写 1",
+      "desc": "晶圆与芯片检测工业特写，强调半导体制造、精密科技与微观工艺。",
+      "url": "gallery/wafer-chip-inspection-01.html",
+      "tags": [
+        "晶圆",
+        "芯片",
+        "半导体",
+        "工业",
+        "检测",
+        "科技",
+        "特写",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "晶圆芯片检测特写 2",
+      "desc": "晶圆与芯片检测工业特写，强调半导体制造、精密科技与微观工艺。",
+      "url": "gallery/wafer-chip-inspection-02.html",
+      "tags": [
+        "晶圆",
+        "芯片",
+        "半导体",
+        "工业",
+        "检测",
+        "科技",
+        "特写",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "晶圆芯片检测特写 3",
+      "desc": "晶圆与芯片检测工业特写，强调半导体制造、精密科技与微观工艺。",
+      "url": "gallery/wafer-chip-inspection-03.html",
+      "tags": [
+        "晶圆",
+        "芯片",
+        "半导体",
+        "工业",
+        "检测",
+        "科技",
+        "特写",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "晶圆芯片检测特写 4",
+      "desc": "晶圆与芯片检测工业特写，强调半导体制造、精密科技与微观工艺。",
+      "url": "gallery/wafer-chip-inspection-04.html",
+      "tags": [
+        "晶圆",
+        "芯片",
+        "半导体",
+        "工业",
+        "检测",
+        "科技",
+        "特写",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "铜色金属无穷环",
+      "desc": "暖米色背景上的抛光铜色三维无穷符号，柔光勾勒金属质感，寓意连续与永恒。",
+      "url": "gallery/wqd-01.html",
+      "tags": [
+        "无穷符号",
+        "3D",
+        "金属",
+        "铜色",
+        "抽象",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "橙金螺旋缎带",
+      "desc": "多层光泽缎带扭转成螺旋形态，橙金渐变与高光强调流动感与现代感。",
+      "url": "gallery/wqd-02.html",
+      "tags": [
+        "螺旋",
+        "缎带",
+        "橙色",
+        "3D渲染",
+        "抽象",
+        "动态"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "橙色波浪层叠",
+      "desc": "平行光泽带层叠扭转，形成波浪式无穷动线，深影与高对比塑造立体层次。",
+      "url": "gallery/wqd-03.html",
+      "tags": [
+        "波浪",
+        "层叠",
+        "橙色",
+        "光泽",
+        "流体",
+        "3D"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "渐变背景螺旋",
+      "desc": "粗壮橙色缎带螺旋盘绕，背景由暖黄过渡到浅蓝，冷暖对比突出主体。",
+      "url": "gallery/wqd-04.html",
+      "tags": [
+        "螺旋",
+        "渐变背景",
+        "橙色",
+        "极简",
+        "构图",
+        "3D艺术"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "双色光影无穷环",
+      "desc": "黑色背景上的镀铬无穷符号，左侧暖金、右侧冷蓝双色照明，科技感强烈。",
+      "url": "gallery/wqd-05.html",
+      "tags": [
+        "无穷符号",
+        "镀铬",
+        "双色光",
+        "黑色背景",
+        "科技",
+        "未来感"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "青绿渐变扭曲环",
+      "desc": "多层薄带扭转成莫比乌斯式无穷结构，青绿到青蓝渐变，金属光泽细腻。",
+      "url": "gallery/wqd-06.html",
+      "tags": [
+        "青绿",
+        "渐变",
+        "莫比乌斯",
+        "无穷",
+        "金属",
+        "抽象雕塑"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "哑光橙无穷符号",
+      "desc": "简洁哑光橙色三维无穷环，置于浅色平面，轻阴影呈现干净极简风格。",
+      "url": "gallery/wqd-07.html",
+      "tags": [
+        "哑光",
+        "橙色",
+        "极简",
+        "无穷符号",
+        "图标",
+        "现代"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "单色橙铜无穷",
+      "desc": "同色系橙铜金属无穷符号，背景与主体色调统一，强调形态与材质细节。",
+      "url": "gallery/wqd-08.html",
+      "tags": [
+        "单色",
+        "橙铜",
+        "金属",
+        "无穷",
+        "极简",
+        "品牌视觉"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "层叠橙带无穷",
+      "desc": "多层薄带堆叠扭转成无穷结，全橙色调中通过明暗展现立体结构。",
+      "url": "gallery/wqd-09.html",
+      "tags": [
+        "层叠",
+        "薄带",
+        "橙色",
+        "无穷符号",
+        "3D",
+        "光泽"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "虹彩玻璃方块无穷",
+      "desc": "半透明方块螺旋砌成无穷环，虹彩折射如水晶玻璃，轻盈且富有未来感。",
+      "url": "gallery/wqd-10.html",
+      "tags": [
+        "虹彩",
+        "玻璃",
+        "半透明",
+        "无穷",
+        "方块",
+        "未来"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "无穷符号 3D 视觉合辑",
+      "desc": "十张无穷符号 3D 抽象视觉合集页面，亦可从单张作品页浏览。",
+      "url": "gallery/infinity-3d.html",
+      "tags": [
+        "图集",
+        "无穷符号",
+        "3D",
+        "合辑",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "春日图集",
+      "desc": "示例图集：多图展示与无障碍说明。",
+      "url": "gallery/spring-scenes.html",
+      "tags": [
+        "图集",
+        "摄影"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "暖色视觉短片",
+      "desc": "960×540 自托管 MP4 短片，暖色调画面与柔和节奏，适合作为 aoglang 视频栏目示例与视觉灵感。",
+      "url": "videos/warm-visual-clip.html",
+      "tags": [
+        "视频",
+        "短片",
+        "暖色",
+        "视觉",
+        "自托管",
+        "MP4",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "高清动感视觉短片",
+      "desc": "1280×720 高清 MP4 短片，16:9 画幅与流畅动感，适合产品展示、创意片头与视频栏目推荐位。",
+      "url": "videos/hd-motion-visual.html",
+      "tags": [
+        "视频",
+        "高清",
+        "720p",
+        "16:9",
+        "动感",
+        "自托管",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "科技视觉短片",
+      "desc": "1440×960 自托管 MP4，动感科技视觉节奏，适合栏目推荐与社媒短视频位。",
+      "url": "videos/tech-visual-short.html",
+      "tags": [
+        "视频",
+        "科技",
+        "视觉",
+        "短片",
+        "自托管",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "碧蓝海岸航拍小船",
+      "desc": "1280×720 俯拍短片：碧色海面、崖影与小船航迹，适合旅行、自然与航拍类内容推荐位。",
+      "url": "videos/aerial-boat-turquoise-coast.html",
+      "tags": [
+        "视频",
+        "航拍",
+        "海岸",
+        "小船",
+        "碧蓝海水",
+        "旅行",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "水下冲浪破浪瞬间",
+      "desc": "1920×1080 水下视角短片：冲浪者与浪沫气泡，适合运动、海洋与极限体育视觉。",
+      "url": "videos/underwater-surfer-wave.html",
+      "tags": [
+        "视频",
+        "冲浪",
+        "水下",
+        "海浪",
+        "运动",
+        "海洋",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "蓝蝶特写·好奇凝视",
+      "desc": "1920×1080 电影感特写：蓝黑蝶翼与孩童好奇凝视，适合自然、亲子与慢镜头栏目。",
+      "url": "videos/blue-butterfly-closeup.html",
+      "tags": [
+        "视频",
+        "蝴蝶",
+        "自然",
+        "特写",
+        "电影感",
+        "亲子",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "全球网络地球动画",
+      "desc": "594×594 方形循环动画：紫色线框地球与节点光点，适合科技、互联与数据可视化场景。",
+      "url": "videos/global-network-globe.html",
+      "tags": [
+        "视频",
+        "地球",
+        "网络",
+        "科技",
+        "数据",
+        "动画",
+        "自托管"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "认识 aoglang 视频（示例）",
+      "desc": "HTML5 视频播放与嵌入说明。",
+      "url": "videos/intro-aoglang.html",
+      "tags": [
+        "视频",
+        "示例"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "关于我们",
+      "desc": "站点使命与联系方式。",
+      "url": "about/",
+      "tags": [
+        "关于"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "联系我们",
+      "desc": "邮件与留言表单。",
+      "url": "contact/",
+      "tags": [
+        "联系"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "New videos: coast aerial, surfing, butterfly & globe",
+      "desc": "Four new self-hosted MP4s with bilingual pages and VideoObject schema—coast drone, underwater surf, butterfly macro, and network globe.",
+      "url": "articles/new-video-uploads-collection.html",
+      "tags": [
+        "article",
+        "video",
+        "aerial",
+        "nature",
+        "tech",
+        "SEO",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "New people & business portraits in the gallery",
+      "desc": "New uploads—living room scenes, phone calls, customer service smiles, tech backgrounds—with dedicated bilingual SEO pages.",
+      "url": "articles/people-business-portrait-gallery.html",
+      "tags": [
+        "article",
+        "people",
+        "business",
+        "customer service",
+        "gallery",
+        "SEO",
+        "portrait"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Drone city aerials: Tokyo, Fuzhou & offshore wind",
+      "desc": "How to turn aerial gallery shots into SEO-friendly articles with clear topics, alt text, and internal links.",
+      "url": "articles/drone-aerial-city-photography.html",
+      "tags": [
+        "article",
+        "aerial",
+        "drone",
+        "urban",
+        "SEO",
+        "gallery"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "WebP thumbnails for faster gallery pages",
+      "desc": "Build-time 1400px heroes and 480px thumbs—indexes stay light while detail pages stay sharp.",
+      "url": "articles/webp-gallery-performance.html",
+      "tags": [
+        "article",
+        "WebP",
+        "performance",
+        "gallery",
+        "SEO",
+        "static"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Infinity 3D visuals: brand abstracts & collection SEO",
+      "desc": "Ten infinity-themed 3D renders with both a collection URL and per-image pages for sharing and long-tail search.",
+      "url": "articles/infinity-3d-brand-visuals.html",
+      "tags": [
+        "article",
+        "3D",
+        "infinity",
+        "branding",
+        "gallery",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Self-hosted MP4 pages: UX and video SEO",
+      "desc": "Posters, bilingual copy, VideoObject schema, and internal links for short clips hosted on a static site.",
+      "url": "articles/self-hosted-video-seo.html",
+      "tags": [
+        "article",
+        "video",
+        "SEO",
+        "MP4",
+        "self-hosted",
+        "schema"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Tech & lifestyle visuals as searchable topics",
+      "desc": "Connect office, energy, and leisure shots with articles that capture long-tail queries beyond image filenames.",
+      "url": "articles/tech-lifestyle-visual-storytelling.html",
+      "tags": [
+        "article",
+        "tech",
+        "lifestyle",
+        "visual",
+        "content",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Welcome to aoglang",
+      "desc": "About the aoglang bilingual static site—articles, galleries, videos, and SEO.",
+      "url": "articles/welcome-aoglang.html",
+      "tags": [
+        "article",
+        "guide",
+        "static",
+        "bilingual"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Static site guide",
+      "desc": "Folder layout, SEO, RSS, sitemap, and search index checklist for aoglang.",
+      "url": "articles/static-site-guide.html",
+      "tags": [
+        "article",
+        "SEO",
+        "static",
+        "sitemap"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Tokyo waterside highway aerial",
+      "desc": "Drone view of Tokyo’s waterfront expressway at dusk—traffic streams, water reflections, and layered urban depth.",
+      "url": "gallery/tokyo-waterside-highway.html",
+      "tags": [
+        "Tokyo",
+        "aerial",
+        "drone",
+        "waterside",
+        "highway",
+        "urban",
+        "dusk",
+        "Japan",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Cinematic Tokyo highway bridge I",
+      "desc": "Cinematic aerial of a Tokyo highway bridge—light trails, skyline silhouettes, and the city’s transit backbone.",
+      "url": "gallery/tokyo-highway-bridge-01.html",
+      "tags": [
+        "Tokyo",
+        "cinematic",
+        "highway",
+        "bridge",
+        "aerial",
+        "traffic",
+        "skyline",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Cinematic Tokyo highway bridge II",
+      "desc": "Alternate angle on Tokyo’s elevated highways—depth, contrast, and dense urban infrastructure from above.",
+      "url": "gallery/tokyo-highway-bridge-02.html",
+      "tags": [
+        "Tokyo",
+        "elevated road",
+        "bridge",
+        "aerial",
+        "urban",
+        "transport",
+        "perspective",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Offshore wind turbines aerial I",
+      "desc": "Realistic drone capture of offshore wind turbines—clean energy at scale against the open sea.",
+      "url": "gallery/wind-turbines-drone-01.html",
+      "tags": [
+        "wind power",
+        "turbines",
+        "drone",
+        "aerial",
+        "renewable",
+        "offshore",
+        "sustainable",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Offshore wind turbines aerial II",
+      "desc": "Second composition of offshore turbines—blade geometry and sea texture for energy and eco-themed stories.",
+      "url": "gallery/wind-turbines-drone-02.html",
+      "tags": [
+        "wind farm",
+        "aerial",
+        "blades",
+        "ocean",
+        "green energy",
+        "eco",
+        "drone",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Fuzhou stadium aerial I",
+      "desc": "Bird’s-eye view of Fuzhou’s stadium and surrounding urban fabric—landmark architecture in context.",
+      "url": "gallery/fuzhou-stadium-aerial-01.html",
+      "tags": [
+        "Fuzhou",
+        "stadium",
+        "aerial",
+        "architecture",
+        "urban",
+        "landmark",
+        "Fujian",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Fuzhou stadium aerial II",
+      "desc": "Alternate aerial of the Fuzhou stadium zone—roads, blocks, and landmark curves for travel and city photo stories.",
+      "url": "gallery/fuzhou-stadium-aerial-02.html",
+      "tags": [
+        "Fuzhou",
+        "arena",
+        "drone",
+        "city photography",
+        "travel",
+        "landmark",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Urban street snapshot",
+      "desc": "A candid street moment—everyday light and rhythm for lifestyle and documentary-style visuals.",
+      "url": "gallery/urban-snapshot-b2.html",
+      "tags": [
+        "street",
+        "urban",
+        "snapshot",
+        "documentary",
+        "lifestyle",
+        "city",
+        "photography",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Binary code blue light rays",
+      "desc": "Abstract blue rays with binary code—cybersecurity, data, and tech event backgrounds.",
+      "url": "gallery/binary-blue-light-rays.html",
+      "tags": [
+        "binary",
+        "blue",
+        "light",
+        "tech",
+        "data",
+        "cyber",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Abstract water ripples",
+      "desc": "Soft blurred water ripples—abstract background for wellness, nature, and calm visual themes.",
+      "url": "gallery/abstract-water-ripples.html",
+      "tags": [
+        "water",
+        "ripples",
+        "abstract",
+        "background",
+        "wellness",
+        "nature",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "World map blue light silhouette",
+      "desc": "World map silhouette with blue light rays—global business, logistics, and telecom themes.",
+      "url": "gallery/world-map-blue-light.html",
+      "tags": [
+        "world map",
+        "blue light",
+        "global",
+        "tech",
+        "silhouette",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Haikou shipyard aerial",
+      "desc": "Aerial view of Haikou shipyard and cargo vessels—port logistics and coastal industry.",
+      "url": "gallery/haikou-shipyard-aerial.html",
+      "tags": [
+        "Haikou",
+        "shipyard",
+        "aerial",
+        "port",
+        "cargo",
+        "logistics",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Chinese woman in living room",
+      "desc": "A Chinese woman seated on the living room floor—casual lifestyle and portrait storytelling.",
+      "url": "gallery/chinese-woman-living-room-01.html",
+      "tags": [
+        "woman",
+        "living room",
+        "lifestyle",
+        "portrait",
+        "home",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Chinese woman in living room 2",
+      "desc": "A Chinese woman seated on the living room floor—casual lifestyle and portrait storytelling.",
+      "url": "gallery/chinese-woman-living-room-02.html",
+      "tags": [
+        "woman",
+        "living room",
+        "lifestyle",
+        "portrait",
+        "home",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "iPhone screen close-up",
+      "desc": "Close-up of a smartphone screen—glass reflections and UI glow for tech and gadget features.",
+      "url": "gallery/iphone-screen-closeup.html",
+      "tags": [
+        "iPhone",
+        "smartphone",
+        "screen",
+        "close-up",
+        "tech",
+        "digital",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Protective suit portrait",
+      "desc": "Close-up portrait in a white protective suit—safety, medical, or cleanroom visual context.",
+      "url": "gallery/protective-suit-portrait-01.html",
+      "tags": [
+        "protective suit",
+        "portrait",
+        "safety",
+        "medical",
+        "industrial",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Protective suit portrait 2",
+      "desc": "Close-up portrait in a white protective suit—safety, medical, or cleanroom visual context.",
+      "url": "gallery/protective-suit-portrait-02.html",
+      "tags": [
+        "protective suit",
+        "portrait",
+        "safety",
+        "medical",
+        "industrial",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Hand energy gesture",
+      "desc": "A finger touches the air with rippling energy—futuristic UI and interaction concept art.",
+      "url": "gallery/hand-energy-gesture.html",
+      "tags": [
+        "hand",
+        "energy",
+        "tech",
+        "interaction",
+        "futuristic",
+        "concept",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Young woman talking on the phone",
+      "desc": "A happy young Chinese woman on a phone call—telecom, social apps, and mobile communication.",
+      "url": "gallery/young-woman-phone-call.html",
+      "tags": [
+        "woman",
+        "phone",
+        "call",
+        "smile",
+        "telecom",
+        "mobile",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Working with headphones",
+      "desc": "Person at a desk with headphones—focus, remote work, and digital lifestyle storytelling.",
+      "url": "gallery/desk-headphones-work.html",
+      "tags": [
+        "headphones",
+        "desk",
+        "remote work",
+        "focus",
+        "lifestyle",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Ethereal hands reaching light",
+      "desc": "Hands reaching toward an ethereal glow—meditation, tech UI concepts, and futuristic mood.",
+      "url": "gallery/ethereal-hands-touch.html",
+      "tags": [
+        "hands",
+        "ethereal",
+        "light",
+        "creative",
+        "meditation",
+        "futuristic",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Senior relaxing outdoors",
+      "desc": "A senior person seated outdoors in calm light—wellness, leisure, and gentle lifestyle imagery.",
+      "url": "gallery/senior-outdoor-relax.html",
+      "tags": [
+        "senior",
+        "outdoor",
+        "relax",
+        "wellness",
+        "lifestyle",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smiling customer service staff",
+      "desc": "Smiling Chinese customer service professional—call center, support, and corporate service visuals.",
+      "url": "gallery/customer-service-smile-01.html",
+      "tags": [
+        "customer service",
+        "smile",
+        "support",
+        "call center",
+        "business",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Hand with pink nails",
+      "desc": "Close-up of a woman's hand with pink nail polish—beauty, fashion, and lifestyle visuals.",
+      "url": "gallery/hand-pink-nails-closeup.html",
+      "tags": [
+        "nails",
+        "hand",
+        "beauty",
+        "fashion",
+        "close-up",
+        "lifestyle",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Contact us mobile call",
+      "desc": "Business-style woman on a mobile call—contact us, client communication, and remote work.",
+      "url": "gallery/contact-us-mobile-call-01.html",
+      "tags": [
+        "contact us",
+        "mobile",
+        "call",
+        "business",
+        "woman",
+        "support",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Contact us mobile call 2",
+      "desc": "Business-style woman on a mobile call—contact us, client communication, and remote work.",
+      "url": "gallery/contact-us-mobile-call-02.html",
+      "tags": [
+        "contact us",
+        "mobile",
+        "call",
+        "business",
+        "woman",
+        "support",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Computer technician at work",
+      "desc": "Technician working at a computer in a clean office—IT support and enterprise tech.",
+      "url": "gallery/computer-technician-office.html",
+      "tags": [
+        "technician",
+        "computer",
+        "office",
+        "IT",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Computer technician at work 2",
+      "desc": "Technician working at a computer in a clean office—IT support and enterprise tech.",
+      "url": "gallery/computer-technician-office-02.html",
+      "tags": [
+        "technician",
+        "computer",
+        "office",
+        "IT",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Electric grid energy lines",
+      "desc": "Dynamic light lines suggesting electric current—energy, power, and high-tech themes.",
+      "url": "gallery/electric-grid-energy-lines.html",
+      "tags": [
+        "electric",
+        "grid",
+        "energy",
+        "light",
+        "technology",
+        "power",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Laptop and news media",
+      "desc": "Laptop with news and newspaper elements—media, information, and business desk visuals.",
+      "url": "gallery/laptop-news-desk.html",
+      "tags": [
+        "laptop",
+        "news",
+        "media",
+        "newspaper",
+        "business",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smiling middle-aged man portrait",
+      "desc": "Portrait of a smiling middle-aged man—finance, consulting, leadership, and trust-focused branding.",
+      "url": "gallery/middle-aged-man-portrait-01.html",
+      "tags": [
+        "portrait",
+        "man",
+        "middle-aged",
+        "smile",
+        "business",
+        "trust",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smiling middle-aged man portrait 2",
+      "desc": "Portrait of a smiling middle-aged man—finance, consulting, leadership, and trust-focused branding.",
+      "url": "gallery/middle-aged-man-portrait-02.html",
+      "tags": [
+        "portrait",
+        "man",
+        "middle-aged",
+        "smile",
+        "business",
+        "trust",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "AI high-tech light effects",
+      "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
+      "url": "gallery/ai-high-tech-lights.html",
+      "tags": [
+        "AI",
+        "high-tech",
+        "lights",
+        "futuristic",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "AI high-tech light effects 2",
+      "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
+      "url": "gallery/ai-high-tech-lights-02.html",
+      "tags": [
+        "AI",
+        "high-tech",
+        "lights",
+        "futuristic",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "AI high-tech light effects 3",
+      "desc": "Futuristic light effects for AI and high-tech branding—glow, beams, and digital atmosphere.",
+      "url": "gallery/ai-high-tech-lights-03.html",
+      "tags": [
+        "AI",
+        "high-tech",
+        "lights",
+        "futuristic",
+        "technology",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Earth from space",
+      "desc": "Earth seen from space—planet backdrop for climate, space, and global storytelling.",
+      "url": "gallery/earth-from-space.html",
+      "tags": [
+        "Earth",
+        "space",
+        "planet",
+        "climate",
+        "global",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Hikers on mountain summit",
+      "desc": "Three hikers on a mountain top—outdoor adventure, travel, and team spirit.",
+      "url": "gallery/hikers-mountain-summit.html",
+      "tags": [
+        "hikers",
+        "mountain",
+        "summit",
+        "outdoor",
+        "travel",
+        "adventure",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Newspaper top view",
+      "desc": "Top-down black-and-white newspaper layout—editorial and media-themed visuals.",
+      "url": "gallery/newspaper-top-view.html",
+      "tags": [
+        "newspaper",
+        "top view",
+        "editorial",
+        "media",
+        "monochrome",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Wafer chip inspection 1",
+      "desc": "Industrial close-up of wafer and chip inspection—semiconductor manufacturing precision.",
+      "url": "gallery/wafer-chip-inspection-01.html",
+      "tags": [
+        "wafer",
+        "chip",
+        "semiconductor",
+        "industrial",
+        "inspection",
+        "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Wafer chip inspection 2",
+      "desc": "Industrial close-up of wafer and chip inspection—semiconductor manufacturing precision.",
+      "url": "gallery/wafer-chip-inspection-02.html",
+      "tags": [
+        "wafer",
+        "chip",
+        "semiconductor",
+        "industrial",
+        "inspection",
+        "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Wafer chip inspection 3",
+      "desc": "Industrial close-up of wafer and chip inspection—semiconductor manufacturing precision.",
+      "url": "gallery/wafer-chip-inspection-03.html",
+      "tags": [
+        "wafer",
+        "chip",
+        "semiconductor",
+        "industrial",
+        "inspection",
+        "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Wafer chip inspection 4",
+      "desc": "Industrial close-up of wafer and chip inspection—semiconductor manufacturing precision.",
+      "url": "gallery/wafer-chip-inspection-04.html",
+      "tags": [
+        "wafer",
+        "chip",
+        "semiconductor",
+        "industrial",
+        "inspection",
+        "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Copper metallic infinity",
+      "desc": "A polished copper 3D infinity loop on a warm beige backdrop with soft studio lighting.",
+      "url": "gallery/wqd-01.html",
+      "tags": [
+        "infinity",
+        "3D",
+        "metallic",
+        "copper",
+        "abstract",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Orange-gold spiral ribbons",
+      "desc": "Glossy layered ribbons twist into a dynamic spiral with warm orange and gold highlights.",
+      "url": "gallery/wqd-02.html",
+      "tags": [
+        "spiral",
+        "ribbon",
+        "orange",
+        "3D render",
+        "abstract",
+        "dynamic"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Layered orange waves",
+      "desc": "Parallel glossy bands layer and twist into a fluid wave-like infinity motion.",
+      "url": "gallery/wqd-03.html",
+      "tags": [
+        "wave",
+        "layers",
+        "orange",
+        "glossy",
+        "fluid",
+        "3D"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Spiral on gradient sky",
+      "desc": "Bold orange helical ribbons against a soft yellow-to-blue gradient background.",
+      "url": "gallery/wqd-04.html",
+      "tags": [
+        "spiral",
+        "gradient",
+        "orange",
+        "minimal",
+        "composition",
+        "3D art"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Dual-lit chrome infinity",
+      "desc": "Chrome infinity on black with warm gold left and cool blue right lighting.",
+      "url": "gallery/wqd-05.html",
+      "tags": [
+        "infinity",
+        "chrome",
+        "dual lighting",
+        "black background",
+        "tech",
+        "futuristic"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Teal gradient twist",
+      "desc": "Layered ribbons form a Möbius-like infinity with lime-to-cyan metallic gradients.",
+      "url": "gallery/wqd-06.html",
+      "tags": [
+        "teal",
+        "gradient",
+        "Möbius",
+        "infinity",
+        "metallic",
+        "sculpture"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Matte orange infinity",
+      "desc": "Clean matte orange 3D infinity icon on a light surface with soft shadow.",
+      "url": "gallery/wqd-07.html",
+      "tags": [
+        "matte",
+        "orange",
+        "minimal",
+        "infinity",
+        "icon",
+        "modern"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Monochrome copper-orange",
+      "desc": "Monochromatic metallic infinity in copper-orange tones on a matching backdrop.",
+      "url": "gallery/wqd-08.html",
+      "tags": [
+        "monochrome",
+        "copper",
+        "metallic",
+        "infinity",
+        "minimal",
+        "branding"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Layered orange infinity",
+      "desc": "Stacked thin ribbons twist into an infinity knot with depth via orange highlights.",
+      "url": "gallery/wqd-09.html",
+      "tags": [
+        "layered",
+        "ribbons",
+        "orange",
+        "infinity",
+        "3D",
+        "glossy"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Iridescent glass blocks",
+      "desc": "Translucent blocks spiral into an infinity loop with rainbow iridescent refractions.",
+      "url": "gallery/wqd-10.html",
+      "tags": [
+        "iridescent",
+        "glass",
+        "translucent",
+        "infinity",
+        "blocks",
+        "futuristic"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Infinity 3D visual collection",
+      "desc": "Collection page for ten infinity-themed 3D visuals; each also has its own URL.",
+      "url": "gallery/infinity-3d.html",
+      "tags": [
+        "gallery",
+        "infinity",
+        "3D",
+        "collection",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Spring scenes gallery",
+      "desc": "Sample photo gallery with captions and alt text.",
+      "url": "gallery/spring-scenes.html",
+      "tags": [
+        "gallery",
+        "photos"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Warm-tone visual clip",
+      "desc": "Self-hosted 960×540 MP4 short clip with warm palette and calm pacing—featured on aoglang’s video section.",
+      "url": "videos/warm-visual-clip.html",
+      "tags": [
+        "video",
+        "short clip",
+        "warm tone",
+        "visual",
+        "self-hosted",
+        "MP4",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "HD motion visual clip",
+      "desc": "1280×720 MP4 short in 16:9 with crisp motion—ideal for product vibes, openers, and featured video slots on aoglang.",
+      "url": "videos/hd-motion-visual.html",
+      "tags": [
+        "video",
+        "HD",
+        "720p",
+        "16:9",
+        "motion",
+        "self-hosted",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Tech visual short clip",
+      "desc": "Self-hosted 1440×960 MP4 with a tech-forward motion beat—ideal for featured video slots.",
+      "url": "videos/tech-visual-short.html",
+      "tags": [
+        "video",
+        "tech",
+        "visual",
+        "short",
+        "self-hosted",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Aerial boat on turquoise coast",
+      "desc": "1280×720 top-down clip: teal water, cliff shadow, and a small boat trail—ideal for travel and nature video slots.",
+      "url": "videos/aerial-boat-turquoise-coast.html",
+      "tags": [
+        "video",
+        "aerial",
+        "coast",
+        "boat",
+        "turquoise water",
+        "travel",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Underwater surfer in the wave",
+      "desc": "1920×1080 underwater clip: surfer, foam, and bubbles—built for sports, ocean, and action visuals.",
+      "url": "videos/underwater-surfer-wave.html",
+      "tags": [
+        "video",
+        "surfing",
+        "underwater",
+        "wave",
+        "sports",
+        "ocean",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Blue butterfly close-up",
+      "desc": "1920×1080 cinematic macro: blue-black wings and a curious gaze—ideal for nature and family storytelling.",
+      "url": "videos/blue-butterfly-closeup.html",
+      "tags": [
+        "video",
+        "butterfly",
+        "nature",
+        "close-up",
+        "cinematic",
+        "family",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Global network globe animation",
+      "desc": "594×594 square loop: purple wireframe Earth with node lights—built for tech, connectivity, and data stories.",
+      "url": "videos/global-network-globe.html",
+      "tags": [
+        "video",
+        "globe",
+        "network",
+        "tech",
+        "data",
+        "animation",
+        "self-hosted"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Intro to aoglang (video demo)",
+      "desc": "HTML5 video playback and embed demo.",
+      "url": "videos/intro-aoglang.html",
+      "tags": [
+        "video",
+        "demo"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "About",
+      "desc": "Mission and contact information.",
+      "url": "about/",
+      "tags": [
+        "about"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Contact",
+      "desc": "Email and contact form.",
+      "url": "contact/",
+      "tags": [
+        "contact"
+      ]
+    }
+  ]
+}

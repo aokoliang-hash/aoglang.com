@@ -1,0 +1,28 @@
+DirectoryIndex index.html
+Options -Indexes
+
+# 虚拟主机根目录指向本文件夹时用 /404.html
+# 若在子目录运行（如 localhost:84/aoglang.com/），改为：ErrorDocument 404 /aoglang.com/404.html
+ErrorDocument 404 /404.html
+
+# 根目录短路径 → 中文栏目（无 mod_rewrite 时仍可用各目录下的 index.html 跳转）
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(articles|gallery|videos|contact|about|privacy|terms)/?$ zh/$1/ [R=302,L]
+  RewriteRule ^search/?$ zh/#search [R=302,L,NE]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
