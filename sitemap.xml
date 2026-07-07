@@ -28,6 +28,16 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://aoglang.com/zh/articles/aoglang-site-seo-case-study.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/aoglang-site-seo-case-study.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/aoglang-site-seo-case-study.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/aoglang-site-seo-case-study.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://aoglang.com/zh/articles/energy-product-display-gallery.html</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/energy-product-display-gallery.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/energy-product-display-gallery.html"/>
@@ -35,6 +45,66 @@
   </url>
   <url>
     <loc>https://aoglang.com/en/articles/energy-product-display-gallery.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/tech-industry-visual-handbook.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/tech-industry-visual-handbook.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/tech-industry-visual-handbook.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/tech-industry-visual-handbook.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/video-shorts-collection-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/video-shorts-collection-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/video-shorts-collection-guide.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/video-shorts-collection-guide.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/infinity-3d-complete-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/infinity-3d-complete-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/infinity-3d-complete-guide.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/infinity-3d-complete-guide.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/tokyo-aerial-complete-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/tokyo-aerial-complete-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/tokyo-aerial-complete-guide.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/tokyo-aerial-complete-guide.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/fuzhou-energy-aerial-series.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/fuzhou-energy-aerial-series.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/fuzhou-energy-aerial-series.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/fuzhou-energy-aerial-series.html</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/zh/articles/business-portrait-visual-handbook.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/articles/business-portrait-visual-handbook.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/articles/business-portrait-visual-handbook.html"/>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://aoglang.com/en/articles/business-portrait-visual-handbook.html</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -138,13 +208,13 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://aoglang.com/zh/gallery/spring-scenes.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/spring-scenes.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/spring-scenes.html"/>
+    <loc>https://aoglang.com/zh/gallery/infinity-3d.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/infinity-3d.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/infinity-3d.html"/>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://aoglang.com/en/gallery/spring-scenes.html</loc>
+    <loc>https://aoglang.com/en/gallery/infinity-3d.html</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -218,56 +288,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://aoglang.com/zh/gallery/urban-snapshot-b2.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/urban-snapshot-b2.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/urban-snapshot-b2.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/urban-snapshot-b2.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/white-podium-product-stage.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/white-podium-product-stage.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/white-podium-product-stage.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/white-podium-product-stage.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/binary-blue-light-rays.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/binary-blue-light-rays.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/binary-blue-light-rays.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/binary-blue-light-rays.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/abstract-water-ripples.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/abstract-water-ripples.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/abstract-water-ripples.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/abstract-water-ripples.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/world-map-blue-light.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/world-map-blue-light.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/world-map-blue-light.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/world-map-blue-light.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://aoglang.com/zh/gallery/haikou-shipyard-aerial.html</loc>
     <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/haikou-shipyard-aerial.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/haikou-shipyard-aerial.html"/>
@@ -275,496 +295,6 @@
   </url>
   <url>
     <loc>https://aoglang.com/en/gallery/haikou-shipyard-aerial.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/chinese-woman-living-room-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/chinese-woman-living-room-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/chinese-woman-living-room-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/chinese-woman-living-room-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/chinese-woman-living-room-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/chinese-woman-living-room-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/chinese-woman-living-room-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/chinese-woman-living-room-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/architectural-concrete-wall-closeup.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/architectural-concrete-wall-closeup.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/architectural-concrete-wall-closeup.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/architectural-concrete-wall-closeup.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/iphone-screen-closeup.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/iphone-screen-closeup.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/iphone-screen-closeup.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/iphone-screen-closeup.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/protective-suit-portrait-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/protective-suit-portrait-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/protective-suit-portrait-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/protective-suit-portrait-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/protective-suit-portrait-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/protective-suit-portrait-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/protective-suit-portrait-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/protective-suit-portrait-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/hand-energy-gesture.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/hand-energy-gesture.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/hand-energy-gesture.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/hand-energy-gesture.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/young-woman-phone-call.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/young-woman-phone-call.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/young-woman-phone-call.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/young-woman-phone-call.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/desk-headphones-work.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/desk-headphones-work.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/desk-headphones-work.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/desk-headphones-work.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/ethereal-hands-touch.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/ethereal-hands-touch.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/ethereal-hands-touch.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/ethereal-hands-touch.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/senior-outdoor-relax.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/senior-outdoor-relax.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/senior-outdoor-relax.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/senior-outdoor-relax.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/customer-service-smile-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/customer-service-smile-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/customer-service-smile-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/customer-service-smile-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/hand-pink-nails-closeup.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/hand-pink-nails-closeup.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/hand-pink-nails-closeup.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/hand-pink-nails-closeup.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/contact-us-mobile-call-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/contact-us-mobile-call-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/contact-us-mobile-call-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/contact-us-mobile-call-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/contact-us-mobile-call-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/contact-us-mobile-call-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/contact-us-mobile-call-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/contact-us-mobile-call-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/computer-technician-office.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/computer-technician-office.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/computer-technician-office.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/computer-technician-office.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/computer-technician-office-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/computer-technician-office-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/computer-technician-office-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/computer-technician-office-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/electric-grid-energy-lines.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/electric-grid-energy-lines.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/electric-grid-energy-lines.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/electric-grid-energy-lines.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/microgrid-storage-equipment-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/microgrid-storage-equipment-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/microgrid-storage-equipment-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/microgrid-storage-equipment-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/microgrid-ems-energy-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/microgrid-ems-energy-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/microgrid-ems-energy-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/microgrid-ems-energy-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/laptop-news-desk.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/laptop-news-desk.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/laptop-news-desk.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/laptop-news-desk.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/minimalist-product-display-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/minimalist-product-display-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/minimalist-product-display-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/minimalist-product-display-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/middle-aged-man-portrait-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/middle-aged-man-portrait-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/middle-aged-man-portrait-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/middle-aged-man-portrait-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/middle-aged-man-portrait-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/middle-aged-man-portrait-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/middle-aged-man-portrait-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/middle-aged-man-portrait-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/smart-energy-future-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/smart-energy-future-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/smart-energy-future-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/smart-energy-future-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/smart-energy-future-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/smart-energy-future-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/smart-energy-future-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/smart-energy-future-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/ai-high-tech-lights.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/ai-high-tech-lights.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/ai-high-tech-lights.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/ai-high-tech-lights.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/ai-high-tech-lights-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/ai-high-tech-lights-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/ai-high-tech-lights-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/ai-high-tech-lights-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/ai-high-tech-lights-03.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/ai-high-tech-lights-03.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/ai-high-tech-lights-03.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/ai-high-tech-lights-03.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/earth-from-space.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/earth-from-space.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/earth-from-space.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/earth-from-space.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/hikers-mountain-summit.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/hikers-mountain-summit.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/hikers-mountain-summit.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/hikers-mountain-summit.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/newspaper-top-view.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/newspaper-top-view.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/newspaper-top-view.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/newspaper-top-view.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wafer-chip-inspection-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wafer-chip-inspection-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wafer-chip-inspection-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wafer-chip-inspection-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wafer-chip-inspection-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wafer-chip-inspection-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wafer-chip-inspection-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wafer-chip-inspection-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wafer-chip-inspection-03.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wafer-chip-inspection-03.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wafer-chip-inspection-03.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wafer-chip-inspection-03.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wafer-chip-inspection-04.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wafer-chip-inspection-04.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wafer-chip-inspection-04.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wafer-chip-inspection-04.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/curved-wall-product-showroom.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/curved-wall-product-showroom.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/curved-wall-product-showroom.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/curved-wall-product-showroom.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/product-display-three-cubes.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/product-display-three-cubes.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/product-display-three-cubes.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/product-display-three-cubes.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-01.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-01.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-01.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-01.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-02.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-02.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-02.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-02.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-03.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-03.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-03.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-03.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-04.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-04.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-04.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-04.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-05.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-05.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-05.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-05.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-06.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-06.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-06.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-06.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-07.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-07.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-07.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-07.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-08.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-08.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-08.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-08.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-09.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-09.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-09.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-09.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/wqd-10.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/wqd-10.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/wqd-10.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/wqd-10.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/gallery/infinity-3d.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/gallery/infinity-3d.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/gallery/infinity-3d.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/gallery/infinity-3d.html</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -845,16 +375,6 @@
   </url>
   <url>
     <loc>https://aoglang.com/en/videos/global-network-globe.html</loc>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/zh/videos/intro-aoglang.html</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://aoglang.com/zh/videos/intro-aoglang.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aoglang.com/en/videos/intro-aoglang.html"/>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://aoglang.com/en/videos/intro-aoglang.html</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>

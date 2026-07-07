@@ -277,6 +277,41 @@ main {
   border-bottom: 1px solid var(--color-border);
 }
 
+.section-intro {
+  color: var(--color-muted);
+  margin: -0.5rem 0 1rem;
+  max-width: 42rem;
+}
+
+.home-featured {
+  margin-bottom: 0.5rem;
+}
+
+.home-featured .section-title {
+  margin-top: 0;
+}
+
+.article-byline {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+}
+
+.article-byline p {
+  margin: 0.35rem 0;
+}
+
+.gallery-noindex-note {
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+  padding: 0.65rem 0.85rem;
+  background: rgb(37 99 235 / 0.06);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-accent);
+}
+
 /* 卡片列表：桌面至少 5 列；瀑布流由 masonry.js 设置 grid-row span */
 .masonry-grid,
 .card-grid {

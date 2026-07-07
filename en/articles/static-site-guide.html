@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Static site guide","description":"Folder layout, SEO, RSS, sitemap, and search index checklist for aoglang.","datePublished":"2026-05-26","inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Static site guide","description":"Folder layout, SEO, RSS, sitemap, and search index checklist for aoglang.","datePublished":"2026-05-26","inLanguage":"en","author":{"@type":"Organization","name":"aoglang editorial","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -79,13 +79,23 @@
       <p class="card-meta">2026-05-26 · <a href="../../zh/articles/static-site-guide.html" hreflang="zh">中文版</a></p>
     </header>
     <article class="prose">
-      <p>A build script keeps bilingual pages, feeds, and maps in sync.</p>
+      <p>A Node build script (<code>tools/build.mjs</code>) keeps bilingual pages in sync. This guide covers layout, publishing, and our <strong>feature-first / noindex thin gallery</strong> quality strategy.</p>
       <h2>Folder layout</h2>
-      <p><pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> Register new posts in the <code>ARTICLES</code> array, then run <code>npm run build</code>.</p>
+      <p><pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> Register posts in <code>ARTICLES</code>, then run <code>npm run build</code>.</p>
+      <h2>Feature-first content</h2>
+      <p>Long-form features (e.g. <a href="tokyo-aerial-complete-guide.html">Tokyo aerial guide</a>) carry SEO weight. Most single-image URLs are <code>noindex</code>; only flagship aerials stay in the sitemap—see <code>INDEXABLE_PICTURE_SLUGS</code>.</p>
       <h2>New article checklist</h2>
-      <p>Set slug, date, bilingual copy, and sections—the build updates indexes, home “Latest”, RSS, search JSON, and sitemap when listed in <code>HOME_LATEST</code>.</p>
+      <p>Set slug, date, bilingual copy, and several substantive sections; the build adds author bylines, BlogPosting schema, RSS, and home listings when configured in <code>HOME_FEATURED</code> / <code>HOME_LATEST</code>.</p>
       <h2>Images and video</h2>
       <p>See <a href="webp-gallery-performance.html">WebP gallery performance</a>. Host very large MP4 files on a CDN if needed.</p>
+      <h2>After deploy</h2>
+      <p>Run <code>npm run ping-sitemap</code> after upload; also submit <code>sitemap.xml</code> in Search Console—see <a href="aoglang-site-seo-case-study.html">SEO case study</a>.</p>
+      <h2>Trust pages</h2>
+      <p>Keep <a href="../about/">About</a>, <a href="../contact/">Contact</a>, and <a href="../privacy/">Privacy</a> current. Author credit comes from <code>SITE_AUTHOR</code>.</p>
+      <footer class="article-byline">
+        <p>By <strong>aoglang editorial</strong> · Published 2026-05-26 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>Please link to the original when republishing.</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">

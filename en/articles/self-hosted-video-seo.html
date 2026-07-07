@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Self-hosted MP4 pages: UX and video SEO","description":"Posters, bilingual copy, VideoObject schema, and internal links for short clips hosted on a static site.","datePublished":"2026-05-29","inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Self-hosted MP4 pages: UX and video SEO","description":"Posters, bilingual copy, VideoObject schema, and internal links for short clips hosted on a static site.","datePublished":"2026-05-29","inLanguage":"en","author":{"@type":"Organization","name":"aoglang editorial","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -79,13 +79,25 @@
       <p class="card-meta">2026-05-29 · <a href="../../zh/articles/self-hosted-video-seo.html" hreflang="zh">中文版</a></p>
     </header>
     <article class="prose">
-      <p>You do not have to embed every clip from a third-party platform. The <a href="../videos/">video section</a> hosts MP4 examples with dedicated pages.</p>
+      <p>You do not have to embed every clip from a third-party platform. The <a href="../videos/">video section</a> hosts MP4 examples with dedicated pages. For the full collection write-up, see <a href="video-shorts-collection-guide.html">self-hosted shorts collection</a>.</p>
       <h2>What each page needs</h2>
       <p>Provide a <strong>unique URL</strong>, clear <code>h1</code> and <code>meta description</code>, a <code>poster</code> image, duration text, and VideoObject JSON-LD—see <a href="../videos/tech-visual-short.html">tech visual short</a> and <a href="../videos/warm-visual-clip.html">warm visual clip</a>.</p>
+      <h2>VideoObject fields</h2>
+      <p>The build emits <code>VideoObject</code> with <code>contentUrl</code>, <code>thumbnailUrl</code>, ISO <code>duration</code> (e.g. PT14S), and <code>uploadDate</code>. Validate in Google’s rich results test.</p>
+      <h2>Posters & first paint</h2>
+      <p>Posters should match aspect ratio and approximate the first frame. ffmpeg can generate missing posters during build.</p>
       <h2>File size</h2>
-      <p>Keep shorts under ~15 seconds with sensible compression; posters prevent layout shift. Host very large files on a CDN and link from the article.</p>
+      <p>Keep shorts under ~15 seconds; target ~2–5 Mbps at 1080p. Use CDN for very large sources.</p>
+      <h2>Accessibility</h2>
+      <p>Use controls and playsinline; no loud autoplay. Surround players with descriptive copy.</p>
       <h2>Link galleries and articles</h2>
-      <p>Cross-link related stills such as <a href="../gallery/ai-high-tech-lights.html">AI high-tech lights</a> to build topical clusters.</p>
+      <p>Cross-link <a href="../gallery/ai-high-tech-lights.html">AI lights</a> and the <a href="video-shorts-collection-guide.html">collection feature</a>.</p>
+      <h2>Publish workflow</h2>
+      <p>Drop MP4 in <code>upload/video/</code>, register in <code>VIDEOS</code>, run <code>npm run build</code>, update the collection article and sitemap.</p>
+      <footer class="article-byline">
+        <p>By <strong>aoglang editorial</strong> · Published 2026-05-29 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>Please link to the original when republishing.</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">

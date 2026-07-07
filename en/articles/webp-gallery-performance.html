@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"WebP thumbnails for faster gallery pages","description":"Build-time 1400px heroes and 480px thumbs—indexes stay light while detail pages stay sharp.","datePublished":"2026-05-31","inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"WebP thumbnails for faster gallery pages","description":"Build-time 1400px heroes and 480px thumbs—indexes stay light while detail pages stay sharp.","datePublished":"2026-05-31","inLanguage":"en","author":{"@type":"Organization","name":"aoglang editorial","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -79,13 +79,25 @@
       <p class="card-meta">2026-05-31 · <a href="../../zh/articles/webp-gallery-performance.html" hreflang="zh">中文版</a></p>
     </header>
     <article class="prose">
-      <p>Galleries often feel slow because indexes load huge PNGs. aoglang converts uploads to <strong>WebP at build time</strong> with separate thumb and hero sizes.</p>
+      <p>Galleries often feel slow because indexes load huge PNGs. aoglang converts uploads to <strong>WebP at build time</strong> with separate thumb and hero sizes—parameters, HTML hints, and Core Web Vitals impact below.</p>
       <h2>Why two sizes</h2>
       <p>Masonry grids may show dozens of cards at once. We serve <strong>*-thumb.webp (≤480px wide)</strong> on lists and <strong>*.webp (≤1400px)</strong> on detail pages; originals stay in <code>upload/picture/</code> only.</p>
-      <h2>SEO impact</h2>
-      <p>Better LCP helps user experience; each image still has its own URL, meta description, and ImageObject schema. Browse the <a href="../gallery/">gallery index</a> to see thumbs linking to full write-ups.</p>
+      <h2>sharp settings</h2>
+      <p>In <code>tools/build.mjs</code>: main max 1400px, thumb max 480px, WebP quality 82/78. Skips upscaling when sources are already smaller.</p>
+      <h2>width/height in HTML</h2>
+      <p>Every <code>&lt;img&gt;</code> includes dimensions plus <code>--thumb-ar</code> to reduce CLS on masonry cards.</p>
+      <h2>SEO & AdSense</h2>
+      <p>Better LCP supports rankings and quality reviews—see <a href="aoglang-site-seo-case-study.html">SEO case study</a>.</p>
+      <h2>ImageObject</h2>
+      <p>Flagship photos keep ImageObject schema pointing at 1400px WebP heroes; thin gallery URLs are noindex.</p>
       <h2>Adding new photos</h2>
-      <p>Drop files into <code>upload/picture/</code>, run <code>npm run build</code>, and HTML plus optimized assets regenerate. See the <a href="static-site-guide.html">static site guide</a> for the full checklist.</p>
+      <p>Drop files into <code>upload/picture/</code>, run <code>npm run build</code>. See <a href="static-site-guide.html">static site guide</a>.</p>
+      <h2>Troubleshooting</h2>
+      <p>Install <code>sharp</code> via <code>npm install</code>; ensure Node is on PATH (especially on Windows).</p>
+      <footer class="article-byline">
+        <p>By <strong>aoglang editorial</strong> · Published 2026-05-31 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>Please link to the original when republishing.</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">

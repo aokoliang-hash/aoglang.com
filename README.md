@@ -73,39 +73,70 @@ npx --yes serve .
 
 ---
 
-## 构建页面（可选）
+## 构建页面
 
-修改 `tools/build.mjs` 中的站点配置或模板后，重新生成 HTML：
+修改 `tools/build.mjs` 中的 `ARTICLES`、图集/视频数据或模板后，重新生成全站 HTML：
 
 ```bash
+npm install
 npm run build
-# 或
-node tools/build.mjs
 ```
 
-`build.mjs` 中的 `SITE` 常量默认为 `https://aoglang.com`，上线前请改为你的真实域名。
+`build.mjs` 中的 `SITE` 常量默认为 `https://aoglang.com`。构建会自动更新：
+
+- 中英文页面、RSS、`sitemap.xml`
+- `assets/data/search-index.json`
+- 图集 WebP 缩略图（需 `sharp`）
 
 ---
 
 ## 发布内容
 
+**推荐方式**：在 `tools/build.mjs` 的 `ARTICLES` 数组添加文章数据，然后 `npm run build`。无需手工改多个 HTML 文件。
+
 ### 新增文章
 
-1. 复制 `zh/articles/welcome-aoglang.html` 为新文件（如 `my-post.html`）
-2. 修改 `<title>`、`meta description`、`canonical`、`hreflang` 与正文
-3. 在 `zh/articles/index.html` 的 `.masonry-grid` 中增加卡片链接
-4. 在 `en/articles/` 创建英文对应页并互链
-5. 更新 `assets/data/search-index.json`、`sitemap.xml`、`zh/feed.xml`
+1. 在 `tools/build.mjs` → `ARTICLES` 添加条目（slug、date、双语 title/desc、sections）
+2. 可选：加入 `HOME_FEATURED` 或 `HOME_LATEST`
+3. 运行 `npm run build`
 
 ### 新增图集 / 视频
 
-- 图集：参考 `zh/gallery/spring-scenes.html`，图片放在 `assets/img/`
-- 视频：参考 `zh/videos/intro-aoglang.html`（HTML5 或 iframe 嵌入）
+- 图片：放入 `upload/picture/`，在 `AERIAL_PICTURES` 登记或自动发现
+- 视频：放入 `upload/video/`，在 `VIDEOS` 数组登记
+- 运行 `npm run build`
 
 ### 图片建议
 
 - 列表图提供 `width`、`height`，便于比例与布局
-- 优先 WebP / AVIF，并填写有意义的 `alt`
+- 优先 WebP；构建脚本自动生成主图与 `-thumb.webp`
+
+---
+
+## 搜索引擎与 AdSense
+
+### Google Search Console
+
+1. 打开 [Google Search Console](https://search.google.com/search-console)
+2. 添加资源：`https://aoglang.com`（网址前缀）
+3. 验证所有权（DNS TXT 或 HTML 文件）
+4. **站点地图** → 提交 `sitemap.xml`
+5. 使用 **网址检查** 测试专题页是否可编入索引
+6. 定期查看「网页」→ 编制索引、Core Web Vitals
+
+### 部署后 ping sitemap
+
+```bash
+npm run ping-sitemap
+```
+
+会向 Google ping sitemap 更新通知（Bing 需在 Webmaster Tools 手动提交）。**仍需**在 Search Console 手动提交站点地图。
+
+### 内容策略（AdSense）
+
+- 以**深度专题文章**为核心（见 `HOME_FEATURED`）
+- 批量单图页默认 `noindex`，由专题承载 SEO
+- 完整复盘见：`/zh/articles/aoglang-site-seo-case-study.html`
 
 ---
 
@@ -130,9 +161,11 @@ node tools/build.mjs
 
 | 文件 | 用途 |
 |------|------|
-| `assets/data/search-index.json` | 站内搜索索引 |
-| `zh/contact/index.html` | 联系表单（FormSubmit，请改邮箱） |
+| `tools/build.mjs` | 站点生成脚本（文章、图集、SEO） |
+| `tools/ping-sitemap.mjs` | 部署后 ping Google/Bing sitemap |
+| `assets/data/search-index.json` | 站内搜索索引（构建生成） |
 | `robots.txt` / `sitemap.xml` | 搜索引擎 |
+| `ads.txt` | Google AdSense 授权 |
 | `site.webmanifest` | PWA 基础信息 |
 
 ---

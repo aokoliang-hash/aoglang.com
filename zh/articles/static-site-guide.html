@@ -28,7 +28,7 @@
   gtag('config', 'G-1J6FDXQL1B');
 </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958761551797888" crossorigin="anonymous"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"静态网站搭建指南","description":"纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。","datePublished":"2026-05-26","inLanguage":"zh-Hans"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"静态网站搭建指南","description":"纯 HTML 站点目录、SEO、RSS、sitemap 与搜索索引的发布清单。","datePublished":"2026-05-26","inLanguage":"zh-Hans","author":{"@type":"Organization","name":"aoglang 编辑团队","email":"hello@aoglang.com"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -79,13 +79,23 @@
       <p class="card-meta">2026-05-26 · <a href="../../en/articles/static-site-guide.html" hreflang="en">English</a></p>
     </header>
     <article class="prose">
-      <p>使用生成脚本维护双语页面，可避免手工漏改链接或站点地图。</p>
+      <p>aoglang 使用 Node.js 构建脚本（<code>tools/build.mjs</code>）维护双语页面。本文说明目录结构、内容发布流程，以及我们如何通过<strong>专题文章优先、单图页 noindex</strong>策略提升内容质量。</p>
       <h2>目录结构</h2>
-      <p><pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> 新文章在 <code>tools/build.mjs</code> 的 <code>ARTICLES</code> 数组中登记后运行 <code>npm run build</code>。</p>
+      <p><pre><code>zh/  en/  assets/  tools/build.mjs  sitemap.xml</code></pre> 新文章在 <code>ARTICLES</code> 数组登记后运行 <code>npm run build</code>，自动生成列表、RSS、搜索索引与 sitemap。</p>
+      <h2>内容策略：专题优先</h2>
+      <p>深度专题（如 <a href="tokyo-aerial-complete-guide.html">东京航拍完全指南</a>）是 SEO 与 AdSense 审核的核心。批量单图页默认 <code>noindex</code>，仅保留航拍旗舰作品在 sitemap 中——见 <code>INDEXABLE_PICTURE_SLUGS</code>。</p>
       <h2>每篇新文章 checklist</h2>
-      <p>填写 slug、日期、双语 title/description、正文 sections；构建会自动写入列表页、首页最新内容（若加入 <code>HOME_LATEST</code>）、RSS、搜索索引与 sitemap。</p>
+      <p>填写 slug、日期、双语 title/description、至少 4 段 sections（每段 80 字以上）；构建会写入作者署名、BlogPosting schema、RSS 与首页精选（若加入 <code>HOME_FEATURED</code> 或 <code>HOME_LATEST</code>）。</p>
       <h2>图片与性能</h2>
       <p>图集使用 WebP 主图与缩略图，详见 <a href="webp-gallery-performance.html">WebP 优化指南</a>。视频大文件可外链 CDN。</p>
+      <h2>部署后通知搜索引擎</h2>
+      <p>执行 <code>npm run build</code> 上传后运行 <code>npm run ping-sitemap</code>，向 Google/Bing ping sitemap。并在 Search Console 手动提交 <code>sitemap.xml</code>——详见 <a href="aoglang-site-seo-case-study.html">站点 SEO 复盘</a>。</p>
+      <h2>E-E-A-T 与关于页</h2>
+      <p>保持<a href="../about/">关于我们</a>、<a href="../contact/">联系</a>、<a href="../privacy/">隐私政策</a>更新。文章底部自动添加作者署名（<code>SITE_AUTHOR</code>）。</p>
+      <footer class="article-byline">
+        <p>作者 <strong>aoglang 编辑团队</strong> · 发布于 2026-05-26 · <a href="mailto:hello@aoglang.com">hello@aoglang.com</a></p>
+        <p>转载请注明出处并链接原文。</p>
+      </footer>
     </article>
   </main>
   <footer class="site-footer">

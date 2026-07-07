@@ -2,8 +2,23 @@
   "items": [
     {
       "lang": "zh",
+      "title": "aoglang 站点 SEO 复盘：从薄内容到专题化静态站",
+      "desc": "真实复盘 aoglang.com 的 SEO 改造：专题文章、noindex 薄页、sitemap 精简、Search Console 与 AdSense 准备清单。",
+      "url": "articles/aoglang-site-seo-case-study.html",
+      "tags": [
+        "文章",
+        "SEO",
+        "复盘",
+        "静态站",
+        "AdSense",
+        "Search Console",
+        "案例"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "能源与产品展示图集上新：微电网、智慧能源与极简展台",
-      "desc": "解读 upload 新增 9 张能源电力与产品展示题材图：智慧能源、微电网储能、清水混凝土、白色展台与立方体陈列等，均有独立 SEO 页面。",
+      "desc": "解读 upload 新增 9 张能源电力与产品展示题材图：智慧能源、微电网储能、清水混凝土、白色展台与立方体陈列等，均有双语说明页并链到本专题。",
       "url": "articles/energy-product-display-gallery.html",
       "tags": [
         "文章",
@@ -12,6 +27,96 @@
         "产品展示",
         "图集",
         "SEO"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "科技与工业视觉手册：半导体、能源与办公场景",
+      "desc": "晶圆检测、电网光效、地球太空视角与办公资讯场景——如何为 B2B 与科技媒体选对图、写对说明，附 aoglang 作品索引。",
+      "url": "articles/tech-industry-visual-handbook.html",
+      "tags": [
+        "文章",
+        "科技",
+        "工业",
+        "半导体",
+        "能源",
+        "B2B",
+        "手册"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "自托管短片合集解读：旅行、自然、宏观与科技动画",
+      "desc": "逐支解读 aoglang 8 支 MP4 短片：题材分组、时长与码率建议、poster 与 VideoObject SEO，以及每支视频的适用场景。",
+      "url": "articles/video-shorts-collection-guide.html",
+      "tags": [
+        "文章",
+        "视频",
+        "自托管",
+        "MP4",
+        "合集",
+        "SEO",
+        "专题"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "无穷符号 3D 视觉完全指南：十件作品与品牌应用",
+      "desc": "逐件解读铜色金属、螺旋缎带、双色镀铬与虹彩玻璃等 10 款 3D 无穷符号作品，含发布会、Keynote 与网站头图应用建议。",
+      "url": "articles/infinity-3d-complete-guide.html",
+      "tags": [
+        "文章",
+        "3D",
+        "无穷符号",
+        "品牌",
+        "抽象",
+        "合辑",
+        "指南"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "东京城市航拍完全指南：机位、构图与作品解读",
+      "desc": "从滨水高速到桥面视角，系统解读 aoglang 东京航拍系列：选点思路、黄金时段、安全合规与后期方向，附全部相关作品链接。",
+      "url": "articles/tokyo-aerial-complete-guide.html",
+      "tags": [
+        "文章",
+        "航拍",
+        "东京",
+        "无人机",
+        "城市",
+        "专题",
+        "指南"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "福州与海上风电航拍专题：地标、能源与工业视觉",
+      "desc": "解读福州体育场、海口船厂与海上风电无人机作品：题材选择、行业应用场景、组图发布策略与 aoglang 实拍经验。",
+      "url": "articles/fuzhou-energy-aerial-series.html",
+      "tags": [
+        "文章",
+        "航拍",
+        "福州",
+        "风电",
+        "能源",
+        "工业",
+        "专题"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "人物与商务视觉创作手册：场景、受众与配图指南",
+      "desc": "系统解读客服、通话、居家、科技背景等人物商务题材：谁在用、怎么选图、如何写 alt 与专题文案，附 aoglang 全部相关作品索引。",
+      "url": "articles/business-portrait-visual-handbook.html",
+      "tags": [
+        "文章",
+        "人物",
+        "商务",
+        "客服",
+        "视觉",
+        "手册",
+        "专题"
       ]
     },
     {
@@ -47,7 +152,7 @@
     {
       "lang": "zh",
       "title": "无人机城市航拍指南：东京、福州与海上风电",
-      "desc": "从东京滨水高速到福州体育场与海上风电，如何为航拍图集写清主题、alt 与内链，提升图片类关键词排名。",
+      "desc": "城市与能源题材航拍的完整方法论：设备准备、飞行规划、构图、合规、后期、SEO 发布与 aoglang 作品索引。",
       "url": "articles/drone-aerial-city-photography.html",
       "tags": [
         "文章",
@@ -55,7 +160,8 @@
         "无人机",
         "城市",
         "SEO",
-        "图集"
+        "图集",
+        "指南"
       ]
     },
     {
@@ -1062,6 +1168,146 @@
     },
     {
       "lang": "zh",
+      "title": "铜色金属无穷环",
+      "desc": "暖米色背景上的抛光铜色三维无穷符号，柔光勾勒金属质感，寓意连续与永恒。",
+      "url": "gallery/wqd-01.html",
+      "tags": [
+        "无穷符号",
+        "3D",
+        "金属",
+        "铜色",
+        "抽象",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "橙金螺旋缎带",
+      "desc": "多层光泽缎带扭转成螺旋形态，橙金渐变与高光强调流动感与现代感。",
+      "url": "gallery/wqd-02.html",
+      "tags": [
+        "螺旋",
+        "缎带",
+        "橙色",
+        "3D渲染",
+        "抽象",
+        "动态"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "橙色波浪层叠",
+      "desc": "平行光泽带层叠扭转，形成波浪式无穷动线，深影与高对比塑造立体层次。",
+      "url": "gallery/wqd-03.html",
+      "tags": [
+        "波浪",
+        "层叠",
+        "橙色",
+        "光泽",
+        "流体",
+        "3D"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "渐变背景螺旋",
+      "desc": "粗壮橙色缎带螺旋盘绕，背景由暖黄过渡到浅蓝，冷暖对比突出主体。",
+      "url": "gallery/wqd-04.html",
+      "tags": [
+        "螺旋",
+        "渐变背景",
+        "橙色",
+        "极简",
+        "构图",
+        "3D艺术"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "双色光影无穷环",
+      "desc": "黑色背景上的镀铬无穷符号，左侧暖金、右侧冷蓝双色照明，科技感强烈。",
+      "url": "gallery/wqd-05.html",
+      "tags": [
+        "无穷符号",
+        "镀铬",
+        "双色光",
+        "黑色背景",
+        "科技",
+        "未来感"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "青绿渐变扭曲环",
+      "desc": "多层薄带扭转成莫比乌斯式无穷结构，青绿到青蓝渐变，金属光泽细腻。",
+      "url": "gallery/wqd-06.html",
+      "tags": [
+        "青绿",
+        "渐变",
+        "莫比乌斯",
+        "无穷",
+        "金属",
+        "抽象雕塑"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "哑光橙无穷符号",
+      "desc": "简洁哑光橙色三维无穷环，置于浅色平面，轻阴影呈现干净极简风格。",
+      "url": "gallery/wqd-07.html",
+      "tags": [
+        "哑光",
+        "橙色",
+        "极简",
+        "无穷符号",
+        "图标",
+        "现代"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "单色橙铜无穷",
+      "desc": "同色系橙铜金属无穷符号，背景与主体色调统一，强调形态与材质细节。",
+      "url": "gallery/wqd-08.html",
+      "tags": [
+        "单色",
+        "橙铜",
+        "金属",
+        "无穷",
+        "极简",
+        "品牌视觉"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "层叠橙带无穷",
+      "desc": "多层薄带堆叠扭转成无穷结，全橙色调中通过明暗展现立体结构。",
+      "url": "gallery/wqd-09.html",
+      "tags": [
+        "层叠",
+        "薄带",
+        "橙色",
+        "无穷符号",
+        "3D",
+        "光泽"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "虹彩玻璃方块无穷",
+      "desc": "半透明方块螺旋砌成无穷环，虹彩折射如水晶玻璃，轻盈且富有未来感。",
+      "url": "gallery/wqd-10.html",
+      "tags": [
+        "虹彩",
+        "玻璃",
+        "半透明",
+        "无穷",
+        "方块",
+        "未来"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "无穷符号 3D 视觉合辑",
       "desc": "十张无穷符号 3D 抽象视觉合集页面，亦可从单张作品页浏览。",
       "url": "gallery/infinity-3d.html",
@@ -1217,8 +1463,22 @@
     },
     {
       "lang": "en",
+      "title": "aoglang SEO case study: from thin pages to feature-first static HTML",
+      "desc": "How aoglang.com pivoted from thin gallery URLs to long-form features, noindex rules, a lean sitemap, and Search Console setup for AdSense readiness.",
+      "url": "articles/aoglang-site-seo-case-study.html",
+      "tags": [
+        "article",
+        "SEO",
+        "case study",
+        "static site",
+        "AdSense",
+        "Search Console"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "New energy & product-display gallery uploads",
-      "desc": "Nine new images—smart energy, microgrid storage, concrete texture, and minimalist product stages—with bilingual SEO pages.",
+      "desc": "Nine new images—smart energy, microgrid storage, concrete texture, and minimalist product stages—with bilingual pages linked from this feature.",
       "url": "articles/energy-product-display-gallery.html",
       "tags": [
         "article",
@@ -1227,6 +1487,94 @@
         "product display",
         "gallery",
         "SEO"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Tech & industry visual handbook: chips, energy & office scenes",
+      "desc": "Wafer inspection, power-grid art, Earth from space, and news-desk scenes—how to pick B2B visuals with an indexed tour of the aoglang gallery.",
+      "url": "articles/tech-industry-visual-handbook.html",
+      "tags": [
+        "article",
+        "tech",
+        "industry",
+        "semiconductor",
+        "energy",
+        "B2B",
+        "handbook"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Self-hosted shorts collection: travel, nature, macro & tech motion",
+      "desc": "All eight aoglang MP4 clips explained—grouping, compression, posters, VideoObject SEO, and where each clip fits editorially.",
+      "url": "articles/video-shorts-collection-guide.html",
+      "tags": [
+        "article",
+        "video",
+        "self-hosted",
+        "MP4",
+        "collection",
+        "SEO",
+        "feature"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Infinity 3D complete guide: ten renders & brand use cases",
+      "desc": "All ten infinity-themed 3D pieces explained—materials, lighting, and where each fits keynotes, heroes, and social posts.",
+      "url": "articles/infinity-3d-complete-guide.html",
+      "tags": [
+        "article",
+        "3D",
+        "infinity",
+        "branding",
+        "abstract",
+        "collection",
+        "guide"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Tokyo city aerials: locations, composition & gallery walkthrough",
+      "desc": "A complete guide to aoglang’s Tokyo drone series—waterfront expressway, bridge angles, golden hour, compliance, and links to every related photo.",
+      "url": "articles/tokyo-aerial-complete-guide.html",
+      "tags": [
+        "article",
+        "aerial",
+        "Tokyo",
+        "drone",
+        "urban",
+        "guide",
+        "feature"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Fuzhou & offshore wind aerials: landmarks, energy & industry",
+      "desc": "Stadium, shipyard, and offshore wind turbine drone work—use cases, publishing strategy, and links to every related photo in the aoglang gallery.",
+      "url": "articles/fuzhou-energy-aerial-series.html",
+      "tags": [
+        "article",
+        "aerial",
+        "Fuzhou",
+        "wind energy",
+        "industry",
+        "feature"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "People & business visuals handbook: scenes, audiences & pick lists",
+      "desc": "How to choose support, phone, lifestyle, and tech-background imagery—with alt templates, publishing strategy, and an index of every related aoglang photo.",
+      "url": "articles/business-portrait-visual-handbook.html",
+      "tags": [
+        "article",
+        "people",
+        "business",
+        "customer service",
+        "handbook",
+        "feature"
       ]
     },
     {
@@ -1262,7 +1610,7 @@
     {
       "lang": "en",
       "title": "Drone city aerials: Tokyo, Fuzhou & offshore wind",
-      "desc": "How to turn aerial gallery shots into SEO-friendly articles with clear topics, alt text, and internal links.",
+      "desc": "Full workflow for urban and energy drone work—gear, planning, composition, compliance, post, SEO publishing, and gallery links.",
       "url": "articles/drone-aerial-city-photography.html",
       "tags": [
         "article",
@@ -1270,7 +1618,8 @@
         "drone",
         "urban",
         "SEO",
-        "gallery"
+        "gallery",
+        "guide"
       ]
     },
     {
@@ -2109,6 +2458,146 @@
         "e-commerce",
         "staging",
         "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Copper metallic infinity",
+      "desc": "A polished copper 3D infinity loop on a warm beige backdrop with soft studio lighting.",
+      "url": "gallery/wqd-01.html",
+      "tags": [
+        "无穷符号",
+        "3D",
+        "金属",
+        "铜色",
+        "抽象",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Orange-gold spiral ribbons",
+      "desc": "Glossy layered ribbons twist into a dynamic spiral with warm orange and gold highlights.",
+      "url": "gallery/wqd-02.html",
+      "tags": [
+        "螺旋",
+        "缎带",
+        "橙色",
+        "3D渲染",
+        "抽象",
+        "动态"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Layered orange waves",
+      "desc": "Parallel glossy bands layer and twist into a fluid wave-like infinity motion.",
+      "url": "gallery/wqd-03.html",
+      "tags": [
+        "波浪",
+        "层叠",
+        "橙色",
+        "光泽",
+        "流体",
+        "3D"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Spiral on gradient sky",
+      "desc": "Bold orange helical ribbons against a soft yellow-to-blue gradient background.",
+      "url": "gallery/wqd-04.html",
+      "tags": [
+        "螺旋",
+        "渐变背景",
+        "橙色",
+        "极简",
+        "构图",
+        "3D艺术"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Dual-lit chrome infinity",
+      "desc": "Chrome infinity on black with warm gold left and cool blue right lighting.",
+      "url": "gallery/wqd-05.html",
+      "tags": [
+        "无穷符号",
+        "镀铬",
+        "双色光",
+        "黑色背景",
+        "科技",
+        "未来感"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Teal gradient twist",
+      "desc": "Layered ribbons form a Möbius-like infinity with lime-to-cyan metallic gradients.",
+      "url": "gallery/wqd-06.html",
+      "tags": [
+        "青绿",
+        "渐变",
+        "莫比乌斯",
+        "无穷",
+        "金属",
+        "抽象雕塑"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Matte orange infinity",
+      "desc": "Clean matte orange 3D infinity icon on a light surface with soft shadow.",
+      "url": "gallery/wqd-07.html",
+      "tags": [
+        "哑光",
+        "橙色",
+        "极简",
+        "无穷符号",
+        "图标",
+        "现代"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Monochrome copper-orange",
+      "desc": "Monochromatic metallic infinity in copper-orange tones on a matching backdrop.",
+      "url": "gallery/wqd-08.html",
+      "tags": [
+        "单色",
+        "橙铜",
+        "金属",
+        "无穷",
+        "极简",
+        "品牌视觉"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Layered orange infinity",
+      "desc": "Stacked thin ribbons twist into an infinity knot with depth via orange highlights.",
+      "url": "gallery/wqd-09.html",
+      "tags": [
+        "层叠",
+        "薄带",
+        "橙色",
+        "无穷符号",
+        "3D",
+        "光泽"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Iridescent glass blocks",
+      "desc": "Translucent blocks spiral into an infinity loop with rainbow iridescent refractions.",
+      "url": "gallery/wqd-10.html",
+      "tags": [
+        "虹彩",
+        "玻璃",
+        "半透明",
+        "无穷",
+        "方块",
+        "未来"
       ]
     },
     {
