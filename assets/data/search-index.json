@@ -2,6 +2,20 @@
   "items": [
     {
       "lang": "zh",
+      "title": "能源与产品展示图集上新：微电网、智慧能源与极简展台",
+      "desc": "解读 upload 新增 9 张能源电力与产品展示题材图：智慧能源、微电网储能、清水混凝土、白色展台与立方体陈列等，均有独立 SEO 页面。",
+      "url": "articles/energy-product-display-gallery.html",
+      "tags": [
+        "文章",
+        "能源",
+        "微电网",
+        "产品展示",
+        "图集",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "视频栏目上新：海岸航拍、水下冲浪、蓝蝶与地球网络",
       "desc": "解读 upload 新增 4 支自托管 MP4：俯拍碧色海岸、水下冲浪、蓝蝶特写与线框地球动画，每支均有双语页面与 VideoObject。",
       "url": "articles/new-video-uploads-collection.html",
@@ -257,6 +271,21 @@
     },
     {
       "lang": "zh",
+      "title": "白色展台底座 3D 渲染",
+      "desc": "纯白空展台与底座 3D 渲染，留白充足，适合电商产品主图、发布会 KV 与品牌展示模板。",
+      "url": "gallery/white-podium-product-stage.html",
+      "tags": [
+        "展台",
+        "底座",
+        "3D渲染",
+        "产品展示",
+        "白色背景",
+        "电商",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "二进制蓝光科技背景",
       "desc": "蓝色光线与二进制代码抽象背景，适合网络安全、数据与高科技发布会视觉。",
       "url": "gallery/binary-blue-light-rays.html",
@@ -343,6 +372,22 @@
         "生活方式",
         "人物",
         "肖像",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "建筑清水混凝土墙面特写",
+      "desc": "清水混凝土墙面肌理特写，强调建筑材质、极简主义与空间光影，适合建筑设计与地产视觉。",
+      "url": "gallery/architectural-concrete-wall-closeup.html",
+      "tags": [
+        "混凝土",
+        "建筑",
+        "墙面",
+        "特写",
+        "极简",
+        "材质",
+        "设计",
         "aoglang"
       ]
     },
@@ -573,6 +618,36 @@
     },
     {
       "lang": "zh",
+      "title": "微电网储能设备",
+      "desc": "微电网储能设备与电力基础设施特写，突出工业质感与新能源产业布局。",
+      "url": "gallery/microgrid-storage-equipment-01.html",
+      "tags": [
+        "微电网",
+        "储能设备",
+        "电力",
+        "新能源",
+        "工业",
+        "能源",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "微电网 EMS 储能系统",
+      "desc": "微电网能源管理系统与储能设备视觉，适合新能源、储能电站与智慧能源方案宣传。",
+      "url": "gallery/microgrid-ems-energy-01.html",
+      "tags": [
+        "微电网",
+        "EMS",
+        "储能",
+        "新能源",
+        "智慧能源",
+        "电力",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
       "title": "笔记本与新闻资讯",
       "desc": "笔记本电脑与新闻、报纸资讯场景，适合媒体、资讯与商务办公类内容。",
       "url": "gallery/laptop-news-desk.html",
@@ -583,6 +658,21 @@
         "媒体",
         "办公",
         "报纸",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "极简产品展示背景",
+      "desc": "极简白色产品展示背景，留白与柔光营造高级感，适合电商主图与品牌视觉模板。",
+      "url": "gallery/minimalist-product-display-01.html",
+      "tags": [
+        "极简",
+        "产品展示",
+        "白色背景",
+        "电商",
+        "品牌",
+        "摄影",
         "aoglang"
       ]
     },
@@ -613,6 +703,36 @@
         "微笑",
         "商务",
         "信任",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "智慧能源未来视觉",
+      "desc": "智慧能源与未来电力主题视觉，强调清洁能源转型、智能电网与可持续发展叙事。",
+      "url": "gallery/smart-energy-future-01.html",
+      "tags": [
+        "智慧能源",
+        "清洁能源",
+        "未来",
+        "电力",
+        "可持续",
+        "科技",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "智慧能源未来视觉 · 2",
+      "desc": "智慧能源与未来电力主题视觉，强调清洁能源转型、智能电网与可持续发展叙事。",
+      "url": "gallery/smart-energy-future-02.html",
+      "tags": [
+        "智慧能源",
+        "清洁能源",
+        "未来",
+        "电力",
+        "可持续",
+        "科技",
         "aoglang"
       ]
     },
@@ -767,6 +887,36 @@
         "检测",
         "科技",
         "特写",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "弧形柱廊产品展厅",
+      "desc": "白色弧形圆墙与立柱构成的产品展厅空间，通透简洁，适合家居、汽车与高端零售场景渲染。",
+      "url": "gallery/curved-wall-product-showroom.html",
+      "tags": [
+        "展厅",
+        "弧形墙",
+        "立柱",
+        "白色空间",
+        "产品展示",
+        "零售",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "zh",
+      "title": "三立方体产品陈列",
+      "desc": "白色背景右侧三立方体展台构图，极简几何感，适合科技产品、护肤与电商详情页场景图。",
+      "url": "gallery/product-display-three-cubes.html",
+      "tags": [
+        "产品陈列",
+        "立方体",
+        "白色背景",
+        "极简",
+        "电商",
+        "展示",
         "aoglang"
       ]
     },
@@ -1067,6 +1217,20 @@
     },
     {
       "lang": "en",
+      "title": "New energy & product-display gallery uploads",
+      "desc": "Nine new images—smart energy, microgrid storage, concrete texture, and minimalist product stages—with bilingual SEO pages.",
+      "url": "articles/energy-product-display-gallery.html",
+      "tags": [
+        "article",
+        "energy",
+        "microgrid",
+        "product display",
+        "gallery",
+        "SEO"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "New videos: coast aerial, surfing, butterfly & globe",
       "desc": "Four new self-hosted MP4s with bilingual pages and VideoObject schema—coast drone, underwater surf, butterfly macro, and network globe.",
       "url": "articles/new-video-uploads-collection.html",
@@ -1319,6 +1483,21 @@
     },
     {
       "lang": "en",
+      "title": "White podium product stage 3D",
+      "desc": "3D render of a white empty podium platform—clean product hero shots, launch key visuals, and brand templates.",
+      "url": "gallery/white-podium-product-stage.html",
+      "tags": [
+        "podium",
+        "stage",
+        "3D render",
+        "product display",
+        "white background",
+        "e-commerce",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Binary code blue light rays",
       "desc": "Abstract blue rays with binary code—cybersecurity, data, and tech event backgrounds.",
       "url": "gallery/binary-blue-light-rays.html",
@@ -1401,6 +1580,22 @@
         "lifestyle",
         "portrait",
         "home",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Architectural concrete wall close-up",
+      "desc": "Close-up of architectural concrete texture—material honesty, minimalism, and spatial light for design features.",
+      "url": "gallery/architectural-concrete-wall-closeup.html",
+      "tags": [
+        "concrete",
+        "architecture",
+        "wall",
+        "close-up",
+        "minimal",
+        "texture",
+        "design",
         "aoglang"
       ]
     },
@@ -1624,6 +1819,36 @@
     },
     {
       "lang": "en",
+      "title": "Microgrid storage equipment",
+      "desc": "Microgrid energy storage hardware—industrial power infrastructure for renewables and grid flexibility.",
+      "url": "gallery/microgrid-storage-equipment-01.html",
+      "tags": [
+        "microgrid",
+        "storage",
+        "equipment",
+        "renewables",
+        "power",
+        "industrial",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Microgrid EMS energy storage",
+      "desc": "Microgrid EMS and energy storage equipment—renewables, battery systems, and smart power solutions.",
+      "url": "gallery/microgrid-ems-energy-01.html",
+      "tags": [
+        "microgrid",
+        "EMS",
+        "energy storage",
+        "renewables",
+        "smart energy",
+        "power",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
       "title": "Laptop and news media",
       "desc": "Laptop with news and newspaper elements—media, information, and business desk visuals.",
       "url": "gallery/laptop-news-desk.html",
@@ -1633,6 +1858,21 @@
         "media",
         "newspaper",
         "business",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Minimalist product display background",
+      "desc": "Minimalist white product display scene—soft light and negative space for premium e-commerce heroes.",
+      "url": "gallery/minimalist-product-display-01.html",
+      "tags": [
+        "minimalist",
+        "product display",
+        "white background",
+        "e-commerce",
+        "brand",
+        "photo",
         "aoglang"
       ]
     },
@@ -1663,6 +1903,36 @@
         "smile",
         "business",
         "trust",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smart energy powering the future",
+      "desc": "Smart energy and future power visuals—clean transition, intelligent grids, and sustainability storytelling.",
+      "url": "gallery/smart-energy-future-01.html",
+      "tags": [
+        "smart energy",
+        "clean power",
+        "future",
+        "sustainability",
+        "grid",
+        "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Smart energy powering the future 2",
+      "desc": "Smart energy and future power visuals—clean transition, intelligent grids, and sustainability storytelling.",
+      "url": "gallery/smart-energy-future-02.html",
+      "tags": [
+        "smart energy",
+        "clean power",
+        "future",
+        "sustainability",
+        "grid",
+        "tech",
         "aoglang"
       ]
     },
@@ -1808,6 +2078,36 @@
         "industrial",
         "inspection",
         "tech",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Curved wall product showroom",
+      "desc": "White curved circular wall with pillars—a bright showroom render for home, auto, and premium retail visuals.",
+      "url": "gallery/curved-wall-product-showroom.html",
+      "tags": [
+        "showroom",
+        "curved wall",
+        "pillars",
+        "white space",
+        "product display",
+        "retail",
+        "aoglang"
+      ]
+    },
+    {
+      "lang": "en",
+      "title": "Product display with three cubes",
+      "desc": "Minimal white scene with three cubes on the right—geometric product staging for tech and e-commerce layouts.",
+      "url": "gallery/product-display-three-cubes.html",
+      "tags": [
+        "product display",
+        "cubes",
+        "white background",
+        "minimal",
+        "e-commerce",
+        "staging",
         "aoglang"
       ]
     },

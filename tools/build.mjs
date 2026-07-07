@@ -751,6 +751,68 @@ const VIDEOS = [
 /** 文章数据：构建时生成 zh/en 页面、列表、首页与搜索索引 */
 const ARTICLES = [
   {
+    slug: "energy-product-display-gallery",
+    date: "2026-07-07",
+    rssDate: "Tue, 07 Jul 2026 00:00:00 GMT",
+    thumb: {
+      src: "assets/img/gallery/pictures/smart-energy-future-01-thumb.webp",
+      w: 1920,
+      h: 1080,
+      altZh: "智慧能源未来主题视觉",
+      altEn: "Smart energy future visual",
+    },
+    zh: {
+      title: "能源与产品展示图集上新：微电网、智慧能源与极简展台",
+      desc: "解读 upload 新增 9 张能源电力与产品展示题材图：智慧能源、微电网储能、清水混凝土、白色展台与立方体陈列等，均有独立 SEO 页面。",
+      tags: ["文章", "能源", "微电网", "产品展示", "图集", "SEO"],
+      intro:
+        "本站图集新增一批<strong>智慧能源与电商展示场景</strong>视觉，涵盖储能设备、EMS 系统、建筑材质特写与 3D 产品展台。下文按主题分组并链到对应单图页面。",
+      sections: [
+        {
+          h: "智慧能源与微电网",
+          p: "智慧能源主题：<a href=\"../gallery/smart-energy-future-01.html\">智慧能源未来 01</a>、<a href=\"../gallery/smart-energy-future-02.html\">02</a>；微电网 EMS：<a href=\"../gallery/microgrid-ems-energy-01.html\">微电网 EMS 储能</a>；储能设备：<a href=\"../gallery/microgrid-storage-equipment-01.html\">微电网储能设备</a>。可与 <a href=\"../gallery/electric-grid-energy-lines.html\">电网能量流光</a> 组成能源专题。",
+        },
+        {
+          h: "产品展示与极简空间",
+          p: "白色展台：<a href=\"../gallery/white-podium-product-stage.html\">展台底座 3D</a>；三立方体陈列：<a href=\"../gallery/product-display-three-cubes.html\">三立方体产品陈列</a>；弧形展厅：<a href=\"../gallery/curved-wall-product-showroom.html\">弧形柱廊展厅</a>；极简背景：<a href=\"../gallery/minimalist-product-display-01.html\">极简产品展示背景</a>。",
+        },
+        {
+          h: "建筑材质特写",
+          p: "清水混凝土肌理见 <a href=\"../gallery/architectural-concrete-wall-closeup.html\">建筑清水混凝土墙面特写</a>，适合建筑设计与地产品牌视觉。",
+        },
+        {
+          h: "发布说明",
+          p: "新图放入 <code>upload/picture/</code> 后执行 <code>npm run build</code> 即可生成 WebP 与双语页面。列表使用缩略图，详见 <a href=\"webp-gallery-performance.html\">WebP 图集优化</a>。",
+        },
+      ],
+    },
+    en: {
+      title: "New energy & product-display gallery uploads",
+      desc: "Nine new images—smart energy, microgrid storage, concrete texture, and minimalist product stages—with bilingual SEO pages.",
+      tags: ["article", "energy", "microgrid", "product display", "gallery", "SEO"],
+      intro:
+        "The gallery adds <strong>smart energy and e-commerce staging</strong> visuals—storage hardware, EMS systems, architectural textures, and 3D product pedestals.",
+      sections: [
+        {
+          h: "Smart energy & microgrid",
+          p: "See <a href=\"../gallery/smart-energy-future-01.html\">smart energy future 01</a>, <a href=\"../gallery/smart-energy-future-02.html\">02</a>, <a href=\"../gallery/microgrid-ems-energy-01.html\">microgrid EMS</a>, and <a href=\"../gallery/microgrid-storage-equipment-01.html\">storage equipment</a>—pair with <a href=\"../gallery/electric-grid-energy-lines.html\">electric grid lines</a>.",
+        },
+        {
+          h: "Product display scenes",
+          p: "White podium: <a href=\"../gallery/white-podium-product-stage.html\">podium stage 3D</a>. Cubes: <a href=\"../gallery/product-display-three-cubes.html\">three-cube display</a>. Showroom: <a href=\"../gallery/curved-wall-product-showroom.html\">curved wall showroom</a>. Minimal: <a href=\"../gallery/minimalist-product-display-01.html\">minimalist display 01</a>.",
+        },
+        {
+          h: "Architecture texture",
+          p: "Concrete close-up: <a href=\"../gallery/architectural-concrete-wall-closeup.html\">architectural concrete wall</a> for design and real-estate branding.",
+        },
+        {
+          h: "Publishing",
+          p: "Drop files into <code>upload/picture/</code>, run <code>npm run build</code>, and browse the <a href=\"../gallery/\">gallery index</a>. Thumbs keep lists fast—see <a href=\"webp-gallery-performance.html\">WebP performance</a>.",
+        },
+      ],
+    },
+  },
+  {
     slug: "new-video-uploads-collection",
     date: "2026-06-03",
     rssDate: "Wed, 03 Jun 2026 00:00:00 GMT",
@@ -1232,23 +1294,22 @@ const ARTICLES = [
 
 /** 首页「最新内容」顺序（构建时在 PICTURES 可用后生成） */
 const HOME_LATEST = [
+  { type: "article", slug: "energy-product-display-gallery" },
+  { type: "gallery", slug: "smart-energy-future-01" },
+  { type: "gallery", slug: "microgrid-ems-energy-01" },
+  { type: "gallery", slug: "white-podium-product-stage" },
+  { type: "gallery", slug: "product-display-three-cubes" },
+  { type: "gallery", slug: "architectural-concrete-wall-closeup" },
+  { type: "gallery", slug: "curved-wall-product-showroom" },
   { type: "article", slug: "new-video-uploads-collection" },
   { type: "video", slug: "aerial-boat-turquoise-coast" },
-  { type: "video", slug: "underwater-surfer-wave" },
-  { type: "video", slug: "blue-butterfly-closeup" },
-  { type: "video", slug: "global-network-globe" },
-  { type: "article", slug: "people-business-portrait-gallery" },
-  { type: "gallery", slug: "customer-service-smile-01" },
-  { type: "gallery", slug: "young-woman-phone-call" },
   { type: "gallery", slug: "binary-blue-light-rays" },
   { type: "gallery", slug: "world-map-blue-light" },
-  { type: "article", slug: "drone-aerial-city-photography" },
+  { type: "article", slug: "people-business-portrait-gallery" },
+  { type: "video", slug: "underwater-surfer-wave" },
   { type: "gallery", slug: "tokyo-waterside-highway" },
-  { type: "video", slug: "tech-visual-short" },
-  { type: "gallery", slug: "ai-high-tech-lights-02" },
-  { type: "article", slug: "webp-gallery-performance" },
-  { type: "video", slug: "warm-visual-clip" },
   { type: "gallery", slug: "infinity-3d" },
+  { type: "article", slug: "webp-gallery-performance" },
 ];
 
 function articleBySlug(slug) {
@@ -1887,6 +1948,10 @@ const pictureInferCounters = {
   customerService: 0,
   contactUsCall: 0,
   middleAgedPortrait: 0,
+  smartEnergyFuture: 0,
+  microgridEms: 0,
+  microgridStorageEquip: 0,
+  productDisplay: 0,
 };
 
 /** 根据提示词生成双语 SEO（upload 新图自动入库） */
@@ -2259,6 +2324,126 @@ function inferPictureMeta(prompt, uploadFile) {
         keywords: ["wafer", "chip", "semiconductor", "industrial", "inspection", "tech", "aoglang"],
       }
     );
+  } else if (/smart energy.*powering the future|powering the future/i.test(prompt)) {
+    pictureInferCounters.smartEnergyFuture += 1;
+    const n = pictureInferCounters.smartEnergyFuture;
+    finish(
+      `smart-energy-future-${String(n).padStart(2, "0")}`,
+      {
+        title: `智慧能源未来视觉 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "智慧能源与未来电力主题视觉，强调清洁能源转型、智能电网与可持续发展叙事。",
+        keywords: ["智慧能源", "清洁能源", "未来", "电力", "可持续", "科技", "aoglang"],
+      },
+      {
+        title: `Smart energy powering the future ${n > 1 ? n : ""}`.trim(),
+        desc: "Smart energy and future power visuals—clean transition, intelligent grids, and sustainability storytelling.",
+        keywords: ["smart energy", "clean power", "future", "sustainability", "grid", "tech", "aoglang"],
+      }
+    );
+  } else if (/microgrid.*ems|vitality microgrid|ems energy storage/i.test(prompt)) {
+    pictureInferCounters.microgridEms += 1;
+    const n = pictureInferCounters.microgridEms;
+    finish(
+      `microgrid-ems-energy-${String(n).padStart(2, "0")}`,
+      {
+        title: `微电网 EMS 储能系统 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "微电网能源管理系统与储能设备视觉，适合新能源、储能电站与智慧能源方案宣传。",
+        keywords: ["微电网", "EMS", "储能", "新能源", "智慧能源", "电力", "aoglang"],
+      },
+      {
+        title: `Microgrid EMS energy storage ${n > 1 ? n : ""}`.trim(),
+        desc: "Microgrid EMS and energy storage equipment—renewables, battery systems, and smart power solutions.",
+        keywords: ["microgrid", "EMS", "energy storage", "renewables", "smart energy", "power", "aoglang"],
+      }
+    );
+  } else if (/microgrid.*energy storage|energy storage equi/i.test(prompt)) {
+    pictureInferCounters.microgridStorageEquip += 1;
+    const n = pictureInferCounters.microgridStorageEquip;
+    finish(
+      `microgrid-storage-equipment-${String(n).padStart(2, "0")}`,
+      {
+        title: `微电网储能设备 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "微电网储能设备与电力基础设施特写，突出工业质感与新能源产业布局。",
+        keywords: ["微电网", "储能设备", "电力", "新能源", "工业", "能源", "aoglang"],
+      },
+      {
+        title: `Microgrid storage equipment ${n > 1 ? n : ""}`.trim(),
+        desc: "Microgrid energy storage hardware—industrial power infrastructure for renewables and grid flexibility.",
+        keywords: ["microgrid", "storage", "equipment", "renewables", "power", "industrial", "aoglang"],
+      }
+    );
+  } else if (/architectural concrete wall/i.test(prompt)) {
+    finish(
+      "architectural-concrete-wall-closeup",
+      {
+        title: "建筑清水混凝土墙面特写",
+        desc: "清水混凝土墙面肌理特写，强调建筑材质、极简主义与空间光影，适合建筑设计与地产视觉。",
+        keywords: ["混凝土", "建筑", "墙面", "特写", "极简", "材质", "设计", "aoglang"],
+      },
+      {
+        title: "Architectural concrete wall close-up",
+        desc: "Close-up of architectural concrete texture—material honesty, minimalism, and spatial light for design features.",
+        keywords: ["concrete", "architecture", "wall", "close-up", "minimal", "texture", "design", "aoglang"],
+      }
+    );
+  } else if (/white empty podium|podium platform/i.test(prompt)) {
+    finish(
+      "white-podium-product-stage",
+      {
+        title: "白色展台底座 3D 渲染",
+        desc: "纯白空展台与底座 3D 渲染，留白充足，适合电商产品主图、发布会 KV 与品牌展示模板。",
+        keywords: ["展台", "底座", "3D渲染", "产品展示", "白色背景", "电商", "aoglang"],
+      },
+      {
+        title: "White podium product stage 3D",
+        desc: "3D render of a white empty podium platform—clean product hero shots, launch key visuals, and brand templates.",
+        keywords: ["podium", "stage", "3D render", "product display", "white background", "e-commerce", "aoglang"],
+      }
+    );
+  } else if (/three cubes.*right side|three_cubes/i.test(prompt)) {
+    finish(
+      "product-display-three-cubes",
+      {
+        title: "三立方体产品陈列",
+        desc: "白色背景右侧三立方体展台构图，极简几何感，适合科技产品、护肤与电商详情页场景图。",
+        keywords: ["产品陈列", "立方体", "白色背景", "极简", "电商", "展示", "aoglang"],
+      },
+      {
+        title: "Product display with three cubes",
+        desc: "Minimal white scene with three cubes on the right—geometric product staging for tech and e-commerce layouts.",
+        keywords: ["product display", "cubes", "white background", "minimal", "e-commerce", "staging", "aoglang"],
+      }
+    );
+  } else if (/curved circular wall.*pillars/i.test(prompt)) {
+    finish(
+      "curved-wall-product-showroom",
+      {
+        title: "弧形柱廊产品展厅",
+        desc: "白色弧形圆墙与立柱构成的产品展厅空间，通透简洁，适合家居、汽车与高端零售场景渲染。",
+        keywords: ["展厅", "弧形墙", "立柱", "白色空间", "产品展示", "零售", "aoglang"],
+      },
+      {
+        title: "Curved wall product showroom",
+        desc: "White curved circular wall with pillars—a bright showroom render for home, auto, and premium retail visuals.",
+        keywords: ["showroom", "curved wall", "pillars", "white space", "product display", "retail", "aoglang"],
+      }
+    );
+  } else if (/minimalist white background.*product display/i.test(prompt)) {
+    pictureInferCounters.productDisplay += 1;
+    const n = pictureInferCounters.productDisplay;
+    finish(
+      `minimalist-product-display-${String(n).padStart(2, "0")}`,
+      {
+        title: `极简产品展示背景 ${n > 1 ? "· " + n : ""}`.trim(),
+        desc: "极简白色产品展示背景，留白与柔光营造高级感，适合电商主图与品牌视觉模板。",
+        keywords: ["极简", "产品展示", "白色背景", "电商", "品牌", "摄影", "aoglang"],
+      },
+      {
+        title: `Minimalist product display background ${n > 1 ? n : ""}`.trim(),
+        desc: "Minimalist white product display scene—soft light and negative space for premium e-commerce heroes.",
+        keywords: ["minimalist", "product display", "white background", "e-commerce", "brand", "photo", "aoglang"],
+      }
+    );
   }
 
   if (!slug) {
@@ -2313,7 +2498,7 @@ function pictureEntryFromUpload(uploadFile, usedSlugs) {
     subdir: "pictures",
     w: ext === ".jpg" || ext === ".jpeg" ? 1600 : 1920,
     h: ext === ".jpg" || ext === ".jpeg" ? 1067 : 1080,
-    date: "2026-06-02",
+    date: "2026-07-07",
     zh: { ...zh, sections: pictureSections(zh, true) },
     en: { ...en, sections: pictureSections(en, false) },
   };
@@ -2348,6 +2533,10 @@ function buildPicturesCatalog() {
   pictureInferCounters.customerService = 0;
   pictureInferCounters.contactUsCall = 0;
   pictureInferCounters.middleAgedPortrait = 0;
+  pictureInferCounters.smartEnergyFuture = 0;
+  pictureInferCounters.microgridEms = 0;
+  pictureInferCounters.microgridStorageEquip = 0;
+  pictureInferCounters.productDisplay = 0;
 
   const usedSlugs = new Set();
   const aerial = AERIAL_PICTURES.map((p) => {
